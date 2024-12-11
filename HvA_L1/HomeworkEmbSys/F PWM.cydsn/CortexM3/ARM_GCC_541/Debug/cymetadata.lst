@@ -1,0 +1,832 @@
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 328
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 02       		.byte	2
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 54       		.byte	84
+  38 0009 02       		.byte	2
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 2D       		.byte	45
+  42 000d 03       		.byte	3
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 02       		.byte	2
+  46 0011 05       		.byte	5
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 02       		.byte	2
+  50 0015 41       		.byte	65
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 01       		.byte	1
+  54 0019 42       		.byte	66
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 02       		.byte	2
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 2
+
+
+  58 001d 50       		.byte	80
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 01       		.byte	1
+  62 0021 08       		.byte	8
+  63 0022 82       		.byte	-126
+  64 0023 0D       		.byte	13
+  65 0024 83       		.byte	-125
+  66 0025 0D       		.byte	13
+  67 0026 14       		.byte	20
+  68 0027 02       		.byte	2
+  69 0028 1A       		.byte	26
+  70 0029 06       		.byte	6
+  71 002a 2E       		.byte	46
+  72 002b 01       		.byte	1
+  73 002c 30       		.byte	48
+  74 002d 02       		.byte	2
+  75 002e 32       		.byte	50
+  76 002f 04       		.byte	4
+  77 0030 36       		.byte	54
+  78 0031 01       		.byte	1
+  79 0032 40       		.byte	64
+  80 0033 30       		.byte	48
+  81 0034 41       		.byte	65
+  82 0035 02       		.byte	2
+  83 0036 45       		.byte	69
+  84 0037 D1       		.byte	-47
+  85 0038 47       		.byte	71
+  86 0039 02       		.byte	2
+  87 003a 48       		.byte	72
+  88 003b 13       		.byte	19
+  89 003c 49       		.byte	73
+  90 003d FF       		.byte	-1
+  91 003e 4A       		.byte	74
+  92 003f FF       		.byte	-1
+  93 0040 4B       		.byte	75
+  94 0041 FF       		.byte	-1
+  95 0042 4D       		.byte	77
+  96 0043 A0       		.byte	-96
+  97 0044 4F       		.byte	79
+  98 0045 04       		.byte	4
+  99 0046 50       		.byte	80
+ 100 0047 18       		.byte	24
+ 101 0048 52       		.byte	82
+ 102 0049 80       		.byte	-128
+ 103 004a 54       		.byte	84
+ 104 004b 05       		.byte	5
+ 105 004c 58       		.byte	88
+ 106 004d 04       		.byte	4
+ 107 004e 5A       		.byte	90
+ 108 004f 04       		.byte	4
+ 109 0050 5B       		.byte	91
+ 110 0051 04       		.byte	4
+ 111 0052 5F       		.byte	95
+ 112 0053 01       		.byte	1
+ 113 0054 60       		.byte	96
+ 114 0055 40       		.byte	64
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 3
+
+
+ 115 0056 62       		.byte	98
+ 116 0057 C0       		.byte	-64
+ 117 0058 64       		.byte	100
+ 118 0059 40       		.byte	64
+ 119 005a 65       		.byte	101
+ 120 005b 40       		.byte	64
+ 121 005c 66       		.byte	102
+ 122 005d C0       		.byte	-64
+ 123 005e 68       		.byte	104
+ 124 005f C0       		.byte	-64
+ 125 0060 6A       		.byte	106
+ 126 0061 C0       		.byte	-64
+ 127 0062 6C       		.byte	108
+ 128 0063 C0       		.byte	-64
+ 129 0064 6E       		.byte	110
+ 130 0065 C0       		.byte	-64
+ 131 0066 80       		.byte	-128
+ 132 0067 02       		.byte	2
+ 133 0068 82       		.byte	-126
+ 134 0069 01       		.byte	1
+ 135 006a 87       		.byte	-121
+ 136 006b 04       		.byte	4
+ 137 006c 8E       		.byte	-114
+ 138 006d 14       		.byte	20
+ 139 006e 92       		.byte	-110
+ 140 006f 08       		.byte	8
+ 141 0070 94       		.byte	-108
+ 142 0071 01       		.byte	1
+ 143 0072 96       		.byte	-106
+ 144 0073 02       		.byte	2
+ 145 0074 97       		.byte	-105
+ 146 0075 05       		.byte	5
+ 147 0076 9D       		.byte	-99
+ 148 0077 08       		.byte	8
+ 149 0078 A2       		.byte	-94
+ 150 0079 04       		.byte	4
+ 151 007a A3       		.byte	-93
+ 152 007b 08       		.byte	8
+ 153 007c A6       		.byte	-90
+ 154 007d 10       		.byte	16
+ 155 007e AB       		.byte	-85
+ 156 007f 01       		.byte	1
+ 157 0080 AF       		.byte	-81
+ 158 0081 02       		.byte	2
+ 159 0082 B0       		.byte	-80
+ 160 0083 08       		.byte	8
+ 161 0084 B1       		.byte	-79
+ 162 0085 08       		.byte	8
+ 163 0086 B2       		.byte	-78
+ 164 0087 04       		.byte	4
+ 165 0088 B3       		.byte	-77
+ 166 0089 02       		.byte	2
+ 167 008a B4       		.byte	-76
+ 168 008b 10       		.byte	16
+ 169 008c B5       		.byte	-75
+ 170 008d 04       		.byte	4
+ 171 008e B6       		.byte	-74
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 4
+
+
+ 172 008f 03       		.byte	3
+ 173 0090 B7       		.byte	-73
+ 174 0091 01       		.byte	1
+ 175 0092 BE       		.byte	-66
+ 176 0093 50       		.byte	80
+ 177 0094 BF       		.byte	-65
+ 178 0095 10       		.byte	16
+ 179 0096 C0       		.byte	-64
+ 180 0097 40       		.byte	64
+ 181 0098 C1       		.byte	-63
+ 182 0099 06       		.byte	6
+ 183 009a C5       		.byte	-59
+ 184 009b D2       		.byte	-46
+ 185 009c C6       		.byte	-58
+ 186 009d 01       		.byte	1
+ 187 009e C7       		.byte	-57
+ 188 009f 02       		.byte	2
+ 189 00a0 C8       		.byte	-56
+ 190 00a1 17       		.byte	23
+ 191 00a2 C9       		.byte	-55
+ 192 00a3 FF       		.byte	-1
+ 193 00a4 CA       		.byte	-54
+ 194 00a5 FF       		.byte	-1
+ 195 00a6 CB       		.byte	-53
+ 196 00a7 FF       		.byte	-1
+ 197 00a8 CD       		.byte	-51
+ 198 00a9 A0       		.byte	-96
+ 199 00aa CF       		.byte	-49
+ 200 00ab 04       		.byte	4
+ 201 00ac D0       		.byte	-48
+ 202 00ad 18       		.byte	24
+ 203 00ae D2       		.byte	-46
+ 204 00af 80       		.byte	-128
+ 205 00b0 D4       		.byte	-44
+ 206 00b1 05       		.byte	5
+ 207 00b2 D8       		.byte	-40
+ 208 00b3 04       		.byte	4
+ 209 00b4 D9       		.byte	-39
+ 210 00b5 04       		.byte	4
+ 211 00b6 DA       		.byte	-38
+ 212 00b7 04       		.byte	4
+ 213 00b8 DB       		.byte	-37
+ 214 00b9 04       		.byte	4
+ 215 00ba DF       		.byte	-33
+ 216 00bb 01       		.byte	1
+ 217 00bc E0       		.byte	-32
+ 218 00bd 40       		.byte	64
+ 219 00be E2       		.byte	-30
+ 220 00bf C0       		.byte	-64
+ 221 00c0 E4       		.byte	-28
+ 222 00c1 40       		.byte	64
+ 223 00c2 E5       		.byte	-27
+ 224 00c3 40       		.byte	64
+ 225 00c4 E6       		.byte	-26
+ 226 00c5 C0       		.byte	-64
+ 227 00c6 E8       		.byte	-24
+ 228 00c7 C0       		.byte	-64
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 5
+
+
+ 229 00c8 EA       		.byte	-22
+ 230 00c9 C0       		.byte	-64
+ 231 00ca EC       		.byte	-20
+ 232 00cb C0       		.byte	-64
+ 233 00cc EE       		.byte	-18
+ 234 00cd C0       		.byte	-64
+ 235 00ce 00       		.byte	0
+ 236 00cf 41       		.byte	65
+ 237 00d0 09       		.byte	9
+ 238 00d1 02       		.byte	2
+ 239 00d2 0A       		.byte	10
+ 240 00d3 10       		.byte	16
+ 241 00d4 0E       		.byte	14
+ 242 00d5 20       		.byte	32
+ 243 00d6 0F       		.byte	15
+ 244 00d7 08       		.byte	8
+ 245 00d8 10       		.byte	16
+ 246 00d9 A0       		.byte	-96
+ 247 00da 15       		.byte	21
+ 248 00db 80       		.byte	-128
+ 249 00dc 18       		.byte	24
+ 250 00dd 40       		.byte	64
+ 251 00de 1A       		.byte	26
+ 252 00df 14       		.byte	20
+ 253 00e0 1B       		.byte	27
+ 254 00e1 40       		.byte	64
+ 255 00e2 1D       		.byte	29
+ 256 00e3 40       		.byte	64
+ 257 00e4 1E       		.byte	30
+ 258 00e5 60       		.byte	96
+ 259 00e6 20       		.byte	32
+ 260 00e7 01       		.byte	1
+ 261 00e8 21       		.byte	33
+ 262 00e9 08       		.byte	8
+ 263 00ea 23       		.byte	35
+ 264 00eb 88       		.byte	-120
+ 265 00ec 2A       		.byte	42
+ 266 00ed 80       		.byte	-128
+ 267 00ee 2B       		.byte	43
+ 268 00ef 84       		.byte	-124
+ 269 00f0 31       		.byte	49
+ 270 00f1 48       		.byte	72
+ 271 00f2 3A       		.byte	58
+ 272 00f3 04       		.byte	4
+ 273 00f4 40       		.byte	64
+ 274 00f5 40       		.byte	64
+ 275 00f6 45       		.byte	69
+ 276 00f7 08       		.byte	8
+ 277 00f8 46       		.byte	70
+ 278 00f9 04       		.byte	4
+ 279 00fa 48       		.byte	72
+ 280 00fb 28       		.byte	40
+ 281 00fc 49       		.byte	73
+ 282 00fd 01       		.byte	1
+ 283 00fe 4F       		.byte	79
+ 284 00ff 09       		.byte	9
+ 285 0100 50       		.byte	80
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 6
+
+
+ 286 0101 88       		.byte	-120
+ 287 0102 51       		.byte	81
+ 288 0103 40       		.byte	64
+ 289 0104 53       		.byte	83
+ 290 0105 80       		.byte	-128
+ 291 0106 56       		.byte	86
+ 292 0107 04       		.byte	4
+ 293 0108 59       		.byte	89
+ 294 0109 01       		.byte	1
+ 295 010a 5A       		.byte	90
+ 296 010b 04       		.byte	4
+ 297 010c 5B       		.byte	91
+ 298 010d 80       		.byte	-128
+ 299 010e 5E       		.byte	94
+ 300 010f 40       		.byte	64
+ 301 0110 5F       		.byte	95
+ 302 0111 09       		.byte	9
+ 303 0112 71       		.byte	113
+ 304 0113 02       		.byte	2
+ 305 0114 76       		.byte	118
+ 306 0115 80       		.byte	-128
+ 307 0116 C0       		.byte	-64
+ 308 0117 09       		.byte	9
+ 309 0118 C2       		.byte	-62
+ 310 0119 6C       		.byte	108
+ 311 011a C4       		.byte	-60
+ 312 011b 8C       		.byte	-116
+ 313 011c CA       		.byte	-54
+ 314 011d 0D       		.byte	13
+ 315 011e CC       		.byte	-52
+ 316 011f 0A       		.byte	10
+ 317 0120 CE       		.byte	-50
+ 318 0121 02       		.byte	2
+ 319 0122 D0       		.byte	-48
+ 320 0123 61       		.byte	97
+ 321 0124 D2       		.byte	-46
+ 322 0125 04       		.byte	4
+ 323 0126 D6       		.byte	-42
+ 324 0127 DB       		.byte	-37
+ 325 0128 B7       		.byte	-73
+ 326 0129 40       		.byte	64
+ 327 012a EE       		.byte	-18
+ 328 012b 40       		.byte	64
+ 329 012c 5B       		.byte	91
+ 330 012d 10       		.byte	16
+ 331 012e D4       		.byte	-44
+ 332 012f 80       		.byte	-128
+ 333 0130 B7       		.byte	-73
+ 334 0131 10       		.byte	16
+ 335 0132 00       		.byte	0
+ 336 0133 01       		.byte	1
+ 337 0134 08       		.byte	8
+ 338 0135 01       		.byte	1
+ 339 0136 00       		.byte	0
+ 340 0137 00       		.byte	0
+ 341 0138 00       		.byte	0
+ 342 0139 08       		.byte	8
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 7
+
+
+ 343 013a 08       		.byte	8
+ 344 013b 00       		.byte	0
+ 345 013c 08       		.byte	8
+ 346 013d 00       		.byte	0
+ 347 013e 00       		.byte	0
+ 348 013f 00       		.byte	0
+ 349 0140 00       		.byte	0
+ 350 0141 0B       		.byte	11
+ 351 0142 0B       		.byte	11
+ 352 0143 00       		.byte	0
+ 353 0144 00       		.byte	0
+ 354 0145 00       		.byte	0
+ 355 0146 00       		.byte	0
+ 356 0147 00       		.byte	0
+ 357              		.section	.cywolatch,"a",%progbits
+ 358              		.align	2
+ 359              		.type	cy_meta_wonvl, %object
+ 360              		.size	cy_meta_wonvl, 4
+ 361              	cy_meta_wonvl:
+ 362 0000 BC       		.byte	-68
+ 363 0001 90       		.byte	-112
+ 364 0002 AC       		.byte	-84
+ 365 0003 AF       		.byte	-81
+ 366              		.section	.cycustnvl,"a",%progbits
+ 367              		.align	2
+ 368              		.type	cy_meta_custnvl, %object
+ 369              		.size	cy_meta_custnvl, 4
+ 370              	cy_meta_custnvl:
+ 371 0000 00       		.byte	0
+ 372 0001 00       		.byte	0
+ 373 0002 40       		.byte	64
+ 374 0003 05       		.byte	5
+ 375              		.section	.cymeta,"a",%progbits
+ 376              		.align	2
+ 377              		.type	cy_metadata, %object
+ 378              		.size	cy_metadata, 12
+ 379              	cy_metadata:
+ 380 0000 00       		.byte	0
+ 381 0001 01       		.byte	1
+ 382 0002 2E       		.byte	46
+ 383 0003 16       		.byte	22
+ 384 0004 10       		.byte	16
+ 385 0005 69       		.byte	105
+ 386 0006 00       		.byte	0
+ 387 0007 01       		.byte	1
+ 388 0008 00       		.byte	0
+ 389 0009 00       		.byte	0
+ 390 000a 00       		.byte	0
+ 391 000b 00       		.byte	0
+ 392              		.section	.cyflashprotect,"a",%progbits
+ 393              		.align	2
+ 394              		.type	cy_meta_flashprotect, %object
+ 395              		.size	cy_meta_flashprotect, 256
+ 396              	cy_meta_flashprotect:
+ 397 0000 00000000 		.space	256
+ 397      00000000 
+ 397      00000000 
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 8
+
+
+ 397      00000000 
+ 397      00000000 
+ 398              		.text
+ 399              	.Letext0:
+ 400              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 401              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 402              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 403              		.section	.debug_info,"",%progbits
+ 404              	.Ldebug_info0:
+ 405 0000 31010000 		.4byte	0x131
+ 406 0004 0400     		.2byte	0x4
+ 407 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 408 000a 04       		.byte	0x4
+ 409 000b 01       		.uleb128 0x1
+ 410 000c 24000000 		.4byte	.LASF17
+ 411 0010 0C       		.byte	0xc
+ 412 0011 BF010000 		.4byte	.LASF18
+ 413 0015 48010000 		.4byte	.LASF19
+ 414 0019 00000000 		.4byte	.Ldebug_line0
+ 415 001d 02       		.uleb128 0x2
+ 416 001e 01       		.byte	0x1
+ 417 001f 06       		.byte	0x6
+ 418 0020 B3010000 		.4byte	.LASF0
+ 419 0024 03       		.uleb128 0x3
+ 420 0025 00000000 		.4byte	.LASF9
+ 421 0029 01       		.byte	0x1
+ 422 002a 1D       		.byte	0x1d
+ 423 002b 2F000000 		.4byte	0x2f
+ 424 002f 02       		.uleb128 0x2
+ 425 0030 01       		.byte	0x1
+ 426 0031 08       		.byte	0x8
+ 427 0032 16000000 		.4byte	.LASF1
+ 428 0036 02       		.uleb128 0x2
+ 429 0037 02       		.byte	0x2
+ 430 0038 05       		.byte	0x5
+ 431 0039 A0010000 		.4byte	.LASF2
+ 432 003d 02       		.uleb128 0x2
+ 433 003e 02       		.byte	0x2
+ 434 003f 07       		.byte	0x7
+ 435 0040 C4000000 		.4byte	.LASF3
+ 436 0044 02       		.uleb128 0x2
+ 437 0045 04       		.byte	0x4
+ 438 0046 05       		.byte	0x5
+ 439 0047 AA010000 		.4byte	.LASF4
+ 440 004b 02       		.uleb128 0x2
+ 441 004c 04       		.byte	0x4
+ 442 004d 07       		.byte	0x7
+ 443 004e B2000000 		.4byte	.LASF5
+ 444 0052 02       		.uleb128 0x2
+ 445 0053 08       		.byte	0x8
+ 446 0054 05       		.byte	0x5
+ 447 0055 92010000 		.4byte	.LASF6
+ 448 0059 02       		.uleb128 0x2
+ 449 005a 08       		.byte	0x8
+ 450 005b 07       		.byte	0x7
+ 451 005c 06010000 		.4byte	.LASF7
+ 452 0060 04       		.uleb128 0x4
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 9
+
+
+ 453 0061 04       		.byte	0x4
+ 454 0062 05       		.byte	0x5
+ 455 0063 696E7400 		.ascii	"int\000"
+ 456 0067 02       		.uleb128 0x2
+ 457 0068 04       		.byte	0x4
+ 458 0069 07       		.byte	0x7
+ 459 006a F9000000 		.4byte	.LASF8
+ 460 006e 03       		.uleb128 0x3
+ 461 006f 1D010000 		.4byte	.LASF10
+ 462 0073 02       		.byte	0x2
+ 463 0074 18       		.byte	0x18
+ 464 0075 24000000 		.4byte	0x24
+ 465 0079 05       		.uleb128 0x5
+ 466 007a 91000000 		.4byte	0x91
+ 467 007e 8A000000 		.4byte	0x8a
+ 468 0082 06       		.uleb128 0x6
+ 469 0083 8A000000 		.4byte	0x8a
+ 470 0087 4701     		.2byte	0x147
+ 471 0089 00       		.byte	0
+ 472 008a 02       		.uleb128 0x2
+ 473 008b 04       		.byte	0x4
+ 474 008c 07       		.byte	0x7
+ 475 008d 89010000 		.4byte	.LASF11
+ 476 0091 07       		.uleb128 0x7
+ 477 0092 6E000000 		.4byte	0x6e
+ 478 0096 08       		.uleb128 0x8
+ 479 0097 E7000000 		.4byte	.LASF12
+ 480 009b 03       		.byte	0x3
+ 481 009c 1F       		.byte	0x1f
+ 482 009d A7000000 		.4byte	0xa7
+ 483 00a1 05       		.uleb128 0x5
+ 484 00a2 03       		.byte	0x3
+ 485 00a3 00000000 		.4byte	cy_meta_configecc
+ 486 00a7 07       		.uleb128 0x7
+ 487 00a8 79000000 		.4byte	0x79
+ 488 00ac 05       		.uleb128 0x5
+ 489 00ad 91000000 		.4byte	0x91
+ 490 00b1 BC000000 		.4byte	0xbc
+ 491 00b5 09       		.uleb128 0x9
+ 492 00b6 8A000000 		.4byte	0x8a
+ 493 00ba 03       		.byte	0x3
+ 494 00bb 00       		.byte	0
+ 495 00bc 08       		.uleb128 0x8
+ 496 00bd D7000000 		.4byte	.LASF13
+ 497 00c1 03       		.byte	0x3
+ 498 00c2 55       		.byte	0x55
+ 499 00c3 CD000000 		.4byte	0xcd
+ 500 00c7 05       		.uleb128 0x5
+ 501 00c8 03       		.byte	0x3
+ 502 00c9 00000000 		.4byte	cy_meta_custnvl
+ 503 00cd 07       		.uleb128 0x7
+ 504 00ce AC000000 		.4byte	0xac
+ 505 00d2 08       		.uleb128 0x8
+ 506 00d3 3A010000 		.4byte	.LASF14
+ 507 00d7 03       		.byte	0x3
+ 508 00d8 63       		.byte	0x63
+ 509 00d9 E3000000 		.4byte	0xe3
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 10
+
+
+ 510 00dd 05       		.uleb128 0x5
+ 511 00de 03       		.byte	0x3
+ 512 00df 00000000 		.4byte	cy_meta_wonvl
+ 513 00e3 07       		.uleb128 0x7
+ 514 00e4 AC000000 		.4byte	0xac
+ 515 00e8 05       		.uleb128 0x5
+ 516 00e9 91000000 		.4byte	0x91
+ 517 00ed F8000000 		.4byte	0xf8
+ 518 00f1 09       		.uleb128 0x9
+ 519 00f2 8A000000 		.4byte	0x8a
+ 520 00f6 FF       		.byte	0xff
+ 521 00f7 00       		.byte	0
+ 522 00f8 08       		.uleb128 0x8
+ 523 00f9 25010000 		.4byte	.LASF15
+ 524 00fd 03       		.byte	0x3
+ 525 00fe 71       		.byte	0x71
+ 526 00ff 09010000 		.4byte	0x109
+ 527 0103 05       		.uleb128 0x5
+ 528 0104 03       		.byte	0x3
+ 529 0105 00000000 		.4byte	cy_meta_flashprotect
+ 530 0109 07       		.uleb128 0x7
+ 531 010a E8000000 		.4byte	0xe8
+ 532 010e 05       		.uleb128 0x5
+ 533 010f 91000000 		.4byte	0x91
+ 534 0113 1E010000 		.4byte	0x11e
+ 535 0117 09       		.uleb128 0x9
+ 536 0118 8A000000 		.4byte	0x8a
+ 537 011c 0B       		.byte	0xb
+ 538 011d 00       		.byte	0
+ 539 011e 08       		.uleb128 0x8
+ 540 011f 0A000000 		.4byte	.LASF16
+ 541 0123 03       		.byte	0x3
+ 542 0124 9E       		.byte	0x9e
+ 543 0125 2F010000 		.4byte	0x12f
+ 544 0129 05       		.uleb128 0x5
+ 545 012a 03       		.byte	0x3
+ 546 012b 00000000 		.4byte	cy_metadata
+ 547 012f 07       		.uleb128 0x7
+ 548 0130 0E010000 		.4byte	0x10e
+ 549 0134 00       		.byte	0
+ 550              		.section	.debug_abbrev,"",%progbits
+ 551              	.Ldebug_abbrev0:
+ 552 0000 01       		.uleb128 0x1
+ 553 0001 11       		.uleb128 0x11
+ 554 0002 01       		.byte	0x1
+ 555 0003 25       		.uleb128 0x25
+ 556 0004 0E       		.uleb128 0xe
+ 557 0005 13       		.uleb128 0x13
+ 558 0006 0B       		.uleb128 0xb
+ 559 0007 03       		.uleb128 0x3
+ 560 0008 0E       		.uleb128 0xe
+ 561 0009 1B       		.uleb128 0x1b
+ 562 000a 0E       		.uleb128 0xe
+ 563 000b 10       		.uleb128 0x10
+ 564 000c 17       		.uleb128 0x17
+ 565 000d 00       		.byte	0
+ 566 000e 00       		.byte	0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 11
+
+
+ 567 000f 02       		.uleb128 0x2
+ 568 0010 24       		.uleb128 0x24
+ 569 0011 00       		.byte	0
+ 570 0012 0B       		.uleb128 0xb
+ 571 0013 0B       		.uleb128 0xb
+ 572 0014 3E       		.uleb128 0x3e
+ 573 0015 0B       		.uleb128 0xb
+ 574 0016 03       		.uleb128 0x3
+ 575 0017 0E       		.uleb128 0xe
+ 576 0018 00       		.byte	0
+ 577 0019 00       		.byte	0
+ 578 001a 03       		.uleb128 0x3
+ 579 001b 16       		.uleb128 0x16
+ 580 001c 00       		.byte	0
+ 581 001d 03       		.uleb128 0x3
+ 582 001e 0E       		.uleb128 0xe
+ 583 001f 3A       		.uleb128 0x3a
+ 584 0020 0B       		.uleb128 0xb
+ 585 0021 3B       		.uleb128 0x3b
+ 586 0022 0B       		.uleb128 0xb
+ 587 0023 49       		.uleb128 0x49
+ 588 0024 13       		.uleb128 0x13
+ 589 0025 00       		.byte	0
+ 590 0026 00       		.byte	0
+ 591 0027 04       		.uleb128 0x4
+ 592 0028 24       		.uleb128 0x24
+ 593 0029 00       		.byte	0
+ 594 002a 0B       		.uleb128 0xb
+ 595 002b 0B       		.uleb128 0xb
+ 596 002c 3E       		.uleb128 0x3e
+ 597 002d 0B       		.uleb128 0xb
+ 598 002e 03       		.uleb128 0x3
+ 599 002f 08       		.uleb128 0x8
+ 600 0030 00       		.byte	0
+ 601 0031 00       		.byte	0
+ 602 0032 05       		.uleb128 0x5
+ 603 0033 01       		.uleb128 0x1
+ 604 0034 01       		.byte	0x1
+ 605 0035 49       		.uleb128 0x49
+ 606 0036 13       		.uleb128 0x13
+ 607 0037 01       		.uleb128 0x1
+ 608 0038 13       		.uleb128 0x13
+ 609 0039 00       		.byte	0
+ 610 003a 00       		.byte	0
+ 611 003b 06       		.uleb128 0x6
+ 612 003c 21       		.uleb128 0x21
+ 613 003d 00       		.byte	0
+ 614 003e 49       		.uleb128 0x49
+ 615 003f 13       		.uleb128 0x13
+ 616 0040 2F       		.uleb128 0x2f
+ 617 0041 05       		.uleb128 0x5
+ 618 0042 00       		.byte	0
+ 619 0043 00       		.byte	0
+ 620 0044 07       		.uleb128 0x7
+ 621 0045 26       		.uleb128 0x26
+ 622 0046 00       		.byte	0
+ 623 0047 49       		.uleb128 0x49
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 12
+
+
+ 624 0048 13       		.uleb128 0x13
+ 625 0049 00       		.byte	0
+ 626 004a 00       		.byte	0
+ 627 004b 08       		.uleb128 0x8
+ 628 004c 34       		.uleb128 0x34
+ 629 004d 00       		.byte	0
+ 630 004e 03       		.uleb128 0x3
+ 631 004f 0E       		.uleb128 0xe
+ 632 0050 3A       		.uleb128 0x3a
+ 633 0051 0B       		.uleb128 0xb
+ 634 0052 3B       		.uleb128 0x3b
+ 635 0053 0B       		.uleb128 0xb
+ 636 0054 49       		.uleb128 0x49
+ 637 0055 13       		.uleb128 0x13
+ 638 0056 3F       		.uleb128 0x3f
+ 639 0057 19       		.uleb128 0x19
+ 640 0058 02       		.uleb128 0x2
+ 641 0059 18       		.uleb128 0x18
+ 642 005a 00       		.byte	0
+ 643 005b 00       		.byte	0
+ 644 005c 09       		.uleb128 0x9
+ 645 005d 21       		.uleb128 0x21
+ 646 005e 00       		.byte	0
+ 647 005f 49       		.uleb128 0x49
+ 648 0060 13       		.uleb128 0x13
+ 649 0061 2F       		.uleb128 0x2f
+ 650 0062 0B       		.uleb128 0xb
+ 651 0063 00       		.byte	0
+ 652 0064 00       		.byte	0
+ 653 0065 00       		.byte	0
+ 654              		.section	.debug_aranges,"",%progbits
+ 655 0000 14000000 		.4byte	0x14
+ 656 0004 0200     		.2byte	0x2
+ 657 0006 00000000 		.4byte	.Ldebug_info0
+ 658 000a 04       		.byte	0x4
+ 659 000b 00       		.byte	0
+ 660 000c 0000     		.2byte	0
+ 661 000e 0000     		.2byte	0
+ 662 0010 00000000 		.4byte	0
+ 663 0014 00000000 		.4byte	0
+ 664              		.section	.debug_line,"",%progbits
+ 665              	.Ldebug_line0:
+ 666 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 666      02003701 
+ 666      00000201 
+ 666      FB0E0D00 
+ 666      01010101 
+ 667              	.LASF9:
+ 668 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 668      6E74385F 
+ 668      7400
+ 669              	.LASF16:
+ 670 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 670      65746164 
+ 670      61746100 
+ 671              	.LASF1:
+ 672 0016 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 13
+
+
+ 672      676E6564 
+ 672      20636861 
+ 672      7200
+ 673              	.LASF17:
+ 674 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 674      43313120 
+ 674      352E342E 
+ 674      31203230 
+ 674      31363036 
+ 675 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 675      20726576 
+ 675      6973696F 
+ 675      6E203233 
+ 675      37373135 
+ 676 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 676      66756E63 
+ 676      74696F6E 
+ 676      2D736563 
+ 676      74696F6E 
+ 677              	.LASF5:
+ 678 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 678      20756E73 
+ 678      69676E65 
+ 678      6420696E 
+ 678      7400
+ 679              	.LASF3:
+ 680 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 680      7420756E 
+ 680      7369676E 
+ 680      65642069 
+ 680      6E7400
+ 681              	.LASF13:
+ 682 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 682      6574615F 
+ 682      63757374 
+ 682      6E766C00 
+ 683              	.LASF12:
+ 684 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 684      6574615F 
+ 684      636F6E66 
+ 684      69676563 
+ 684      6300
+ 685              	.LASF8:
+ 686 00f9 756E7369 		.ascii	"unsigned int\000"
+ 686      676E6564 
+ 686      20696E74 
+ 686      00
+ 687              	.LASF7:
+ 688 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 688      206C6F6E 
+ 688      6720756E 
+ 688      7369676E 
+ 688      65642069 
+ 689              	.LASF10:
+ 690 011d 75696E74 		.ascii	"uint8_t\000"
+ 690      385F7400 
+ 691              	.LASF15:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccaNJTZk.s 			page 14
+
+
+ 692 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 692      6574615F 
+ 692      666C6173 
+ 692      6870726F 
+ 692      74656374 
+ 693              	.LASF14:
+ 694 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 694      6574615F 
+ 694      776F6E76 
+ 694      6C00
+ 695              	.LASF19:
+ 696 0148 433A5C55 		.ascii	"C:\\Users\\atill\\OneDrive\\Documenten\\PSoC Creato"
+ 696      73657273 
+ 696      5C617469 
+ 696      6C6C5C4F 
+ 696      6E654472 
+ 697 0176 725C486F 		.ascii	"r\\Homework\\F.cydsn\000"
+ 697      6D65776F 
+ 697      726B5C46 
+ 697      2E637964 
+ 697      736E00
+ 698              	.LASF11:
+ 699 0189 73697A65 		.ascii	"sizetype\000"
+ 699      74797065 
+ 699      00
+ 700              	.LASF6:
+ 701 0192 6C6F6E67 		.ascii	"long long int\000"
+ 701      206C6F6E 
+ 701      6720696E 
+ 701      7400
+ 702              	.LASF2:
+ 703 01a0 73686F72 		.ascii	"short int\000"
+ 703      7420696E 
+ 703      7400
+ 704              	.LASF4:
+ 705 01aa 6C6F6E67 		.ascii	"long int\000"
+ 705      20696E74 
+ 705      00
+ 706              	.LASF0:
+ 707 01b3 7369676E 		.ascii	"signed char\000"
+ 707      65642063 
+ 707      68617200 
+ 708              	.LASF18:
+ 709 01bf 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 709      72617465 
+ 709      645F536F 
+ 709      75726365 
+ 709      5C50536F 
+ 710              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

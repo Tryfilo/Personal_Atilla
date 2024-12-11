@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> WebSocket with PHP and Open Swoole </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="websocket.js"></script>
+</head>
+
+<body>
+    <h1 class="web-header"> Kobuki Projects | By Team 6 </h1>
+    <div class="container">
+        <div class="child1">
+            <div class="manual-control">
+                <h2>Manual Control</h2>
+                <div class="gamepad-controls">
+                    <div id="empty-div-top-left" class="control-button"></div>
+                    <!-- Forward Button -->
+                    <button onclick='message("Forward"), printLog("Forward")' class="control-button" id="forward-button">
+                        ▲
+                    </button>
+                    <div id="empty-div-top-right" class="control-button"></div>
+                    <!-- Left Button -->
+                    <button onclick='message("Left"), printLog("Left")' class="control-button" id="left-button">
+                        ◀
+                    </button>
+                    <!-- Break Button -->
+                    <button onclick='message("Break"), printLog("Break")' class="control-button" id="break-button">
+                        Break
+                    </button>
+                    <!-- Right Button -->
+                    <button onclick='message("Right"), printLog("Right")' class="control-button" id="right-button">
+                        ▶
+                    </button>
+                    <div id="empty-div-bottom-left" class="control-button"></div>
+                    <!-- Back Button -->
+                    <button onclick='message("Back"), printLog("Back")' class="control-button" id="back-button">
+                        ▼
+                    </button>
+                    <div id="empty-div-bottom-right" class="control-button"></div>
+                </div>
+                <div class="control-choice-button">
+                    <button id="manual-control-button" class="control-button">
+                        Manual Control
+                    </button>
+                    <div id="empty-div-center"></div>
+                    <button id="auto-drive-button" class="control-button">
+                        Auto Drive
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="child2">
+            <div id="lidar-display-div" class="lidar-display">
+                <p id="lidar-plot">Placeholder for the lidar plot</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="child1">
+            <div class="sensor-data-display">
+                <h2>Sensor Data</h2>
+                <div id="sensor-data-div" class="sensor-data-table">
+                    <table id="sensor-data-table">
+                        <thead id="sensor-data-head">
+                            <tr>
+                                <th>Sensor</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sensor-data-body">
+                            <tr>
+                                <td class="sensor-data-type">Battery </td>
+                                <td id="battery-percentage" class="sensor-data-value">Battery Percentage</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">BumperLeft </td>
+                                <td id="bumper-left-value" class="sensor-data-value">BumperLeft Value</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">BumperCenter </td>
+                                <td id="bumper-center-value" class="sensor-data-value">BumperCenter Value</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">BumperRight </td>
+                                <td id="bumper-right-value" class="sensor-data-value">BumperRight Value</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">CliffLeft </td>
+                                <td id="cliff-left-value" class="sensor-data-value">CliffLeft Value</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">CliffCenter </td>
+                                <td id="cliff-center-value" class="sensor-data-value">CliffCenter Value</td>
+                            </tr>
+                            <tr>
+                                <td class="sensor-data-type">CliffRight </td>
+                                <td id="cliff-right-value" class="sensor-data-value">CliffRight Value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="child2">
+            <div id="snapshot-display-div" class="snapshot-display">
+                <p id="snapshot-picture">Placeholder for the snapshot picture</p>
+            </div>
+        </div>
+    </div>
+    <div class="kobuki-logging">
+        <h2>Kobuki Command Logs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="event-logging-table-header">Command</th>
+                    <th class="event-logging-table-header">Datetime</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="event-logging-command" class="event-logging-table"></td>
+                    <td id="event-logging-datetime" class="event-logging-table"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick='printLog("Clear")' >Clear Logs</button>
+    </div>
+    <div id="about-info-div" class="about-info">
+        <p class="people">Nailah van der Jagt, Dano van den Bosch, Atilla Ören, Jelle Braak and Skip Dekker</p>
+        <p class="idea">We are making a tool for security guards to help with patrolling indoor areas.</p>
+    </div>
+</body>
+</html>

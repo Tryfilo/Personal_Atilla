@@ -1,0 +1,3151 @@
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include <string.h>
+  14:main.c        **** #include <stdlib.h>
+  15:main.c        **** #include <stdio.h>
+  16:main.c        **** 
+  17:main.c        **** int main(void)
+  18:main.c        **** {
+  28              		.loc 1 18 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 128
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 20
+  34              		.cfi_offset 4, -20
+  35              		.cfi_offset 5, -16
+  36              		.cfi_offset 6, -12
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 A1B0     		sub	sp, sp, #132
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 2
+
+
+  40              		.cfi_def_cfa_offset 152
+  19:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  41              		.loc 1 19 0
+  42              		.syntax unified
+  43              	@ 19 "main.c" 1
+  44 0004 62B6     		CPSIE   i
+  45              	@ 0 "" 2
+  20:main.c        ****     int pong1[6] = {1, 2, 4, 8, 16, 0} ;
+  46              		.loc 1 20 0
+  47              		.thumb
+  48              		.syntax unified
+  49 0006 BF4E     		ldr	r6, .L60
+  50 0008 1AAC     		add	r4, sp, #104
+  51 000a 3546     		mov	r5, r6
+  52 000c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  53 000e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  54 0010 95E80300 		ldmia	r5, {r0, r1}
+  55 0014 84E80300 		stmia	r4, {r0, r1}
+  21:main.c        ****     int pong2[7] = {16, 8, 4, 2, 1, 0, 0} ;
+  56              		.loc 1 21 0
+  57 0018 13AC     		add	r4, sp, #76
+  58 001a 06F11805 		add	r5, r6, #24
+  59 001e 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  60 0020 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  61 0022 95E80700 		ldmia	r5, {r0, r1, r2}
+  62 0026 84E80700 		stmia	r4, {r0, r1, r2}
+  22:main.c        ****     int Delay[12] = {600, 600, 500, 500, 400, 400, 300, 300, 200, 200, 100, 100} ;
+  63              		.loc 1 22 0
+  64 002a 07AC     		add	r4, sp, #28
+  65 002c 06F13405 		add	r5, r6, #52
+  66 0030 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  67 0032 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  68 0034 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  69 0036 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  70 0038 95E80F00 		ldmia	r5, {r0, r1, r2, r3}
+  71 003c 84E80F00 		stmia	r4, {r0, r1, r2, r3}
+  23:main.c        ****     int lives_display[6] = {0, 1, 3, 7, 15, 31} ;
+  72              		.loc 1 23 0
+  73 0040 01AD     		add	r5, sp, #4
+  74 0042 06F16404 		add	r4, r6, #100
+  75 0046 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+  76 0048 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+  77 004a 94E80300 		ldmia	r4, {r0, r1}
+  78 004e 85E80300 		stmia	r5, {r0, r1}
+  79              	.LVL0:
+  24:main.c        ****     int livesA = 5 ;
+  25:main.c        ****     int livesB = 5 ;
+  26:main.c        ****     int i ;
+  27:main.c        ****     int Delaycount = 0 ;
+  28:main.c        ****     UART_1_Start() ;
+  80              		.loc 1 28 0
+  81 0052 FFF7FEFF 		bl	UART_1_Start
+  82              	.LVL1:
+  27:main.c        ****     UART_1_Start() ;
+  83              		.loc 1 27 0
+  84 0056 0025     		movs	r5, #0
+  25:main.c        ****     int i ;
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 3
+
+
+  85              		.loc 1 25 0
+  86 0058 0526     		movs	r6, #5
+  24:main.c        ****     int livesA = 5 ;
+  87              		.loc 1 24 0
+  88 005a 3746     		mov	r7, r6
+  89              	.LVL2:
+  90              	.L3:
+  29:main.c        ****     for (;;) {
+  30:main.c        ****         
+  31:main.c        ****         UART_1_PutString("Press the left button to start\n\r") ;
+  91              		.loc 1 31 0
+  92 005c AA48     		ldr	r0, .L60+4
+  93 005e FFF7FEFF 		bl	UART_1_PutString
+  94              	.LVL3:
+  32:main.c        ****         if (Pin_3_Read() == 1) {
+  95              		.loc 1 32 0
+  96 0062 FFF7FEFF 		bl	Pin_3_Read
+  97              	.LVL4:
+  98 0066 0128     		cmp	r0, #1
+  99 0068 F8D1     		bne	.L3
+ 100              	.L57:
+ 101              	.LVL5:
+  33:main.c        ****     for (;;) {
+  34:main.c        ****        
+  35:main.c        ****         for (i = 0; i <= 4; i++) {
+ 102              		.loc 1 35 0
+ 103 006a 0024     		movs	r4, #0
+ 104 006c 0EE0     		b	.L4
+ 105              	.LVL6:
+ 106              	.L5:
+  36:main.c        ****             Pin_1_Write(pong1[i]) ;
+ 107              		.loc 1 36 0 discriminator 3
+ 108 006e 20AB     		add	r3, sp, #128
+ 109 0070 03EB8403 		add	r3, r3, r4, lsl #2
+ 110 0074 13F8180C 		ldrb	r0, [r3, #-24]	@ zero_extendqisi2
+ 111 0078 FFF7FEFF 		bl	Pin_1_Write
+ 112              	.LVL7:
+  37:main.c        ****             CyDelay(Delay[Delaycount]) ;
+ 113              		.loc 1 37 0 discriminator 3
+ 114 007c 20AB     		add	r3, sp, #128
+ 115 007e 03EB8503 		add	r3, r3, r5, lsl #2
+ 116 0082 53F8640C 		ldr	r0, [r3, #-100]
+ 117 0086 FFF7FEFF 		bl	CyDelay
+ 118              	.LVL8:
+  35:main.c        ****             Pin_1_Write(pong1[i]) ;
+ 119              		.loc 1 35 0 discriminator 3
+ 120 008a 0134     		adds	r4, r4, #1
+ 121              	.LVL9:
+ 122              	.L4:
+  35:main.c        ****             Pin_1_Write(pong1[i]) ;
+ 123              		.loc 1 35 0 is_stmt 0 discriminator 1
+ 124 008c 042C     		cmp	r4, #4
+ 125 008e EEDD     		ble	.L5
+  38:main.c        ****         }
+  39:main.c        ****         Pin_1_Write(0) ;
+ 126              		.loc 1 39 0 is_stmt 1
+ 127 0090 0020     		movs	r0, #0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 4
+
+
+ 128 0092 FFF7FEFF 		bl	Pin_1_Write
+ 129              	.LVL10:
+  40:main.c        ****         for (i = 0; i <=5; i++) {
+ 130              		.loc 1 40 0
+ 131 0096 0024     		movs	r4, #0
+ 132 0098 C2E0     		b	.L6
+ 133              	.LVL11:
+ 134              	.L29:
+  41:main.c        ****             Pin_2_Write(pong2[i]) ;
+ 135              		.loc 1 41 0
+ 136 009a 20AB     		add	r3, sp, #128
+ 137 009c 03EB8403 		add	r3, r3, r4, lsl #2
+ 138 00a0 13F8340C 		ldrb	r0, [r3, #-52]	@ zero_extendqisi2
+ 139 00a4 FFF7FEFF 		bl	Pin_2_Write
+ 140              	.LVL12:
+  42:main.c        ****             CyDelay(Delay[Delaycount]) ;
+ 141              		.loc 1 42 0
+ 142 00a8 20AB     		add	r3, sp, #128
+ 143 00aa 03EB8503 		add	r3, r3, r5, lsl #2
+ 144 00ae 53F8640C 		ldr	r0, [r3, #-100]
+ 145 00b2 FFF7FEFF 		bl	CyDelay
+ 146              	.LVL13:
+  43:main.c        ****             if (Pin_4_Read() == 1) {
+ 147              		.loc 1 43 0
+ 148 00b6 FFF7FEFF 		bl	Pin_4_Read
+ 149              	.LVL14:
+ 150 00ba 0128     		cmp	r0, #1
+ 151 00bc 59D1     		bne	.L7
+  44:main.c        ****                 if (i == 3 || i == 4) {
+ 152              		.loc 1 44 0
+ 153 00be 033C     		subs	r4, r4, #3
+ 154              	.LVL15:
+ 155 00c0 012C     		cmp	r4, #1
+ 156 00c2 01D8     		bhi	.L8
+  45:main.c        ****                     Delaycount ++ ;
+ 157              		.loc 1 45 0
+ 158 00c4 0135     		adds	r5, r5, #1
+ 159              	.LVL16:
+  46:main.c        ****                     i = 5 ;
+  47:main.c        ****                     break ;   
+ 160              		.loc 1 47 0
+ 161 00c6 AEE0     		b	.L9
+ 162              	.LVL17:
+ 163              	.L8:
+  48:main.c        ****                 } else {
+  49:main.c        ****                     livesB -- ;
+ 164              		.loc 1 49 0
+ 165 00c8 013E     		subs	r6, r6, #1
+ 166              	.LVL18:
+  50:main.c        ****                     i = 6 ;
+  51:main.c        ****                     Delaycount = 0 ;
+  52:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 167              		.loc 1 52 0
+ 168 00ca 20AB     		add	r3, sp, #128
+ 169 00cc 03EB8703 		add	r3, r3, r7, lsl #2
+ 170 00d0 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 171 00d4 FFF7FEFF 		bl	Pin_1_Write
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 5
+
+
+ 172              	.LVL19:
+  53:main.c        ****                     Pin_2_Write(lives_display[livesB]) ;
+ 173              		.loc 1 53 0
+ 174 00d8 20AB     		add	r3, sp, #128
+ 175 00da 03EB8603 		add	r3, r3, r6, lsl #2
+ 176 00de 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 177 00e2 FFF7FEFF 		bl	Pin_2_Write
+ 178              	.LVL20:
+  54:main.c        ****                     CyDelay(400) ;
+ 179              		.loc 1 54 0
+ 180 00e6 4FF4C870 		mov	r0, #400
+ 181 00ea FFF7FEFF 		bl	CyDelay
+ 182              	.LVL21:
+  55:main.c        ****                     Pin_1_Write(0) ;
+ 183              		.loc 1 55 0
+ 184 00ee 0020     		movs	r0, #0
+ 185 00f0 FFF7FEFF 		bl	Pin_1_Write
+ 186              	.LVL22:
+  56:main.c        ****                     Pin_2_Write(0) ;
+ 187              		.loc 1 56 0
+ 188 00f4 0020     		movs	r0, #0
+ 189 00f6 FFF7FEFF 		bl	Pin_2_Write
+ 190              	.LVL23:
+  57:main.c        ****                     if (livesA == 5) {
+ 191              		.loc 1 57 0
+ 192 00fa 052F     		cmp	r7, #5
+ 193 00fc 03D1     		bne	.L10
+  58:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 5 lives") ;
+ 194              		.loc 1 58 0
+ 195 00fe 8348     		ldr	r0, .L60+8
+ 196 0100 FFF7FEFF 		bl	UART_1_PutString
+ 197              	.LVL24:
+ 198 0104 14E0     		b	.L11
+ 199              	.L10:
+  59:main.c        ****                     } else if (livesA == 4) {
+ 200              		.loc 1 59 0
+ 201 0106 042F     		cmp	r7, #4
+ 202 0108 03D1     		bne	.L12
+  60:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 4 lives") ;
+ 203              		.loc 1 60 0
+ 204 010a 8148     		ldr	r0, .L60+12
+ 205 010c FFF7FEFF 		bl	UART_1_PutString
+ 206              	.LVL25:
+ 207 0110 0EE0     		b	.L11
+ 208              	.L12:
+  61:main.c        ****                     } else if (livesA == 3) {
+ 209              		.loc 1 61 0
+ 210 0112 032F     		cmp	r7, #3
+ 211 0114 03D1     		bne	.L13
+  62:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 3 lives") ;
+ 212              		.loc 1 62 0
+ 213 0116 7F48     		ldr	r0, .L60+16
+ 214 0118 FFF7FEFF 		bl	UART_1_PutString
+ 215              	.LVL26:
+ 216 011c 08E0     		b	.L11
+ 217              	.L13:
+  63:main.c        ****                     } else if (livesA == 2) {
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 6
+
+
+ 218              		.loc 1 63 0
+ 219 011e 022F     		cmp	r7, #2
+ 220 0120 03D1     		bne	.L14
+  64:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 2 lives") ;
+ 221              		.loc 1 64 0
+ 222 0122 7D48     		ldr	r0, .L60+20
+ 223 0124 FFF7FEFF 		bl	UART_1_PutString
+ 224              	.LVL27:
+ 225 0128 02E0     		b	.L11
+ 226              	.L14:
+  65:main.c        ****                     } else {
+  66:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 1 lives") ;
+ 227              		.loc 1 66 0
+ 228 012a 7C48     		ldr	r0, .L60+24
+ 229 012c FFF7FEFF 		bl	UART_1_PutString
+ 230              	.LVL28:
+ 231              	.L11:
+  67:main.c        ****                     }
+  68:main.c        ****                     if (livesB == 5) {
+ 232              		.loc 1 68 0
+ 233 0130 052E     		cmp	r6, #5
+ 234 0132 04D1     		bne	.L15
+  69:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 5 lives") ;
+ 235              		.loc 1 69 0
+ 236 0134 7A48     		ldr	r0, .L60+28
+ 237 0136 FFF7FEFF 		bl	UART_1_PutString
+ 238              	.LVL29:
+  51:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 239              		.loc 1 51 0
+ 240 013a 0025     		movs	r5, #0
+ 241 013c 73E0     		b	.L9
+ 242              	.L15:
+  70:main.c        ****                     } else if (livesB == 4) {
+ 243              		.loc 1 70 0
+ 244 013e 042E     		cmp	r6, #4
+ 245 0140 04D1     		bne	.L16
+  71:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 4 lives") ;
+ 246              		.loc 1 71 0
+ 247 0142 7848     		ldr	r0, .L60+32
+ 248 0144 FFF7FEFF 		bl	UART_1_PutString
+ 249              	.LVL30:
+  51:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 250              		.loc 1 51 0
+ 251 0148 0025     		movs	r5, #0
+ 252 014a 6CE0     		b	.L9
+ 253              	.L16:
+  72:main.c        ****                     } else if (livesB == 3) {
+ 254              		.loc 1 72 0
+ 255 014c 032E     		cmp	r6, #3
+ 256 014e 04D1     		bne	.L17
+  73:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 3 lives") ;
+ 257              		.loc 1 73 0
+ 258 0150 7548     		ldr	r0, .L60+36
+ 259 0152 FFF7FEFF 		bl	UART_1_PutString
+ 260              	.LVL31:
+  51:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 261              		.loc 1 51 0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 7
+
+
+ 262 0156 0025     		movs	r5, #0
+ 263 0158 65E0     		b	.L9
+ 264              	.L17:
+  74:main.c        ****                     } else if (livesB == 2) {
+ 265              		.loc 1 74 0
+ 266 015a 022E     		cmp	r6, #2
+ 267 015c 04D1     		bne	.L18
+  75:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 2 lives") ;
+ 268              		.loc 1 75 0
+ 269 015e 7348     		ldr	r0, .L60+40
+ 270 0160 FFF7FEFF 		bl	UART_1_PutString
+ 271              	.LVL32:
+  51:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 272              		.loc 1 51 0
+ 273 0164 0025     		movs	r5, #0
+ 274 0166 5EE0     		b	.L9
+ 275              	.L18:
+  76:main.c        ****                     } else {
+  77:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 1 lives") ;
+ 276              		.loc 1 77 0
+ 277 0168 7148     		ldr	r0, .L60+44
+ 278 016a FFF7FEFF 		bl	UART_1_PutString
+ 279              	.LVL33:
+  51:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 280              		.loc 1 51 0
+ 281 016e 0025     		movs	r5, #0
+ 282 0170 59E0     		b	.L9
+ 283              	.LVL34:
+ 284              	.L7:
+  78:main.c        ****                     }
+  79:main.c        ****                     break ;
+  80:main.c        ****                 }
+  81:main.c        ****             } else if (i == 5) {
+ 285              		.loc 1 81 0
+ 286 0172 052C     		cmp	r4, #5
+ 287 0174 53D1     		bne	.L19
+  82:main.c        ****                 livesB -- ;
+ 288              		.loc 1 82 0
+ 289 0176 013E     		subs	r6, r6, #1
+ 290              	.LVL35:
+  83:main.c        ****                 Delaycount = 0 ;
+  84:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 291              		.loc 1 84 0
+ 292 0178 20AB     		add	r3, sp, #128
+ 293 017a 03EB8703 		add	r3, r3, r7, lsl #2
+ 294 017e 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 295 0182 FFF7FEFF 		bl	Pin_1_Write
+ 296              	.LVL36:
+  85:main.c        ****                 Pin_2_Write(lives_display[livesB]) ;
+ 297              		.loc 1 85 0
+ 298 0186 20AB     		add	r3, sp, #128
+ 299 0188 03EB8603 		add	r3, r3, r6, lsl #2
+ 300 018c 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 301 0190 FFF7FEFF 		bl	Pin_2_Write
+ 302              	.LVL37:
+  86:main.c        ****                 CyDelay(400) ;
+ 303              		.loc 1 86 0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 8
+
+
+ 304 0194 4FF4C870 		mov	r0, #400
+ 305 0198 FFF7FEFF 		bl	CyDelay
+ 306              	.LVL38:
+  87:main.c        ****                 Pin_1_Write(0) ;
+ 307              		.loc 1 87 0
+ 308 019c 0020     		movs	r0, #0
+ 309 019e FFF7FEFF 		bl	Pin_1_Write
+ 310              	.LVL39:
+  88:main.c        ****                 Pin_2_Write(0) ;
+ 311              		.loc 1 88 0
+ 312 01a2 0020     		movs	r0, #0
+ 313 01a4 FFF7FEFF 		bl	Pin_2_Write
+ 314              	.LVL40:
+  89:main.c        ****                 if (livesA == 5) {
+ 315              		.loc 1 89 0
+ 316 01a8 052F     		cmp	r7, #5
+ 317 01aa 03D1     		bne	.L20
+  90:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 5 lives") ;
+ 318              		.loc 1 90 0
+ 319 01ac 5748     		ldr	r0, .L60+8
+ 320 01ae FFF7FEFF 		bl	UART_1_PutString
+ 321              	.LVL41:
+ 322 01b2 14E0     		b	.L21
+ 323              	.L20:
+  91:main.c        ****                     } else if (livesA == 4) {
+ 324              		.loc 1 91 0
+ 325 01b4 042F     		cmp	r7, #4
+ 326 01b6 03D1     		bne	.L22
+  92:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 4 lives") ;
+ 327              		.loc 1 92 0
+ 328 01b8 5548     		ldr	r0, .L60+12
+ 329 01ba FFF7FEFF 		bl	UART_1_PutString
+ 330              	.LVL42:
+ 331 01be 0EE0     		b	.L21
+ 332              	.L22:
+  93:main.c        ****                     } else if (livesA == 3) {
+ 333              		.loc 1 93 0
+ 334 01c0 032F     		cmp	r7, #3
+ 335 01c2 03D1     		bne	.L23
+  94:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 3 lives") ;
+ 336              		.loc 1 94 0
+ 337 01c4 5348     		ldr	r0, .L60+16
+ 338 01c6 FFF7FEFF 		bl	UART_1_PutString
+ 339              	.LVL43:
+ 340 01ca 08E0     		b	.L21
+ 341              	.L23:
+  95:main.c        ****                     } else if (livesA == 2) {
+ 342              		.loc 1 95 0
+ 343 01cc 022F     		cmp	r7, #2
+ 344 01ce 03D1     		bne	.L24
+  96:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 2 lives") ;
+ 345              		.loc 1 96 0
+ 346 01d0 5148     		ldr	r0, .L60+20
+ 347 01d2 FFF7FEFF 		bl	UART_1_PutString
+ 348              	.LVL44:
+ 349 01d6 02E0     		b	.L21
+ 350              	.L24:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 9
+
+
+  97:main.c        ****                     } else {
+  98:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 1 lives") ;
+ 351              		.loc 1 98 0
+ 352 01d8 5048     		ldr	r0, .L60+24
+ 353 01da FFF7FEFF 		bl	UART_1_PutString
+ 354              	.LVL45:
+ 355              	.L21:
+  99:main.c        ****                     }
+ 100:main.c        ****                     if (livesB == 5) {
+ 356              		.loc 1 100 0
+ 357 01de 052E     		cmp	r6, #5
+ 358 01e0 04D1     		bne	.L25
+ 101:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 5 lives") ;
+ 359              		.loc 1 101 0
+ 360 01e2 4F48     		ldr	r0, .L60+28
+ 361 01e4 FFF7FEFF 		bl	UART_1_PutString
+ 362              	.LVL46:
+  83:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 363              		.loc 1 83 0
+ 364 01e8 0025     		movs	r5, #0
+ 365 01ea 18E0     		b	.L19
+ 366              	.L25:
+ 102:main.c        ****                     } else if (livesB == 4) {
+ 367              		.loc 1 102 0
+ 368 01ec 042E     		cmp	r6, #4
+ 369 01ee 04D1     		bne	.L26
+ 103:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 4 lives") ;
+ 370              		.loc 1 103 0
+ 371 01f0 4C48     		ldr	r0, .L60+32
+ 372 01f2 FFF7FEFF 		bl	UART_1_PutString
+ 373              	.LVL47:
+  83:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 374              		.loc 1 83 0
+ 375 01f6 0025     		movs	r5, #0
+ 376 01f8 11E0     		b	.L19
+ 377              	.L26:
+ 104:main.c        ****                     } else if (livesB == 3) {
+ 378              		.loc 1 104 0
+ 379 01fa 032E     		cmp	r6, #3
+ 380 01fc 04D1     		bne	.L27
+ 105:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 3 lives") ;
+ 381              		.loc 1 105 0
+ 382 01fe 4A48     		ldr	r0, .L60+36
+ 383 0200 FFF7FEFF 		bl	UART_1_PutString
+ 384              	.LVL48:
+  83:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 385              		.loc 1 83 0
+ 386 0204 0025     		movs	r5, #0
+ 387 0206 0AE0     		b	.L19
+ 388              	.L27:
+ 106:main.c        ****                     } else if (livesB == 2) {
+ 389              		.loc 1 106 0
+ 390 0208 022E     		cmp	r6, #2
+ 391 020a 04D1     		bne	.L28
+ 107:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 2 lives") ;
+ 392              		.loc 1 107 0
+ 393 020c 4748     		ldr	r0, .L60+40
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 10
+
+
+ 394 020e FFF7FEFF 		bl	UART_1_PutString
+ 395              	.LVL49:
+  83:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 396              		.loc 1 83 0
+ 397 0212 0025     		movs	r5, #0
+ 398 0214 03E0     		b	.L19
+ 399              	.L28:
+ 108:main.c        ****                     } else {
+ 109:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 1 lives") ;
+ 400              		.loc 1 109 0
+ 401 0216 4648     		ldr	r0, .L60+44
+ 402 0218 FFF7FEFF 		bl	UART_1_PutString
+ 403              	.LVL50:
+  83:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 404              		.loc 1 83 0
+ 405 021c 0025     		movs	r5, #0
+ 406              	.LVL51:
+ 407              	.L19:
+  40:main.c        ****             Pin_2_Write(pong2[i]) ;
+ 408              		.loc 1 40 0 discriminator 2
+ 409 021e 0134     		adds	r4, r4, #1
+ 410              	.LVL52:
+ 411              	.L6:
+  40:main.c        ****             Pin_2_Write(pong2[i]) ;
+ 412              		.loc 1 40 0 is_stmt 0 discriminator 1
+ 413 0220 052C     		cmp	r4, #5
+ 414 0222 7FF73AAF 		ble	.L29
+ 415              	.LVL53:
+ 416              	.L9:
+ 110:main.c        ****                     }
+ 111:main.c        ****             }
+ 112:main.c        ****         }
+ 113:main.c        ****         if (livesB == 0) {
+ 417              		.loc 1 113 0 is_stmt 1
+ 418 0226 EEB9     		cbnz	r6, .L58
+ 114:main.c        ****             UART_1_PutString("\n\rPlayer 1 won!") ;
+ 419              		.loc 1 114 0
+ 420 0228 4248     		ldr	r0, .L60+48
+ 421 022a FFF7FEFF 		bl	UART_1_PutString
+ 422              	.LVL54:
+ 115:main.c        ****             Pin_1_Write(0) ;
+ 423              		.loc 1 115 0
+ 424 022e 0020     		movs	r0, #0
+ 425 0230 FFF7FEFF 		bl	Pin_1_Write
+ 426              	.LVL55:
+ 116:main.c        ****             Pin_2_Write(0) ;
+ 427              		.loc 1 116 0
+ 428 0234 0020     		movs	r0, #0
+ 429 0236 FFF7FEFF 		bl	Pin_2_Write
+ 430              	.LVL56:
+ 117:main.c        ****             CyDelay(5000) ;
+ 431              		.loc 1 117 0
+ 432 023a 41F28830 		movw	r0, #5000
+ 433 023e FFF7FEFF 		bl	CyDelay
+ 434              	.LVL57:
+ 118:main.c        ****             break ;
+ 435              		.loc 1 118 0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 11
+
+
+ 436 0242 0BE7     		b	.L3
+ 437              	.LVL58:
+ 438              	.L32:
+ 119:main.c        ****            
+ 120:main.c        ****         }
+ 121:main.c        ****           
+ 122:main.c        ****         for (i = 0; i <= 4; i++) {
+ 123:main.c        ****             Pin_2_Write(pong1[i]) ;
+ 439              		.loc 1 123 0 discriminator 3
+ 440 0244 20AB     		add	r3, sp, #128
+ 441 0246 03EB8403 		add	r3, r3, r4, lsl #2
+ 442 024a 13F8180C 		ldrb	r0, [r3, #-24]	@ zero_extendqisi2
+ 443 024e FFF7FEFF 		bl	Pin_2_Write
+ 444              	.LVL59:
+ 124:main.c        ****             CyDelay(Delay[Delaycount]) ;
+ 445              		.loc 1 124 0 discriminator 3
+ 446 0252 20AB     		add	r3, sp, #128
+ 447 0254 03EB8503 		add	r3, r3, r5, lsl #2
+ 448 0258 53F8640C 		ldr	r0, [r3, #-100]
+ 449 025c FFF7FEFF 		bl	CyDelay
+ 450              	.LVL60:
+ 122:main.c        ****             Pin_2_Write(pong1[i]) ;
+ 451              		.loc 1 122 0 discriminator 3
+ 452 0260 0134     		adds	r4, r4, #1
+ 453              	.LVL61:
+ 454 0262 00E0     		b	.L30
+ 455              	.LVL62:
+ 456              	.L58:
+ 457 0264 0024     		movs	r4, #0
+ 458              	.L30:
+ 459              	.LVL63:
+ 122:main.c        ****             Pin_2_Write(pong1[i]) ;
+ 460              		.loc 1 122 0 is_stmt 0 discriminator 1
+ 461 0266 042C     		cmp	r4, #4
+ 462 0268 ECDD     		ble	.L32
+ 125:main.c        ****         }
+ 126:main.c        ****         Pin_2_Write(0) ;
+ 463              		.loc 1 126 0 is_stmt 1
+ 464 026a 0020     		movs	r0, #0
+ 465 026c FFF7FEFF 		bl	Pin_2_Write
+ 466              	.LVL64:
+ 127:main.c        ****         for (i = 0; i <=5; i++) {
+ 467              		.loc 1 127 0
+ 468 0270 0024     		movs	r4, #0
+ 469 0272 DCE0     		b	.L33
+ 470              	.LVL65:
+ 471              	.L56:
+ 128:main.c        ****             Pin_1_Write(pong2[i]) ;
+ 472              		.loc 1 128 0
+ 473 0274 20AB     		add	r3, sp, #128
+ 474 0276 03EB8403 		add	r3, r3, r4, lsl #2
+ 475 027a 13F8340C 		ldrb	r0, [r3, #-52]	@ zero_extendqisi2
+ 476 027e FFF7FEFF 		bl	Pin_1_Write
+ 477              	.LVL66:
+ 129:main.c        ****             CyDelay(Delay[Delaycount]) ;
+ 478              		.loc 1 129 0
+ 479 0282 20AB     		add	r3, sp, #128
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 12
+
+
+ 480 0284 03EB8503 		add	r3, r3, r5, lsl #2
+ 481 0288 53F8640C 		ldr	r0, [r3, #-100]
+ 482 028c FFF7FEFF 		bl	CyDelay
+ 483              	.LVL67:
+ 130:main.c        ****             if (Pin_3_Read() == 1) {
+ 484              		.loc 1 130 0
+ 485 0290 FFF7FEFF 		bl	Pin_3_Read
+ 486              	.LVL68:
+ 487 0294 0128     		cmp	r0, #1
+ 488 0296 73D1     		bne	.L34
+ 131:main.c        ****                 if (i == 3 || i == 4) {
+ 489              		.loc 1 131 0
+ 490 0298 033C     		subs	r4, r4, #3
+ 491              	.LVL69:
+ 492 029a 012C     		cmp	r4, #1
+ 493 029c 01D8     		bhi	.L35
+ 132:main.c        ****                     Delaycount ++ ;
+ 494              		.loc 1 132 0
+ 495 029e 0135     		adds	r5, r5, #1
+ 496              	.LVL70:
+ 133:main.c        ****                     i = 6;
+ 134:main.c        ****                     break ;   
+ 497              		.loc 1 134 0
+ 498 02a0 C8E0     		b	.L36
+ 499              	.LVL71:
+ 500              	.L35:
+ 135:main.c        ****                 } else {
+ 136:main.c        ****                     livesA -- ;
+ 501              		.loc 1 136 0
+ 502 02a2 013F     		subs	r7, r7, #1
+ 503              	.LVL72:
+ 137:main.c        ****                     Delaycount = 0 ;
+ 138:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 504              		.loc 1 138 0
+ 505 02a4 20AB     		add	r3, sp, #128
+ 506 02a6 03EB8703 		add	r3, r3, r7, lsl #2
+ 507 02aa 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 508 02ae FFF7FEFF 		bl	Pin_1_Write
+ 509              	.LVL73:
+ 139:main.c        ****                     Pin_2_Write(lives_display[livesB]) ;
+ 510              		.loc 1 139 0
+ 511 02b2 20AB     		add	r3, sp, #128
+ 512 02b4 03EB8603 		add	r3, r3, r6, lsl #2
+ 513 02b8 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 514 02bc FFF7FEFF 		bl	Pin_2_Write
+ 515              	.LVL74:
+ 140:main.c        ****                     CyDelay(400) ;
+ 516              		.loc 1 140 0
+ 517 02c0 4FF4C870 		mov	r0, #400
+ 518 02c4 FFF7FEFF 		bl	CyDelay
+ 519              	.LVL75:
+ 141:main.c        ****                     Pin_1_Write(0) ;
+ 520              		.loc 1 141 0
+ 521 02c8 0020     		movs	r0, #0
+ 522 02ca FFF7FEFF 		bl	Pin_1_Write
+ 523              	.LVL76:
+ 142:main.c        ****                     Pin_2_Write(0) ;
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 13
+
+
+ 524              		.loc 1 142 0
+ 525 02ce 0020     		movs	r0, #0
+ 526 02d0 FFF7FEFF 		bl	Pin_2_Write
+ 527              	.LVL77:
+ 143:main.c        ****                     if (livesA == 5) {
+ 528              		.loc 1 143 0
+ 529 02d4 052F     		cmp	r7, #5
+ 530 02d6 03D1     		bne	.L37
+ 144:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 5 lives") ;
+ 531              		.loc 1 144 0
+ 532 02d8 0C48     		ldr	r0, .L60+8
+ 533 02da FFF7FEFF 		bl	UART_1_PutString
+ 534              	.LVL78:
+ 535 02de 2EE0     		b	.L38
+ 536              	.L37:
+ 145:main.c        ****                     } else if (livesA == 4) {
+ 537              		.loc 1 145 0
+ 538 02e0 042F     		cmp	r7, #4
+ 539 02e2 03D1     		bne	.L39
+ 146:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 4 lives") ;
+ 540              		.loc 1 146 0
+ 541 02e4 0A48     		ldr	r0, .L60+12
+ 542 02e6 FFF7FEFF 		bl	UART_1_PutString
+ 543              	.LVL79:
+ 544 02ea 28E0     		b	.L38
+ 545              	.L39:
+ 147:main.c        ****                     } else if (livesA == 3) {
+ 546              		.loc 1 147 0
+ 547 02ec 032F     		cmp	r7, #3
+ 548 02ee 03D1     		bne	.L40
+ 148:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 3 lives") ;
+ 549              		.loc 1 148 0
+ 550 02f0 0848     		ldr	r0, .L60+16
+ 551 02f2 FFF7FEFF 		bl	UART_1_PutString
+ 552              	.LVL80:
+ 553 02f6 22E0     		b	.L38
+ 554              	.L40:
+ 149:main.c        ****                     } else if (livesA == 2) {
+ 555              		.loc 1 149 0
+ 556 02f8 022F     		cmp	r7, #2
+ 557 02fa 1DD1     		bne	.L41
+ 150:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 2 lives") ;
+ 558              		.loc 1 150 0
+ 559 02fc 0648     		ldr	r0, .L60+20
+ 560 02fe FFF7FEFF 		bl	UART_1_PutString
+ 561              	.LVL81:
+ 562 0302 1CE0     		b	.L38
+ 563              	.L61:
+ 564              		.align	2
+ 565              	.L60:
+ 566 0304 00000000 		.word	.LANCHOR0
+ 567 0308 00000000 		.word	.LC4
+ 568 030c 24000000 		.word	.LC5
+ 569 0310 3C000000 		.word	.LC6
+ 570 0314 54000000 		.word	.LC7
+ 571 0318 6C000000 		.word	.LC8
+ 572 031c 84000000 		.word	.LC9
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 14
+
+
+ 573 0320 9C000000 		.word	.LC10
+ 574 0324 B4000000 		.word	.LC11
+ 575 0328 CC000000 		.word	.LC12
+ 576 032c E4000000 		.word	.LC13
+ 577 0330 FC000000 		.word	.LC14
+ 578 0334 14010000 		.word	.LC15
+ 579              	.L41:
+ 151:main.c        ****                     } else {
+ 152:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 1 lives") ;
+ 580              		.loc 1 152 0
+ 581 0338 4748     		ldr	r0, .L62
+ 582 033a FFF7FEFF 		bl	UART_1_PutString
+ 583              	.LVL82:
+ 584              	.L38:
+ 153:main.c        ****                     }
+ 154:main.c        ****                     if (livesB == 5) {
+ 585              		.loc 1 154 0
+ 586 033e 052E     		cmp	r6, #5
+ 587 0340 04D1     		bne	.L42
+ 155:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 5 lives") ;
+ 588              		.loc 1 155 0
+ 589 0342 4648     		ldr	r0, .L62+4
+ 590 0344 FFF7FEFF 		bl	UART_1_PutString
+ 591              	.LVL83:
+ 137:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 592              		.loc 1 137 0
+ 593 0348 0025     		movs	r5, #0
+ 594 034a 73E0     		b	.L36
+ 595              	.L42:
+ 156:main.c        ****                     } else if (livesB == 4) {
+ 596              		.loc 1 156 0
+ 597 034c 042E     		cmp	r6, #4
+ 598 034e 04D1     		bne	.L43
+ 157:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 4 lives") ;
+ 599              		.loc 1 157 0
+ 600 0350 4348     		ldr	r0, .L62+8
+ 601 0352 FFF7FEFF 		bl	UART_1_PutString
+ 602              	.LVL84:
+ 137:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 603              		.loc 1 137 0
+ 604 0356 0025     		movs	r5, #0
+ 605 0358 6CE0     		b	.L36
+ 606              	.L43:
+ 158:main.c        ****                     } else if (livesB == 3) {
+ 607              		.loc 1 158 0
+ 608 035a 032E     		cmp	r6, #3
+ 609 035c 04D1     		bne	.L44
+ 159:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 3 lives") ;
+ 610              		.loc 1 159 0
+ 611 035e 4148     		ldr	r0, .L62+12
+ 612 0360 FFF7FEFF 		bl	UART_1_PutString
+ 613              	.LVL85:
+ 137:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 614              		.loc 1 137 0
+ 615 0364 0025     		movs	r5, #0
+ 616 0366 65E0     		b	.L36
+ 617              	.L44:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 15
+
+
+ 160:main.c        ****                     } else if (livesB == 2) {
+ 618              		.loc 1 160 0
+ 619 0368 022E     		cmp	r6, #2
+ 620 036a 04D1     		bne	.L45
+ 161:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 2 lives") ;
+ 621              		.loc 1 161 0
+ 622 036c 3E48     		ldr	r0, .L62+16
+ 623 036e FFF7FEFF 		bl	UART_1_PutString
+ 624              	.LVL86:
+ 137:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 625              		.loc 1 137 0
+ 626 0372 0025     		movs	r5, #0
+ 627 0374 5EE0     		b	.L36
+ 628              	.L45:
+ 162:main.c        ****                     } else {
+ 163:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 1 lives") ;
+ 629              		.loc 1 163 0
+ 630 0376 3D48     		ldr	r0, .L62+20
+ 631 0378 FFF7FEFF 		bl	UART_1_PutString
+ 632              	.LVL87:
+ 137:main.c        ****                     Pin_1_Write(lives_display[livesA]) ;
+ 633              		.loc 1 137 0
+ 634 037c 0025     		movs	r5, #0
+ 635 037e 59E0     		b	.L36
+ 636              	.LVL88:
+ 637              	.L34:
+ 164:main.c        ****                     }
+ 165:main.c        ****                     break ;
+ 166:main.c        ****                 }
+ 167:main.c        ****             } else if (i == 5) {
+ 638              		.loc 1 167 0
+ 639 0380 052C     		cmp	r4, #5
+ 640 0382 53D1     		bne	.L46
+ 168:main.c        ****                 livesA -- ;
+ 641              		.loc 1 168 0
+ 642 0384 013F     		subs	r7, r7, #1
+ 643              	.LVL89:
+ 169:main.c        ****                 Pin_1_Write(lives_display[livesA]) ;
+ 644              		.loc 1 169 0
+ 645 0386 20AB     		add	r3, sp, #128
+ 646 0388 03EB8703 		add	r3, r3, r7, lsl #2
+ 647 038c 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 648 0390 FFF7FEFF 		bl	Pin_1_Write
+ 649              	.LVL90:
+ 170:main.c        ****                 Pin_2_Write(lives_display[livesB]) ;
+ 650              		.loc 1 170 0
+ 651 0394 20AB     		add	r3, sp, #128
+ 652 0396 03EB8603 		add	r3, r3, r6, lsl #2
+ 653 039a 13F87C0C 		ldrb	r0, [r3, #-124]	@ zero_extendqisi2
+ 654 039e FFF7FEFF 		bl	Pin_2_Write
+ 655              	.LVL91:
+ 171:main.c        ****                 Delaycount = 0 ;
+ 172:main.c        ****                 CyDelay(400) ;
+ 656              		.loc 1 172 0
+ 657 03a2 4FF4C870 		mov	r0, #400
+ 658 03a6 FFF7FEFF 		bl	CyDelay
+ 659              	.LVL92:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 16
+
+
+ 173:main.c        ****                 Pin_1_Write(0) ;
+ 660              		.loc 1 173 0
+ 661 03aa 0020     		movs	r0, #0
+ 662 03ac FFF7FEFF 		bl	Pin_1_Write
+ 663              	.LVL93:
+ 174:main.c        ****                 Pin_2_Write(0) ;
+ 664              		.loc 1 174 0
+ 665 03b0 0020     		movs	r0, #0
+ 666 03b2 FFF7FEFF 		bl	Pin_2_Write
+ 667              	.LVL94:
+ 175:main.c        ****                 if (livesA == 5) {
+ 668              		.loc 1 175 0
+ 669 03b6 052F     		cmp	r7, #5
+ 670 03b8 03D1     		bne	.L47
+ 176:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 5 lives") ;
+ 671              		.loc 1 176 0
+ 672 03ba 2D48     		ldr	r0, .L62+24
+ 673 03bc FFF7FEFF 		bl	UART_1_PutString
+ 674              	.LVL95:
+ 675 03c0 14E0     		b	.L48
+ 676              	.L47:
+ 177:main.c        ****                     } else if (livesA == 4) {
+ 677              		.loc 1 177 0
+ 678 03c2 042F     		cmp	r7, #4
+ 679 03c4 03D1     		bne	.L49
+ 178:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 4 lives") ;
+ 680              		.loc 1 178 0
+ 681 03c6 2B48     		ldr	r0, .L62+28
+ 682 03c8 FFF7FEFF 		bl	UART_1_PutString
+ 683              	.LVL96:
+ 684 03cc 0EE0     		b	.L48
+ 685              	.L49:
+ 179:main.c        ****                     } else if (livesA == 3) {
+ 686              		.loc 1 179 0
+ 687 03ce 032F     		cmp	r7, #3
+ 688 03d0 03D1     		bne	.L50
+ 180:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 3 lives") ;
+ 689              		.loc 1 180 0
+ 690 03d2 2948     		ldr	r0, .L62+32
+ 691 03d4 FFF7FEFF 		bl	UART_1_PutString
+ 692              	.LVL97:
+ 693 03d8 08E0     		b	.L48
+ 694              	.L50:
+ 181:main.c        ****                     } else if (livesA == 2) {
+ 695              		.loc 1 181 0
+ 696 03da 022F     		cmp	r7, #2
+ 697 03dc 03D1     		bne	.L51
+ 182:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 2 lives") ;
+ 698              		.loc 1 182 0
+ 699 03de 2748     		ldr	r0, .L62+36
+ 700 03e0 FFF7FEFF 		bl	UART_1_PutString
+ 701              	.LVL98:
+ 702 03e4 02E0     		b	.L48
+ 703              	.L51:
+ 183:main.c        ****                     } else {
+ 184:main.c        ****                     UART_1_PutString("\n\rPlayer 1 has 1 lives") ;
+ 704              		.loc 1 184 0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 17
+
+
+ 705 03e6 1C48     		ldr	r0, .L62
+ 706 03e8 FFF7FEFF 		bl	UART_1_PutString
+ 707              	.LVL99:
+ 708              	.L48:
+ 185:main.c        ****                     }
+ 186:main.c        ****                     if (livesB == 5) {
+ 709              		.loc 1 186 0
+ 710 03ec 052E     		cmp	r6, #5
+ 711 03ee 04D1     		bne	.L52
+ 187:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 5 lives") ;
+ 712              		.loc 1 187 0
+ 713 03f0 1A48     		ldr	r0, .L62+4
+ 714 03f2 FFF7FEFF 		bl	UART_1_PutString
+ 715              	.LVL100:
+ 171:main.c        ****                 CyDelay(400) ;
+ 716              		.loc 1 171 0
+ 717 03f6 0025     		movs	r5, #0
+ 718 03f8 18E0     		b	.L46
+ 719              	.L52:
+ 188:main.c        ****                     } else if (livesB == 4) {
+ 720              		.loc 1 188 0
+ 721 03fa 042E     		cmp	r6, #4
+ 722 03fc 04D1     		bne	.L53
+ 189:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 4 lives") ;
+ 723              		.loc 1 189 0
+ 724 03fe 1848     		ldr	r0, .L62+8
+ 725 0400 FFF7FEFF 		bl	UART_1_PutString
+ 726              	.LVL101:
+ 171:main.c        ****                 CyDelay(400) ;
+ 727              		.loc 1 171 0
+ 728 0404 0025     		movs	r5, #0
+ 729 0406 11E0     		b	.L46
+ 730              	.L53:
+ 190:main.c        ****                     } else if (livesB == 3) {
+ 731              		.loc 1 190 0
+ 732 0408 032E     		cmp	r6, #3
+ 733 040a 04D1     		bne	.L54
+ 191:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 3 lives") ;
+ 734              		.loc 1 191 0
+ 735 040c 1548     		ldr	r0, .L62+12
+ 736 040e FFF7FEFF 		bl	UART_1_PutString
+ 737              	.LVL102:
+ 171:main.c        ****                 CyDelay(400) ;
+ 738              		.loc 1 171 0
+ 739 0412 0025     		movs	r5, #0
+ 740 0414 0AE0     		b	.L46
+ 741              	.L54:
+ 192:main.c        ****                     } else if (livesB == 2) {
+ 742              		.loc 1 192 0
+ 743 0416 022E     		cmp	r6, #2
+ 744 0418 04D1     		bne	.L55
+ 193:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 2 lives") ;
+ 745              		.loc 1 193 0
+ 746 041a 1348     		ldr	r0, .L62+16
+ 747 041c FFF7FEFF 		bl	UART_1_PutString
+ 748              	.LVL103:
+ 171:main.c        ****                 CyDelay(400) ;
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 18
+
+
+ 749              		.loc 1 171 0
+ 750 0420 0025     		movs	r5, #0
+ 751 0422 03E0     		b	.L46
+ 752              	.L55:
+ 194:main.c        ****                     } else {
+ 195:main.c        ****                     UART_1_PutString("\n\rPlayer 2 has 1 lives") ;
+ 753              		.loc 1 195 0
+ 754 0424 1148     		ldr	r0, .L62+20
+ 755 0426 FFF7FEFF 		bl	UART_1_PutString
+ 756              	.LVL104:
+ 171:main.c        ****                 CyDelay(400) ;
+ 757              		.loc 1 171 0
+ 758 042a 0025     		movs	r5, #0
+ 759              	.LVL105:
+ 760              	.L46:
+ 127:main.c        ****             Pin_1_Write(pong2[i]) ;
+ 761              		.loc 1 127 0 discriminator 2
+ 762 042c 0134     		adds	r4, r4, #1
+ 763              	.LVL106:
+ 764              	.L33:
+ 127:main.c        ****             Pin_1_Write(pong2[i]) ;
+ 765              		.loc 1 127 0 is_stmt 0 discriminator 1
+ 766 042e 052C     		cmp	r4, #5
+ 767 0430 7FF720AF 		ble	.L56
+ 768              	.LVL107:
+ 769              	.L36:
+ 196:main.c        ****                     }
+ 197:main.c        ****             }
+ 198:main.c        ****         }
+ 199:main.c        ****         if (livesA == 0 ) {
+ 770              		.loc 1 199 0 is_stmt 1
+ 771 0434 002F     		cmp	r7, #0
+ 772 0436 7FF418AE 		bne	.L57
+ 200:main.c        ****             UART_1_PutString("\n\rPlayer 2 has won!") ;
+ 773              		.loc 1 200 0
+ 774 043a 1148     		ldr	r0, .L62+40
+ 775 043c FFF7FEFF 		bl	UART_1_PutString
+ 776              	.LVL108:
+ 201:main.c        ****             Pin_1_Write(0) ;
+ 777              		.loc 1 201 0
+ 778 0440 0020     		movs	r0, #0
+ 779 0442 FFF7FEFF 		bl	Pin_1_Write
+ 780              	.LVL109:
+ 202:main.c        ****             Pin_2_Write(0) ;
+ 781              		.loc 1 202 0
+ 782 0446 0020     		movs	r0, #0
+ 783 0448 FFF7FEFF 		bl	Pin_2_Write
+ 784              	.LVL110:
+ 203:main.c        ****             CyDelay(5000) ;
+ 785              		.loc 1 203 0
+ 786 044c 41F28830 		movw	r0, #5000
+ 787 0450 FFF7FEFF 		bl	CyDelay
+ 788              	.LVL111:
+ 204:main.c        ****             break ;
+ 789              		.loc 1 204 0
+ 790 0454 02E6     		b	.L3
+ 791              	.L63:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 19
+
+
+ 792 0456 00BF     		.align	2
+ 793              	.L62:
+ 794 0458 84000000 		.word	.LC9
+ 795 045c 9C000000 		.word	.LC10
+ 796 0460 B4000000 		.word	.LC11
+ 797 0464 CC000000 		.word	.LC12
+ 798 0468 E4000000 		.word	.LC13
+ 799 046c FC000000 		.word	.LC14
+ 800 0470 24000000 		.word	.LC5
+ 801 0474 3C000000 		.word	.LC6
+ 802 0478 54000000 		.word	.LC7
+ 803 047c 6C000000 		.word	.LC8
+ 804 0480 24010000 		.word	.LC16
+ 805              		.cfi_endproc
+ 806              	.LFE64:
+ 807              		.size	main, .-main
+ 808              		.section	.rodata
+ 809              		.align	2
+ 810              		.set	.LANCHOR0,. + 0
+ 811              	.LC0:
+ 812 0000 01000000 		.word	1
+ 813 0004 02000000 		.word	2
+ 814 0008 04000000 		.word	4
+ 815 000c 08000000 		.word	8
+ 816 0010 10000000 		.word	16
+ 817 0014 00000000 		.word	0
+ 818              	.LC1:
+ 819 0018 10000000 		.word	16
+ 820 001c 08000000 		.word	8
+ 821 0020 04000000 		.word	4
+ 822 0024 02000000 		.word	2
+ 823 0028 01000000 		.word	1
+ 824 002c 00000000 		.word	0
+ 825 0030 00000000 		.word	0
+ 826              	.LC2:
+ 827 0034 58020000 		.word	600
+ 828 0038 58020000 		.word	600
+ 829 003c F4010000 		.word	500
+ 830 0040 F4010000 		.word	500
+ 831 0044 90010000 		.word	400
+ 832 0048 90010000 		.word	400
+ 833 004c 2C010000 		.word	300
+ 834 0050 2C010000 		.word	300
+ 835 0054 C8000000 		.word	200
+ 836 0058 C8000000 		.word	200
+ 837 005c 64000000 		.word	100
+ 838 0060 64000000 		.word	100
+ 839              	.LC3:
+ 840 0064 00000000 		.word	0
+ 841 0068 01000000 		.word	1
+ 842 006c 03000000 		.word	3
+ 843 0070 07000000 		.word	7
+ 844 0074 0F000000 		.word	15
+ 845 0078 1F000000 		.word	31
+ 846              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 847              		.align	2
+ 848              	.LC4:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 20
+
+
+ 849 0000 50726573 		.ascii	"Press the left button to start\012\015\000"
+ 849      73207468 
+ 849      65206C65 
+ 849      66742062 
+ 849      7574746F 
+ 850 0021 000000   		.space	3
+ 851              	.LC5:
+ 852 0024 0A0D506C 		.ascii	"\012\015Player 1 has 5 lives\000"
+ 852      61796572 
+ 852      20312068 
+ 852      61732035 
+ 852      206C6976 
+ 853 003b 00       		.space	1
+ 854              	.LC6:
+ 855 003c 0A0D506C 		.ascii	"\012\015Player 1 has 4 lives\000"
+ 855      61796572 
+ 855      20312068 
+ 855      61732034 
+ 855      206C6976 
+ 856 0053 00       		.space	1
+ 857              	.LC7:
+ 858 0054 0A0D506C 		.ascii	"\012\015Player 1 has 3 lives\000"
+ 858      61796572 
+ 858      20312068 
+ 858      61732033 
+ 858      206C6976 
+ 859 006b 00       		.space	1
+ 860              	.LC8:
+ 861 006c 0A0D506C 		.ascii	"\012\015Player 1 has 2 lives\000"
+ 861      61796572 
+ 861      20312068 
+ 861      61732032 
+ 861      206C6976 
+ 862 0083 00       		.space	1
+ 863              	.LC9:
+ 864 0084 0A0D506C 		.ascii	"\012\015Player 1 has 1 lives\000"
+ 864      61796572 
+ 864      20312068 
+ 864      61732031 
+ 864      206C6976 
+ 865 009b 00       		.space	1
+ 866              	.LC10:
+ 867 009c 0A0D506C 		.ascii	"\012\015Player 2 has 5 lives\000"
+ 867      61796572 
+ 867      20322068 
+ 867      61732035 
+ 867      206C6976 
+ 868 00b3 00       		.space	1
+ 869              	.LC11:
+ 870 00b4 0A0D506C 		.ascii	"\012\015Player 2 has 4 lives\000"
+ 870      61796572 
+ 870      20322068 
+ 870      61732034 
+ 870      206C6976 
+ 871 00cb 00       		.space	1
+ 872              	.LC12:
+ 873 00cc 0A0D506C 		.ascii	"\012\015Player 2 has 3 lives\000"
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 21
+
+
+ 873      61796572 
+ 873      20322068 
+ 873      61732033 
+ 873      206C6976 
+ 874 00e3 00       		.space	1
+ 875              	.LC13:
+ 876 00e4 0A0D506C 		.ascii	"\012\015Player 2 has 2 lives\000"
+ 876      61796572 
+ 876      20322068 
+ 876      61732032 
+ 876      206C6976 
+ 877 00fb 00       		.space	1
+ 878              	.LC14:
+ 879 00fc 0A0D506C 		.ascii	"\012\015Player 2 has 1 lives\000"
+ 879      61796572 
+ 879      20322068 
+ 879      61732031 
+ 879      206C6976 
+ 880 0113 00       		.space	1
+ 881              	.LC15:
+ 882 0114 0A0D506C 		.ascii	"\012\015Player 1 won!\000"
+ 882      61796572 
+ 882      20312077 
+ 882      6F6E2100 
+ 883              	.LC16:
+ 884 0124 0A0D506C 		.ascii	"\012\015Player 2 has won!\000"
+ 884      61796572 
+ 884      20322068 
+ 884      61732077 
+ 884      6F6E2100 
+ 885              		.text
+ 886              	.Letext0:
+ 887              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 888              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 889              		.file 4 "Generated_Source\\PSoC5/UART_1.h"
+ 890              		.file 5 "Generated_Source\\PSoC5/Pin_3.h"
+ 891              		.file 6 "Generated_Source\\PSoC5/Pin_1.h"
+ 892              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+ 893              		.file 8 "Generated_Source\\PSoC5/Pin_2.h"
+ 894              		.file 9 "Generated_Source\\PSoC5/Pin_4.h"
+ 895              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
+ 896              		.section	.debug_info,"",%progbits
+ 897              	.Ldebug_info0:
+ 898 0000 1F090000 		.4byte	0x91f
+ 899 0004 0400     		.2byte	0x4
+ 900 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 901 000a 04       		.byte	0x4
+ 902 000b 01       		.uleb128 0x1
+ 903 000c 50000000 		.4byte	.LASF30
+ 904 0010 0C       		.byte	0xc
+ 905 0011 7C010000 		.4byte	.LASF31
+ 906 0015 93010000 		.4byte	.LASF32
+ 907 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 908 001d 00000000 		.4byte	0
+ 909 0021 00000000 		.4byte	.Ldebug_line0
+ 910 0025 02       		.uleb128 0x2
+ 911 0026 01       		.byte	0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 22
+
+
+ 912 0027 06       		.byte	0x6
+ 913 0028 00020000 		.4byte	.LASF0
+ 914 002c 02       		.uleb128 0x2
+ 915 002d 01       		.byte	0x1
+ 916 002e 08       		.byte	0x8
+ 917 002f 42000000 		.4byte	.LASF1
+ 918 0033 02       		.uleb128 0x2
+ 919 0034 02       		.byte	0x2
+ 920 0035 05       		.byte	0x5
+ 921 0036 E1010000 		.4byte	.LASF2
+ 922 003a 02       		.uleb128 0x2
+ 923 003b 02       		.byte	0x2
+ 924 003c 07       		.byte	0x7
+ 925 003d F0000000 		.4byte	.LASF3
+ 926 0041 03       		.uleb128 0x3
+ 927 0042 27000000 		.4byte	.LASF9
+ 928 0046 02       		.byte	0x2
+ 929 0047 3F       		.byte	0x3f
+ 930 0048 4C000000 		.4byte	0x4c
+ 931 004c 02       		.uleb128 0x2
+ 932 004d 04       		.byte	0x4
+ 933 004e 05       		.byte	0x5
+ 934 004f EB010000 		.4byte	.LASF4
+ 935 0053 02       		.uleb128 0x2
+ 936 0054 04       		.byte	0x4
+ 937 0055 07       		.byte	0x7
+ 938 0056 DE000000 		.4byte	.LASF5
+ 939 005a 02       		.uleb128 0x2
+ 940 005b 08       		.byte	0x8
+ 941 005c 05       		.byte	0x5
+ 942 005d 6E010000 		.4byte	.LASF6
+ 943 0061 02       		.uleb128 0x2
+ 944 0062 08       		.byte	0x8
+ 945 0063 07       		.byte	0x7
+ 946 0064 3A010000 		.4byte	.LASF7
+ 947 0068 04       		.uleb128 0x4
+ 948 0069 04       		.byte	0x4
+ 949 006a 05       		.byte	0x5
+ 950 006b 696E7400 		.ascii	"int\000"
+ 951 006f 02       		.uleb128 0x2
+ 952 0070 04       		.byte	0x4
+ 953 0071 07       		.byte	0x7
+ 954 0072 2D010000 		.4byte	.LASF8
+ 955 0076 03       		.uleb128 0x3
+ 956 0077 5D010000 		.4byte	.LASF10
+ 957 007b 03       		.byte	0x3
+ 958 007c 2C       		.byte	0x2c
+ 959 007d 41000000 		.4byte	0x41
+ 960 0081 02       		.uleb128 0x2
+ 961 0082 04       		.byte	0x4
+ 962 0083 04       		.byte	0x4
+ 963 0084 3C000000 		.4byte	.LASF11
+ 964 0088 02       		.uleb128 0x2
+ 965 0089 08       		.byte	0x8
+ 966 008a 04       		.byte	0x4
+ 967 008b 1B010000 		.4byte	.LASF12
+ 968 008f 02       		.uleb128 0x2
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 23
+
+
+ 969 0090 01       		.byte	0x1
+ 970 0091 08       		.byte	0x8
+ 971 0092 83010000 		.4byte	.LASF13
+ 972 0096 02       		.uleb128 0x2
+ 973 0097 08       		.byte	0x8
+ 974 0098 04       		.byte	0x4
+ 975 0099 F4010000 		.4byte	.LASF14
+ 976 009d 02       		.uleb128 0x2
+ 977 009e 04       		.byte	0x4
+ 978 009f 07       		.byte	0x7
+ 979 00a0 65010000 		.4byte	.LASF15
+ 980 00a4 05       		.uleb128 0x5
+ 981 00a5 28010000 		.4byte	.LASF33
+ 982 00a9 01       		.byte	0x1
+ 983 00aa 11       		.byte	0x11
+ 984 00ab 68000000 		.4byte	0x68
+ 985 00af 00000000 		.4byte	.LFB64
+ 986 00b3 84040000 		.4byte	.LFE64-.LFB64
+ 987 00b7 01       		.uleb128 0x1
+ 988 00b8 9C       		.byte	0x9c
+ 989 00b9 94080000 		.4byte	0x894
+ 990 00bd 06       		.uleb128 0x6
+ 991 00be 51010000 		.4byte	.LASF16
+ 992 00c2 01       		.byte	0x1
+ 993 00c3 14       		.byte	0x14
+ 994 00c4 94080000 		.4byte	0x894
+ 995 00c8 02       		.uleb128 0x2
+ 996 00c9 91       		.byte	0x91
+ 997 00ca 50       		.sleb128 -48
+ 998 00cb 06       		.uleb128 0x6
+ 999 00cc 57010000 		.4byte	.LASF17
+ 1000 00d0 01       		.byte	0x1
+ 1001 00d1 15       		.byte	0x15
+ 1002 00d2 A4080000 		.4byte	0x8a4
+ 1003 00d6 03       		.uleb128 0x3
+ 1004 00d7 91       		.byte	0x91
+ 1005 00d8 B47F     		.sleb128 -76
+ 1006 00da 06       		.uleb128 0x6
+ 1007 00db 22010000 		.4byte	.LASF18
+ 1008 00df 01       		.byte	0x1
+ 1009 00e0 16       		.byte	0x16
+ 1010 00e1 B4080000 		.4byte	0x8b4
+ 1011 00e5 03       		.uleb128 0x3
+ 1012 00e6 91       		.byte	0x91
+ 1013 00e7 847F     		.sleb128 -124
+ 1014 00e9 06       		.uleb128 0x6
+ 1015 00ea 31020000 		.4byte	.LASF19
+ 1016 00ee 01       		.byte	0x1
+ 1017 00ef 17       		.byte	0x17
+ 1018 00f0 94080000 		.4byte	0x894
+ 1019 00f4 03       		.uleb128 0x3
+ 1020 00f5 91       		.byte	0x91
+ 1021 00f6 EC7E     		.sleb128 -148
+ 1022 00f8 07       		.uleb128 0x7
+ 1023 00f9 19000000 		.4byte	.LASF20
+ 1024 00fd 01       		.byte	0x1
+ 1025 00fe 18       		.byte	0x18
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 24
+
+
+ 1026 00ff 68000000 		.4byte	0x68
+ 1027 0103 00000000 		.4byte	.LLST0
+ 1028 0107 07       		.uleb128 0x7
+ 1029 0108 20000000 		.4byte	.LASF21
+ 1030 010c 01       		.byte	0x1
+ 1031 010d 19       		.byte	0x19
+ 1032 010e 68000000 		.4byte	0x68
+ 1033 0112 1F000000 		.4byte	.LLST1
+ 1034 0116 08       		.uleb128 0x8
+ 1035 0117 6900     		.ascii	"i\000"
+ 1036 0119 01       		.byte	0x1
+ 1037 011a 1A       		.byte	0x1a
+ 1038 011b 68000000 		.4byte	0x68
+ 1039 011f 3E000000 		.4byte	.LLST2
+ 1040 0123 07       		.uleb128 0x7
+ 1041 0124 88010000 		.4byte	.LASF22
+ 1042 0128 01       		.byte	0x1
+ 1043 0129 1B       		.byte	0x1b
+ 1044 012a 68000000 		.4byte	0x68
+ 1045 012e 0F010000 		.4byte	.LLST3
+ 1046 0132 09       		.uleb128 0x9
+ 1047 0133 56000000 		.4byte	.LVL1
+ 1048 0137 D5080000 		.4byte	0x8d5
+ 1049 013b 0A       		.uleb128 0xa
+ 1050 013c 62000000 		.4byte	.LVL3
+ 1051 0140 E0080000 		.4byte	0x8e0
+ 1052 0144 52010000 		.4byte	0x152
+ 1053 0148 0B       		.uleb128 0xb
+ 1054 0149 01       		.uleb128 0x1
+ 1055 014a 50       		.byte	0x50
+ 1056 014b 05       		.uleb128 0x5
+ 1057 014c 03       		.byte	0x3
+ 1058 014d 00000000 		.4byte	.LC4
+ 1059 0151 00       		.byte	0
+ 1060 0152 09       		.uleb128 0x9
+ 1061 0153 66000000 		.4byte	.LVL4
+ 1062 0157 EB080000 		.4byte	0x8eb
+ 1063 015b 0A       		.uleb128 0xa
+ 1064 015c 7C000000 		.4byte	.LVL7
+ 1065 0160 F6080000 		.4byte	0x8f6
+ 1066 0164 79010000 		.4byte	0x179
+ 1067 0168 0B       		.uleb128 0xb
+ 1068 0169 01       		.uleb128 0x1
+ 1069 016a 50       		.byte	0x50
+ 1070 016b 0C       		.uleb128 0xc
+ 1071 016c 74       		.byte	0x74
+ 1072 016d 00       		.sleb128 0
+ 1073 016e 32       		.byte	0x32
+ 1074 016f 24       		.byte	0x24
+ 1075 0170 91       		.byte	0x91
+ 1076 0171 00       		.sleb128 0
+ 1077 0172 22       		.byte	0x22
+ 1078 0173 08       		.byte	0x8
+ 1079 0174 30       		.byte	0x30
+ 1080 0175 1C       		.byte	0x1c
+ 1081 0176 94       		.byte	0x94
+ 1082 0177 01       		.byte	0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 25
+
+
+ 1083 0178 00       		.byte	0
+ 1084 0179 0A       		.uleb128 0xa
+ 1085 017a 8A000000 		.4byte	.LVL8
+ 1086 017e 01090000 		.4byte	0x901
+ 1087 0182 96010000 		.4byte	0x196
+ 1088 0186 0B       		.uleb128 0xb
+ 1089 0187 01       		.uleb128 0x1
+ 1090 0188 50       		.byte	0x50
+ 1091 0189 0B       		.uleb128 0xb
+ 1092 018a 75       		.byte	0x75
+ 1093 018b 00       		.sleb128 0
+ 1094 018c 32       		.byte	0x32
+ 1095 018d 24       		.byte	0x24
+ 1096 018e 91       		.byte	0x91
+ 1097 018f 00       		.sleb128 0
+ 1098 0190 22       		.byte	0x22
+ 1099 0191 08       		.byte	0x8
+ 1100 0192 7C       		.byte	0x7c
+ 1101 0193 1C       		.byte	0x1c
+ 1102 0194 06       		.byte	0x6
+ 1103 0195 00       		.byte	0
+ 1104 0196 0A       		.uleb128 0xa
+ 1105 0197 96000000 		.4byte	.LVL10
+ 1106 019b F6080000 		.4byte	0x8f6
+ 1107 019f A9010000 		.4byte	0x1a9
+ 1108 01a3 0B       		.uleb128 0xb
+ 1109 01a4 01       		.uleb128 0x1
+ 1110 01a5 50       		.byte	0x50
+ 1111 01a6 01       		.uleb128 0x1
+ 1112 01a7 30       		.byte	0x30
+ 1113 01a8 00       		.byte	0
+ 1114 01a9 0A       		.uleb128 0xa
+ 1115 01aa A8000000 		.4byte	.LVL12
+ 1116 01ae 0C090000 		.4byte	0x90c
+ 1117 01b2 C7010000 		.4byte	0x1c7
+ 1118 01b6 0B       		.uleb128 0xb
+ 1119 01b7 01       		.uleb128 0x1
+ 1120 01b8 50       		.byte	0x50
+ 1121 01b9 0C       		.uleb128 0xc
+ 1122 01ba 74       		.byte	0x74
+ 1123 01bb 00       		.sleb128 0
+ 1124 01bc 32       		.byte	0x32
+ 1125 01bd 24       		.byte	0x24
+ 1126 01be 91       		.byte	0x91
+ 1127 01bf 00       		.sleb128 0
+ 1128 01c0 22       		.byte	0x22
+ 1129 01c1 08       		.byte	0x8
+ 1130 01c2 4C       		.byte	0x4c
+ 1131 01c3 1C       		.byte	0x1c
+ 1132 01c4 94       		.byte	0x94
+ 1133 01c5 01       		.byte	0x1
+ 1134 01c6 00       		.byte	0
+ 1135 01c7 0A       		.uleb128 0xa
+ 1136 01c8 B6000000 		.4byte	.LVL13
+ 1137 01cc 01090000 		.4byte	0x901
+ 1138 01d0 E4010000 		.4byte	0x1e4
+ 1139 01d4 0B       		.uleb128 0xb
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 26
+
+
+ 1140 01d5 01       		.uleb128 0x1
+ 1141 01d6 50       		.byte	0x50
+ 1142 01d7 0B       		.uleb128 0xb
+ 1143 01d8 75       		.byte	0x75
+ 1144 01d9 00       		.sleb128 0
+ 1145 01da 32       		.byte	0x32
+ 1146 01db 24       		.byte	0x24
+ 1147 01dc 91       		.byte	0x91
+ 1148 01dd 00       		.sleb128 0
+ 1149 01de 22       		.byte	0x22
+ 1150 01df 08       		.byte	0x8
+ 1151 01e0 7C       		.byte	0x7c
+ 1152 01e1 1C       		.byte	0x1c
+ 1153 01e2 06       		.byte	0x6
+ 1154 01e3 00       		.byte	0
+ 1155 01e4 09       		.uleb128 0x9
+ 1156 01e5 BA000000 		.4byte	.LVL14
+ 1157 01e9 17090000 		.4byte	0x917
+ 1158 01ed 0A       		.uleb128 0xa
+ 1159 01ee D8000000 		.4byte	.LVL19
+ 1160 01f2 F6080000 		.4byte	0x8f6
+ 1161 01f6 0B020000 		.4byte	0x20b
+ 1162 01fa 0B       		.uleb128 0xb
+ 1163 01fb 01       		.uleb128 0x1
+ 1164 01fc 50       		.byte	0x50
+ 1165 01fd 0C       		.uleb128 0xc
+ 1166 01fe 77       		.byte	0x77
+ 1167 01ff 00       		.sleb128 0
+ 1168 0200 32       		.byte	0x32
+ 1169 0201 24       		.byte	0x24
+ 1170 0202 91       		.byte	0x91
+ 1171 0203 00       		.sleb128 0
+ 1172 0204 22       		.byte	0x22
+ 1173 0205 08       		.byte	0x8
+ 1174 0206 94       		.byte	0x94
+ 1175 0207 1C       		.byte	0x1c
+ 1176 0208 94       		.byte	0x94
+ 1177 0209 01       		.byte	0x1
+ 1178 020a 00       		.byte	0
+ 1179 020b 0A       		.uleb128 0xa
+ 1180 020c E6000000 		.4byte	.LVL20
+ 1181 0210 0C090000 		.4byte	0x90c
+ 1182 0214 29020000 		.4byte	0x229
+ 1183 0218 0B       		.uleb128 0xb
+ 1184 0219 01       		.uleb128 0x1
+ 1185 021a 50       		.byte	0x50
+ 1186 021b 0C       		.uleb128 0xc
+ 1187 021c 76       		.byte	0x76
+ 1188 021d 00       		.sleb128 0
+ 1189 021e 32       		.byte	0x32
+ 1190 021f 24       		.byte	0x24
+ 1191 0220 91       		.byte	0x91
+ 1192 0221 00       		.sleb128 0
+ 1193 0222 22       		.byte	0x22
+ 1194 0223 08       		.byte	0x8
+ 1195 0224 94       		.byte	0x94
+ 1196 0225 1C       		.byte	0x1c
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 27
+
+
+ 1197 0226 94       		.byte	0x94
+ 1198 0227 01       		.byte	0x1
+ 1199 0228 00       		.byte	0
+ 1200 0229 0A       		.uleb128 0xa
+ 1201 022a EE000000 		.4byte	.LVL21
+ 1202 022e 01090000 		.4byte	0x901
+ 1203 0232 3E020000 		.4byte	0x23e
+ 1204 0236 0B       		.uleb128 0xb
+ 1205 0237 01       		.uleb128 0x1
+ 1206 0238 50       		.byte	0x50
+ 1207 0239 03       		.uleb128 0x3
+ 1208 023a 0A       		.byte	0xa
+ 1209 023b 9001     		.2byte	0x190
+ 1210 023d 00       		.byte	0
+ 1211 023e 0A       		.uleb128 0xa
+ 1212 023f F4000000 		.4byte	.LVL22
+ 1213 0243 F6080000 		.4byte	0x8f6
+ 1214 0247 51020000 		.4byte	0x251
+ 1215 024b 0B       		.uleb128 0xb
+ 1216 024c 01       		.uleb128 0x1
+ 1217 024d 50       		.byte	0x50
+ 1218 024e 01       		.uleb128 0x1
+ 1219 024f 30       		.byte	0x30
+ 1220 0250 00       		.byte	0
+ 1221 0251 0A       		.uleb128 0xa
+ 1222 0252 FA000000 		.4byte	.LVL23
+ 1223 0256 0C090000 		.4byte	0x90c
+ 1224 025a 64020000 		.4byte	0x264
+ 1225 025e 0B       		.uleb128 0xb
+ 1226 025f 01       		.uleb128 0x1
+ 1227 0260 50       		.byte	0x50
+ 1228 0261 01       		.uleb128 0x1
+ 1229 0262 30       		.byte	0x30
+ 1230 0263 00       		.byte	0
+ 1231 0264 0A       		.uleb128 0xa
+ 1232 0265 04010000 		.4byte	.LVL24
+ 1233 0269 E0080000 		.4byte	0x8e0
+ 1234 026d 7B020000 		.4byte	0x27b
+ 1235 0271 0B       		.uleb128 0xb
+ 1236 0272 01       		.uleb128 0x1
+ 1237 0273 50       		.byte	0x50
+ 1238 0274 05       		.uleb128 0x5
+ 1239 0275 03       		.byte	0x3
+ 1240 0276 24000000 		.4byte	.LC5
+ 1241 027a 00       		.byte	0
+ 1242 027b 0A       		.uleb128 0xa
+ 1243 027c 10010000 		.4byte	.LVL25
+ 1244 0280 E0080000 		.4byte	0x8e0
+ 1245 0284 92020000 		.4byte	0x292
+ 1246 0288 0B       		.uleb128 0xb
+ 1247 0289 01       		.uleb128 0x1
+ 1248 028a 50       		.byte	0x50
+ 1249 028b 05       		.uleb128 0x5
+ 1250 028c 03       		.byte	0x3
+ 1251 028d 3C000000 		.4byte	.LC6
+ 1252 0291 00       		.byte	0
+ 1253 0292 0A       		.uleb128 0xa
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 28
+
+
+ 1254 0293 1C010000 		.4byte	.LVL26
+ 1255 0297 E0080000 		.4byte	0x8e0
+ 1256 029b A9020000 		.4byte	0x2a9
+ 1257 029f 0B       		.uleb128 0xb
+ 1258 02a0 01       		.uleb128 0x1
+ 1259 02a1 50       		.byte	0x50
+ 1260 02a2 05       		.uleb128 0x5
+ 1261 02a3 03       		.byte	0x3
+ 1262 02a4 54000000 		.4byte	.LC7
+ 1263 02a8 00       		.byte	0
+ 1264 02a9 0A       		.uleb128 0xa
+ 1265 02aa 28010000 		.4byte	.LVL27
+ 1266 02ae E0080000 		.4byte	0x8e0
+ 1267 02b2 C0020000 		.4byte	0x2c0
+ 1268 02b6 0B       		.uleb128 0xb
+ 1269 02b7 01       		.uleb128 0x1
+ 1270 02b8 50       		.byte	0x50
+ 1271 02b9 05       		.uleb128 0x5
+ 1272 02ba 03       		.byte	0x3
+ 1273 02bb 6C000000 		.4byte	.LC8
+ 1274 02bf 00       		.byte	0
+ 1275 02c0 0A       		.uleb128 0xa
+ 1276 02c1 30010000 		.4byte	.LVL28
+ 1277 02c5 E0080000 		.4byte	0x8e0
+ 1278 02c9 D7020000 		.4byte	0x2d7
+ 1279 02cd 0B       		.uleb128 0xb
+ 1280 02ce 01       		.uleb128 0x1
+ 1281 02cf 50       		.byte	0x50
+ 1282 02d0 05       		.uleb128 0x5
+ 1283 02d1 03       		.byte	0x3
+ 1284 02d2 84000000 		.4byte	.LC9
+ 1285 02d6 00       		.byte	0
+ 1286 02d7 0A       		.uleb128 0xa
+ 1287 02d8 3A010000 		.4byte	.LVL29
+ 1288 02dc E0080000 		.4byte	0x8e0
+ 1289 02e0 EE020000 		.4byte	0x2ee
+ 1290 02e4 0B       		.uleb128 0xb
+ 1291 02e5 01       		.uleb128 0x1
+ 1292 02e6 50       		.byte	0x50
+ 1293 02e7 05       		.uleb128 0x5
+ 1294 02e8 03       		.byte	0x3
+ 1295 02e9 9C000000 		.4byte	.LC10
+ 1296 02ed 00       		.byte	0
+ 1297 02ee 0A       		.uleb128 0xa
+ 1298 02ef 48010000 		.4byte	.LVL30
+ 1299 02f3 E0080000 		.4byte	0x8e0
+ 1300 02f7 05030000 		.4byte	0x305
+ 1301 02fb 0B       		.uleb128 0xb
+ 1302 02fc 01       		.uleb128 0x1
+ 1303 02fd 50       		.byte	0x50
+ 1304 02fe 05       		.uleb128 0x5
+ 1305 02ff 03       		.byte	0x3
+ 1306 0300 B4000000 		.4byte	.LC11
+ 1307 0304 00       		.byte	0
+ 1308 0305 0A       		.uleb128 0xa
+ 1309 0306 56010000 		.4byte	.LVL31
+ 1310 030a E0080000 		.4byte	0x8e0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 29
+
+
+ 1311 030e 1C030000 		.4byte	0x31c
+ 1312 0312 0B       		.uleb128 0xb
+ 1313 0313 01       		.uleb128 0x1
+ 1314 0314 50       		.byte	0x50
+ 1315 0315 05       		.uleb128 0x5
+ 1316 0316 03       		.byte	0x3
+ 1317 0317 CC000000 		.4byte	.LC12
+ 1318 031b 00       		.byte	0
+ 1319 031c 0A       		.uleb128 0xa
+ 1320 031d 64010000 		.4byte	.LVL32
+ 1321 0321 E0080000 		.4byte	0x8e0
+ 1322 0325 33030000 		.4byte	0x333
+ 1323 0329 0B       		.uleb128 0xb
+ 1324 032a 01       		.uleb128 0x1
+ 1325 032b 50       		.byte	0x50
+ 1326 032c 05       		.uleb128 0x5
+ 1327 032d 03       		.byte	0x3
+ 1328 032e E4000000 		.4byte	.LC13
+ 1329 0332 00       		.byte	0
+ 1330 0333 0A       		.uleb128 0xa
+ 1331 0334 6E010000 		.4byte	.LVL33
+ 1332 0338 E0080000 		.4byte	0x8e0
+ 1333 033c 4A030000 		.4byte	0x34a
+ 1334 0340 0B       		.uleb128 0xb
+ 1335 0341 01       		.uleb128 0x1
+ 1336 0342 50       		.byte	0x50
+ 1337 0343 05       		.uleb128 0x5
+ 1338 0344 03       		.byte	0x3
+ 1339 0345 FC000000 		.4byte	.LC14
+ 1340 0349 00       		.byte	0
+ 1341 034a 0A       		.uleb128 0xa
+ 1342 034b 86010000 		.4byte	.LVL36
+ 1343 034f F6080000 		.4byte	0x8f6
+ 1344 0353 68030000 		.4byte	0x368
+ 1345 0357 0B       		.uleb128 0xb
+ 1346 0358 01       		.uleb128 0x1
+ 1347 0359 50       		.byte	0x50
+ 1348 035a 0C       		.uleb128 0xc
+ 1349 035b 77       		.byte	0x77
+ 1350 035c 00       		.sleb128 0
+ 1351 035d 32       		.byte	0x32
+ 1352 035e 24       		.byte	0x24
+ 1353 035f 91       		.byte	0x91
+ 1354 0360 00       		.sleb128 0
+ 1355 0361 22       		.byte	0x22
+ 1356 0362 08       		.byte	0x8
+ 1357 0363 94       		.byte	0x94
+ 1358 0364 1C       		.byte	0x1c
+ 1359 0365 94       		.byte	0x94
+ 1360 0366 01       		.byte	0x1
+ 1361 0367 00       		.byte	0
+ 1362 0368 0A       		.uleb128 0xa
+ 1363 0369 94010000 		.4byte	.LVL37
+ 1364 036d 0C090000 		.4byte	0x90c
+ 1365 0371 86030000 		.4byte	0x386
+ 1366 0375 0B       		.uleb128 0xb
+ 1367 0376 01       		.uleb128 0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 30
+
+
+ 1368 0377 50       		.byte	0x50
+ 1369 0378 0C       		.uleb128 0xc
+ 1370 0379 76       		.byte	0x76
+ 1371 037a 00       		.sleb128 0
+ 1372 037b 32       		.byte	0x32
+ 1373 037c 24       		.byte	0x24
+ 1374 037d 91       		.byte	0x91
+ 1375 037e 00       		.sleb128 0
+ 1376 037f 22       		.byte	0x22
+ 1377 0380 08       		.byte	0x8
+ 1378 0381 94       		.byte	0x94
+ 1379 0382 1C       		.byte	0x1c
+ 1380 0383 94       		.byte	0x94
+ 1381 0384 01       		.byte	0x1
+ 1382 0385 00       		.byte	0
+ 1383 0386 0A       		.uleb128 0xa
+ 1384 0387 9C010000 		.4byte	.LVL38
+ 1385 038b 01090000 		.4byte	0x901
+ 1386 038f 9B030000 		.4byte	0x39b
+ 1387 0393 0B       		.uleb128 0xb
+ 1388 0394 01       		.uleb128 0x1
+ 1389 0395 50       		.byte	0x50
+ 1390 0396 03       		.uleb128 0x3
+ 1391 0397 0A       		.byte	0xa
+ 1392 0398 9001     		.2byte	0x190
+ 1393 039a 00       		.byte	0
+ 1394 039b 0A       		.uleb128 0xa
+ 1395 039c A2010000 		.4byte	.LVL39
+ 1396 03a0 F6080000 		.4byte	0x8f6
+ 1397 03a4 AE030000 		.4byte	0x3ae
+ 1398 03a8 0B       		.uleb128 0xb
+ 1399 03a9 01       		.uleb128 0x1
+ 1400 03aa 50       		.byte	0x50
+ 1401 03ab 01       		.uleb128 0x1
+ 1402 03ac 30       		.byte	0x30
+ 1403 03ad 00       		.byte	0
+ 1404 03ae 0A       		.uleb128 0xa
+ 1405 03af A8010000 		.4byte	.LVL40
+ 1406 03b3 0C090000 		.4byte	0x90c
+ 1407 03b7 C1030000 		.4byte	0x3c1
+ 1408 03bb 0B       		.uleb128 0xb
+ 1409 03bc 01       		.uleb128 0x1
+ 1410 03bd 50       		.byte	0x50
+ 1411 03be 01       		.uleb128 0x1
+ 1412 03bf 30       		.byte	0x30
+ 1413 03c0 00       		.byte	0
+ 1414 03c1 0A       		.uleb128 0xa
+ 1415 03c2 B2010000 		.4byte	.LVL41
+ 1416 03c6 E0080000 		.4byte	0x8e0
+ 1417 03ca D8030000 		.4byte	0x3d8
+ 1418 03ce 0B       		.uleb128 0xb
+ 1419 03cf 01       		.uleb128 0x1
+ 1420 03d0 50       		.byte	0x50
+ 1421 03d1 05       		.uleb128 0x5
+ 1422 03d2 03       		.byte	0x3
+ 1423 03d3 24000000 		.4byte	.LC5
+ 1424 03d7 00       		.byte	0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 31
+
+
+ 1425 03d8 0A       		.uleb128 0xa
+ 1426 03d9 BE010000 		.4byte	.LVL42
+ 1427 03dd E0080000 		.4byte	0x8e0
+ 1428 03e1 EF030000 		.4byte	0x3ef
+ 1429 03e5 0B       		.uleb128 0xb
+ 1430 03e6 01       		.uleb128 0x1
+ 1431 03e7 50       		.byte	0x50
+ 1432 03e8 05       		.uleb128 0x5
+ 1433 03e9 03       		.byte	0x3
+ 1434 03ea 3C000000 		.4byte	.LC6
+ 1435 03ee 00       		.byte	0
+ 1436 03ef 0A       		.uleb128 0xa
+ 1437 03f0 CA010000 		.4byte	.LVL43
+ 1438 03f4 E0080000 		.4byte	0x8e0
+ 1439 03f8 06040000 		.4byte	0x406
+ 1440 03fc 0B       		.uleb128 0xb
+ 1441 03fd 01       		.uleb128 0x1
+ 1442 03fe 50       		.byte	0x50
+ 1443 03ff 05       		.uleb128 0x5
+ 1444 0400 03       		.byte	0x3
+ 1445 0401 54000000 		.4byte	.LC7
+ 1446 0405 00       		.byte	0
+ 1447 0406 0A       		.uleb128 0xa
+ 1448 0407 D6010000 		.4byte	.LVL44
+ 1449 040b E0080000 		.4byte	0x8e0
+ 1450 040f 1D040000 		.4byte	0x41d
+ 1451 0413 0B       		.uleb128 0xb
+ 1452 0414 01       		.uleb128 0x1
+ 1453 0415 50       		.byte	0x50
+ 1454 0416 05       		.uleb128 0x5
+ 1455 0417 03       		.byte	0x3
+ 1456 0418 6C000000 		.4byte	.LC8
+ 1457 041c 00       		.byte	0
+ 1458 041d 0A       		.uleb128 0xa
+ 1459 041e DE010000 		.4byte	.LVL45
+ 1460 0422 E0080000 		.4byte	0x8e0
+ 1461 0426 34040000 		.4byte	0x434
+ 1462 042a 0B       		.uleb128 0xb
+ 1463 042b 01       		.uleb128 0x1
+ 1464 042c 50       		.byte	0x50
+ 1465 042d 05       		.uleb128 0x5
+ 1466 042e 03       		.byte	0x3
+ 1467 042f 84000000 		.4byte	.LC9
+ 1468 0433 00       		.byte	0
+ 1469 0434 0A       		.uleb128 0xa
+ 1470 0435 E8010000 		.4byte	.LVL46
+ 1471 0439 E0080000 		.4byte	0x8e0
+ 1472 043d 4B040000 		.4byte	0x44b
+ 1473 0441 0B       		.uleb128 0xb
+ 1474 0442 01       		.uleb128 0x1
+ 1475 0443 50       		.byte	0x50
+ 1476 0444 05       		.uleb128 0x5
+ 1477 0445 03       		.byte	0x3
+ 1478 0446 9C000000 		.4byte	.LC10
+ 1479 044a 00       		.byte	0
+ 1480 044b 0A       		.uleb128 0xa
+ 1481 044c F6010000 		.4byte	.LVL47
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 32
+
+
+ 1482 0450 E0080000 		.4byte	0x8e0
+ 1483 0454 62040000 		.4byte	0x462
+ 1484 0458 0B       		.uleb128 0xb
+ 1485 0459 01       		.uleb128 0x1
+ 1486 045a 50       		.byte	0x50
+ 1487 045b 05       		.uleb128 0x5
+ 1488 045c 03       		.byte	0x3
+ 1489 045d B4000000 		.4byte	.LC11
+ 1490 0461 00       		.byte	0
+ 1491 0462 0A       		.uleb128 0xa
+ 1492 0463 04020000 		.4byte	.LVL48
+ 1493 0467 E0080000 		.4byte	0x8e0
+ 1494 046b 79040000 		.4byte	0x479
+ 1495 046f 0B       		.uleb128 0xb
+ 1496 0470 01       		.uleb128 0x1
+ 1497 0471 50       		.byte	0x50
+ 1498 0472 05       		.uleb128 0x5
+ 1499 0473 03       		.byte	0x3
+ 1500 0474 CC000000 		.4byte	.LC12
+ 1501 0478 00       		.byte	0
+ 1502 0479 0A       		.uleb128 0xa
+ 1503 047a 12020000 		.4byte	.LVL49
+ 1504 047e E0080000 		.4byte	0x8e0
+ 1505 0482 90040000 		.4byte	0x490
+ 1506 0486 0B       		.uleb128 0xb
+ 1507 0487 01       		.uleb128 0x1
+ 1508 0488 50       		.byte	0x50
+ 1509 0489 05       		.uleb128 0x5
+ 1510 048a 03       		.byte	0x3
+ 1511 048b E4000000 		.4byte	.LC13
+ 1512 048f 00       		.byte	0
+ 1513 0490 0A       		.uleb128 0xa
+ 1514 0491 1C020000 		.4byte	.LVL50
+ 1515 0495 E0080000 		.4byte	0x8e0
+ 1516 0499 A7040000 		.4byte	0x4a7
+ 1517 049d 0B       		.uleb128 0xb
+ 1518 049e 01       		.uleb128 0x1
+ 1519 049f 50       		.byte	0x50
+ 1520 04a0 05       		.uleb128 0x5
+ 1521 04a1 03       		.byte	0x3
+ 1522 04a2 FC000000 		.4byte	.LC14
+ 1523 04a6 00       		.byte	0
+ 1524 04a7 0A       		.uleb128 0xa
+ 1525 04a8 2E020000 		.4byte	.LVL54
+ 1526 04ac E0080000 		.4byte	0x8e0
+ 1527 04b0 BE040000 		.4byte	0x4be
+ 1528 04b4 0B       		.uleb128 0xb
+ 1529 04b5 01       		.uleb128 0x1
+ 1530 04b6 50       		.byte	0x50
+ 1531 04b7 05       		.uleb128 0x5
+ 1532 04b8 03       		.byte	0x3
+ 1533 04b9 14010000 		.4byte	.LC15
+ 1534 04bd 00       		.byte	0
+ 1535 04be 0A       		.uleb128 0xa
+ 1536 04bf 34020000 		.4byte	.LVL55
+ 1537 04c3 F6080000 		.4byte	0x8f6
+ 1538 04c7 D1040000 		.4byte	0x4d1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 33
+
+
+ 1539 04cb 0B       		.uleb128 0xb
+ 1540 04cc 01       		.uleb128 0x1
+ 1541 04cd 50       		.byte	0x50
+ 1542 04ce 01       		.uleb128 0x1
+ 1543 04cf 30       		.byte	0x30
+ 1544 04d0 00       		.byte	0
+ 1545 04d1 0A       		.uleb128 0xa
+ 1546 04d2 3A020000 		.4byte	.LVL56
+ 1547 04d6 0C090000 		.4byte	0x90c
+ 1548 04da E4040000 		.4byte	0x4e4
+ 1549 04de 0B       		.uleb128 0xb
+ 1550 04df 01       		.uleb128 0x1
+ 1551 04e0 50       		.byte	0x50
+ 1552 04e1 01       		.uleb128 0x1
+ 1553 04e2 30       		.byte	0x30
+ 1554 04e3 00       		.byte	0
+ 1555 04e4 0A       		.uleb128 0xa
+ 1556 04e5 42020000 		.4byte	.LVL57
+ 1557 04e9 01090000 		.4byte	0x901
+ 1558 04ed F9040000 		.4byte	0x4f9
+ 1559 04f1 0B       		.uleb128 0xb
+ 1560 04f2 01       		.uleb128 0x1
+ 1561 04f3 50       		.byte	0x50
+ 1562 04f4 03       		.uleb128 0x3
+ 1563 04f5 0A       		.byte	0xa
+ 1564 04f6 8813     		.2byte	0x1388
+ 1565 04f8 00       		.byte	0
+ 1566 04f9 0A       		.uleb128 0xa
+ 1567 04fa 52020000 		.4byte	.LVL59
+ 1568 04fe 0C090000 		.4byte	0x90c
+ 1569 0502 17050000 		.4byte	0x517
+ 1570 0506 0B       		.uleb128 0xb
+ 1571 0507 01       		.uleb128 0x1
+ 1572 0508 50       		.byte	0x50
+ 1573 0509 0C       		.uleb128 0xc
+ 1574 050a 74       		.byte	0x74
+ 1575 050b 00       		.sleb128 0
+ 1576 050c 32       		.byte	0x32
+ 1577 050d 24       		.byte	0x24
+ 1578 050e 91       		.byte	0x91
+ 1579 050f 00       		.sleb128 0
+ 1580 0510 22       		.byte	0x22
+ 1581 0511 08       		.byte	0x8
+ 1582 0512 30       		.byte	0x30
+ 1583 0513 1C       		.byte	0x1c
+ 1584 0514 94       		.byte	0x94
+ 1585 0515 01       		.byte	0x1
+ 1586 0516 00       		.byte	0
+ 1587 0517 0A       		.uleb128 0xa
+ 1588 0518 60020000 		.4byte	.LVL60
+ 1589 051c 01090000 		.4byte	0x901
+ 1590 0520 34050000 		.4byte	0x534
+ 1591 0524 0B       		.uleb128 0xb
+ 1592 0525 01       		.uleb128 0x1
+ 1593 0526 50       		.byte	0x50
+ 1594 0527 0B       		.uleb128 0xb
+ 1595 0528 75       		.byte	0x75
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 34
+
+
+ 1596 0529 00       		.sleb128 0
+ 1597 052a 32       		.byte	0x32
+ 1598 052b 24       		.byte	0x24
+ 1599 052c 91       		.byte	0x91
+ 1600 052d 00       		.sleb128 0
+ 1601 052e 22       		.byte	0x22
+ 1602 052f 08       		.byte	0x8
+ 1603 0530 7C       		.byte	0x7c
+ 1604 0531 1C       		.byte	0x1c
+ 1605 0532 06       		.byte	0x6
+ 1606 0533 00       		.byte	0
+ 1607 0534 0A       		.uleb128 0xa
+ 1608 0535 70020000 		.4byte	.LVL64
+ 1609 0539 0C090000 		.4byte	0x90c
+ 1610 053d 47050000 		.4byte	0x547
+ 1611 0541 0B       		.uleb128 0xb
+ 1612 0542 01       		.uleb128 0x1
+ 1613 0543 50       		.byte	0x50
+ 1614 0544 01       		.uleb128 0x1
+ 1615 0545 30       		.byte	0x30
+ 1616 0546 00       		.byte	0
+ 1617 0547 0A       		.uleb128 0xa
+ 1618 0548 82020000 		.4byte	.LVL66
+ 1619 054c F6080000 		.4byte	0x8f6
+ 1620 0550 65050000 		.4byte	0x565
+ 1621 0554 0B       		.uleb128 0xb
+ 1622 0555 01       		.uleb128 0x1
+ 1623 0556 50       		.byte	0x50
+ 1624 0557 0C       		.uleb128 0xc
+ 1625 0558 74       		.byte	0x74
+ 1626 0559 00       		.sleb128 0
+ 1627 055a 32       		.byte	0x32
+ 1628 055b 24       		.byte	0x24
+ 1629 055c 91       		.byte	0x91
+ 1630 055d 00       		.sleb128 0
+ 1631 055e 22       		.byte	0x22
+ 1632 055f 08       		.byte	0x8
+ 1633 0560 4C       		.byte	0x4c
+ 1634 0561 1C       		.byte	0x1c
+ 1635 0562 94       		.byte	0x94
+ 1636 0563 01       		.byte	0x1
+ 1637 0564 00       		.byte	0
+ 1638 0565 0A       		.uleb128 0xa
+ 1639 0566 90020000 		.4byte	.LVL67
+ 1640 056a 01090000 		.4byte	0x901
+ 1641 056e 82050000 		.4byte	0x582
+ 1642 0572 0B       		.uleb128 0xb
+ 1643 0573 01       		.uleb128 0x1
+ 1644 0574 50       		.byte	0x50
+ 1645 0575 0B       		.uleb128 0xb
+ 1646 0576 75       		.byte	0x75
+ 1647 0577 00       		.sleb128 0
+ 1648 0578 32       		.byte	0x32
+ 1649 0579 24       		.byte	0x24
+ 1650 057a 91       		.byte	0x91
+ 1651 057b 00       		.sleb128 0
+ 1652 057c 22       		.byte	0x22
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 35
+
+
+ 1653 057d 08       		.byte	0x8
+ 1654 057e 7C       		.byte	0x7c
+ 1655 057f 1C       		.byte	0x1c
+ 1656 0580 06       		.byte	0x6
+ 1657 0581 00       		.byte	0
+ 1658 0582 09       		.uleb128 0x9
+ 1659 0583 94020000 		.4byte	.LVL68
+ 1660 0587 EB080000 		.4byte	0x8eb
+ 1661 058b 0A       		.uleb128 0xa
+ 1662 058c B2020000 		.4byte	.LVL73
+ 1663 0590 F6080000 		.4byte	0x8f6
+ 1664 0594 A9050000 		.4byte	0x5a9
+ 1665 0598 0B       		.uleb128 0xb
+ 1666 0599 01       		.uleb128 0x1
+ 1667 059a 50       		.byte	0x50
+ 1668 059b 0C       		.uleb128 0xc
+ 1669 059c 77       		.byte	0x77
+ 1670 059d 00       		.sleb128 0
+ 1671 059e 32       		.byte	0x32
+ 1672 059f 24       		.byte	0x24
+ 1673 05a0 91       		.byte	0x91
+ 1674 05a1 00       		.sleb128 0
+ 1675 05a2 22       		.byte	0x22
+ 1676 05a3 08       		.byte	0x8
+ 1677 05a4 94       		.byte	0x94
+ 1678 05a5 1C       		.byte	0x1c
+ 1679 05a6 94       		.byte	0x94
+ 1680 05a7 01       		.byte	0x1
+ 1681 05a8 00       		.byte	0
+ 1682 05a9 0A       		.uleb128 0xa
+ 1683 05aa C0020000 		.4byte	.LVL74
+ 1684 05ae 0C090000 		.4byte	0x90c
+ 1685 05b2 C7050000 		.4byte	0x5c7
+ 1686 05b6 0B       		.uleb128 0xb
+ 1687 05b7 01       		.uleb128 0x1
+ 1688 05b8 50       		.byte	0x50
+ 1689 05b9 0C       		.uleb128 0xc
+ 1690 05ba 76       		.byte	0x76
+ 1691 05bb 00       		.sleb128 0
+ 1692 05bc 32       		.byte	0x32
+ 1693 05bd 24       		.byte	0x24
+ 1694 05be 91       		.byte	0x91
+ 1695 05bf 00       		.sleb128 0
+ 1696 05c0 22       		.byte	0x22
+ 1697 05c1 08       		.byte	0x8
+ 1698 05c2 94       		.byte	0x94
+ 1699 05c3 1C       		.byte	0x1c
+ 1700 05c4 94       		.byte	0x94
+ 1701 05c5 01       		.byte	0x1
+ 1702 05c6 00       		.byte	0
+ 1703 05c7 0A       		.uleb128 0xa
+ 1704 05c8 C8020000 		.4byte	.LVL75
+ 1705 05cc 01090000 		.4byte	0x901
+ 1706 05d0 DC050000 		.4byte	0x5dc
+ 1707 05d4 0B       		.uleb128 0xb
+ 1708 05d5 01       		.uleb128 0x1
+ 1709 05d6 50       		.byte	0x50
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 36
+
+
+ 1710 05d7 03       		.uleb128 0x3
+ 1711 05d8 0A       		.byte	0xa
+ 1712 05d9 9001     		.2byte	0x190
+ 1713 05db 00       		.byte	0
+ 1714 05dc 0A       		.uleb128 0xa
+ 1715 05dd CE020000 		.4byte	.LVL76
+ 1716 05e1 F6080000 		.4byte	0x8f6
+ 1717 05e5 EF050000 		.4byte	0x5ef
+ 1718 05e9 0B       		.uleb128 0xb
+ 1719 05ea 01       		.uleb128 0x1
+ 1720 05eb 50       		.byte	0x50
+ 1721 05ec 01       		.uleb128 0x1
+ 1722 05ed 30       		.byte	0x30
+ 1723 05ee 00       		.byte	0
+ 1724 05ef 0A       		.uleb128 0xa
+ 1725 05f0 D4020000 		.4byte	.LVL77
+ 1726 05f4 0C090000 		.4byte	0x90c
+ 1727 05f8 02060000 		.4byte	0x602
+ 1728 05fc 0B       		.uleb128 0xb
+ 1729 05fd 01       		.uleb128 0x1
+ 1730 05fe 50       		.byte	0x50
+ 1731 05ff 01       		.uleb128 0x1
+ 1732 0600 30       		.byte	0x30
+ 1733 0601 00       		.byte	0
+ 1734 0602 0A       		.uleb128 0xa
+ 1735 0603 DE020000 		.4byte	.LVL78
+ 1736 0607 E0080000 		.4byte	0x8e0
+ 1737 060b 19060000 		.4byte	0x619
+ 1738 060f 0B       		.uleb128 0xb
+ 1739 0610 01       		.uleb128 0x1
+ 1740 0611 50       		.byte	0x50
+ 1741 0612 05       		.uleb128 0x5
+ 1742 0613 03       		.byte	0x3
+ 1743 0614 24000000 		.4byte	.LC5
+ 1744 0618 00       		.byte	0
+ 1745 0619 0A       		.uleb128 0xa
+ 1746 061a EA020000 		.4byte	.LVL79
+ 1747 061e E0080000 		.4byte	0x8e0
+ 1748 0622 30060000 		.4byte	0x630
+ 1749 0626 0B       		.uleb128 0xb
+ 1750 0627 01       		.uleb128 0x1
+ 1751 0628 50       		.byte	0x50
+ 1752 0629 05       		.uleb128 0x5
+ 1753 062a 03       		.byte	0x3
+ 1754 062b 3C000000 		.4byte	.LC6
+ 1755 062f 00       		.byte	0
+ 1756 0630 0A       		.uleb128 0xa
+ 1757 0631 F6020000 		.4byte	.LVL80
+ 1758 0635 E0080000 		.4byte	0x8e0
+ 1759 0639 47060000 		.4byte	0x647
+ 1760 063d 0B       		.uleb128 0xb
+ 1761 063e 01       		.uleb128 0x1
+ 1762 063f 50       		.byte	0x50
+ 1763 0640 05       		.uleb128 0x5
+ 1764 0641 03       		.byte	0x3
+ 1765 0642 54000000 		.4byte	.LC7
+ 1766 0646 00       		.byte	0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 37
+
+
+ 1767 0647 0A       		.uleb128 0xa
+ 1768 0648 02030000 		.4byte	.LVL81
+ 1769 064c E0080000 		.4byte	0x8e0
+ 1770 0650 5E060000 		.4byte	0x65e
+ 1771 0654 0B       		.uleb128 0xb
+ 1772 0655 01       		.uleb128 0x1
+ 1773 0656 50       		.byte	0x50
+ 1774 0657 05       		.uleb128 0x5
+ 1775 0658 03       		.byte	0x3
+ 1776 0659 6C000000 		.4byte	.LC8
+ 1777 065d 00       		.byte	0
+ 1778 065e 0A       		.uleb128 0xa
+ 1779 065f 3E030000 		.4byte	.LVL82
+ 1780 0663 E0080000 		.4byte	0x8e0
+ 1781 0667 75060000 		.4byte	0x675
+ 1782 066b 0B       		.uleb128 0xb
+ 1783 066c 01       		.uleb128 0x1
+ 1784 066d 50       		.byte	0x50
+ 1785 066e 05       		.uleb128 0x5
+ 1786 066f 03       		.byte	0x3
+ 1787 0670 84000000 		.4byte	.LC9
+ 1788 0674 00       		.byte	0
+ 1789 0675 0A       		.uleb128 0xa
+ 1790 0676 48030000 		.4byte	.LVL83
+ 1791 067a E0080000 		.4byte	0x8e0
+ 1792 067e 8C060000 		.4byte	0x68c
+ 1793 0682 0B       		.uleb128 0xb
+ 1794 0683 01       		.uleb128 0x1
+ 1795 0684 50       		.byte	0x50
+ 1796 0685 05       		.uleb128 0x5
+ 1797 0686 03       		.byte	0x3
+ 1798 0687 9C000000 		.4byte	.LC10
+ 1799 068b 00       		.byte	0
+ 1800 068c 0A       		.uleb128 0xa
+ 1801 068d 56030000 		.4byte	.LVL84
+ 1802 0691 E0080000 		.4byte	0x8e0
+ 1803 0695 A3060000 		.4byte	0x6a3
+ 1804 0699 0B       		.uleb128 0xb
+ 1805 069a 01       		.uleb128 0x1
+ 1806 069b 50       		.byte	0x50
+ 1807 069c 05       		.uleb128 0x5
+ 1808 069d 03       		.byte	0x3
+ 1809 069e B4000000 		.4byte	.LC11
+ 1810 06a2 00       		.byte	0
+ 1811 06a3 0A       		.uleb128 0xa
+ 1812 06a4 64030000 		.4byte	.LVL85
+ 1813 06a8 E0080000 		.4byte	0x8e0
+ 1814 06ac BA060000 		.4byte	0x6ba
+ 1815 06b0 0B       		.uleb128 0xb
+ 1816 06b1 01       		.uleb128 0x1
+ 1817 06b2 50       		.byte	0x50
+ 1818 06b3 05       		.uleb128 0x5
+ 1819 06b4 03       		.byte	0x3
+ 1820 06b5 CC000000 		.4byte	.LC12
+ 1821 06b9 00       		.byte	0
+ 1822 06ba 0A       		.uleb128 0xa
+ 1823 06bb 72030000 		.4byte	.LVL86
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 38
+
+
+ 1824 06bf E0080000 		.4byte	0x8e0
+ 1825 06c3 D1060000 		.4byte	0x6d1
+ 1826 06c7 0B       		.uleb128 0xb
+ 1827 06c8 01       		.uleb128 0x1
+ 1828 06c9 50       		.byte	0x50
+ 1829 06ca 05       		.uleb128 0x5
+ 1830 06cb 03       		.byte	0x3
+ 1831 06cc E4000000 		.4byte	.LC13
+ 1832 06d0 00       		.byte	0
+ 1833 06d1 0A       		.uleb128 0xa
+ 1834 06d2 7C030000 		.4byte	.LVL87
+ 1835 06d6 E0080000 		.4byte	0x8e0
+ 1836 06da E8060000 		.4byte	0x6e8
+ 1837 06de 0B       		.uleb128 0xb
+ 1838 06df 01       		.uleb128 0x1
+ 1839 06e0 50       		.byte	0x50
+ 1840 06e1 05       		.uleb128 0x5
+ 1841 06e2 03       		.byte	0x3
+ 1842 06e3 FC000000 		.4byte	.LC14
+ 1843 06e7 00       		.byte	0
+ 1844 06e8 0A       		.uleb128 0xa
+ 1845 06e9 94030000 		.4byte	.LVL90
+ 1846 06ed F6080000 		.4byte	0x8f6
+ 1847 06f1 06070000 		.4byte	0x706
+ 1848 06f5 0B       		.uleb128 0xb
+ 1849 06f6 01       		.uleb128 0x1
+ 1850 06f7 50       		.byte	0x50
+ 1851 06f8 0C       		.uleb128 0xc
+ 1852 06f9 77       		.byte	0x77
+ 1853 06fa 00       		.sleb128 0
+ 1854 06fb 32       		.byte	0x32
+ 1855 06fc 24       		.byte	0x24
+ 1856 06fd 91       		.byte	0x91
+ 1857 06fe 00       		.sleb128 0
+ 1858 06ff 22       		.byte	0x22
+ 1859 0700 08       		.byte	0x8
+ 1860 0701 94       		.byte	0x94
+ 1861 0702 1C       		.byte	0x1c
+ 1862 0703 94       		.byte	0x94
+ 1863 0704 01       		.byte	0x1
+ 1864 0705 00       		.byte	0
+ 1865 0706 0A       		.uleb128 0xa
+ 1866 0707 A2030000 		.4byte	.LVL91
+ 1867 070b 0C090000 		.4byte	0x90c
+ 1868 070f 24070000 		.4byte	0x724
+ 1869 0713 0B       		.uleb128 0xb
+ 1870 0714 01       		.uleb128 0x1
+ 1871 0715 50       		.byte	0x50
+ 1872 0716 0C       		.uleb128 0xc
+ 1873 0717 76       		.byte	0x76
+ 1874 0718 00       		.sleb128 0
+ 1875 0719 32       		.byte	0x32
+ 1876 071a 24       		.byte	0x24
+ 1877 071b 91       		.byte	0x91
+ 1878 071c 00       		.sleb128 0
+ 1879 071d 22       		.byte	0x22
+ 1880 071e 08       		.byte	0x8
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 39
+
+
+ 1881 071f 94       		.byte	0x94
+ 1882 0720 1C       		.byte	0x1c
+ 1883 0721 94       		.byte	0x94
+ 1884 0722 01       		.byte	0x1
+ 1885 0723 00       		.byte	0
+ 1886 0724 0A       		.uleb128 0xa
+ 1887 0725 AA030000 		.4byte	.LVL92
+ 1888 0729 01090000 		.4byte	0x901
+ 1889 072d 39070000 		.4byte	0x739
+ 1890 0731 0B       		.uleb128 0xb
+ 1891 0732 01       		.uleb128 0x1
+ 1892 0733 50       		.byte	0x50
+ 1893 0734 03       		.uleb128 0x3
+ 1894 0735 0A       		.byte	0xa
+ 1895 0736 9001     		.2byte	0x190
+ 1896 0738 00       		.byte	0
+ 1897 0739 0A       		.uleb128 0xa
+ 1898 073a B0030000 		.4byte	.LVL93
+ 1899 073e F6080000 		.4byte	0x8f6
+ 1900 0742 4C070000 		.4byte	0x74c
+ 1901 0746 0B       		.uleb128 0xb
+ 1902 0747 01       		.uleb128 0x1
+ 1903 0748 50       		.byte	0x50
+ 1904 0749 01       		.uleb128 0x1
+ 1905 074a 30       		.byte	0x30
+ 1906 074b 00       		.byte	0
+ 1907 074c 0A       		.uleb128 0xa
+ 1908 074d B6030000 		.4byte	.LVL94
+ 1909 0751 0C090000 		.4byte	0x90c
+ 1910 0755 5F070000 		.4byte	0x75f
+ 1911 0759 0B       		.uleb128 0xb
+ 1912 075a 01       		.uleb128 0x1
+ 1913 075b 50       		.byte	0x50
+ 1914 075c 01       		.uleb128 0x1
+ 1915 075d 30       		.byte	0x30
+ 1916 075e 00       		.byte	0
+ 1917 075f 0A       		.uleb128 0xa
+ 1918 0760 C0030000 		.4byte	.LVL95
+ 1919 0764 E0080000 		.4byte	0x8e0
+ 1920 0768 76070000 		.4byte	0x776
+ 1921 076c 0B       		.uleb128 0xb
+ 1922 076d 01       		.uleb128 0x1
+ 1923 076e 50       		.byte	0x50
+ 1924 076f 05       		.uleb128 0x5
+ 1925 0770 03       		.byte	0x3
+ 1926 0771 24000000 		.4byte	.LC5
+ 1927 0775 00       		.byte	0
+ 1928 0776 0A       		.uleb128 0xa
+ 1929 0777 CC030000 		.4byte	.LVL96
+ 1930 077b E0080000 		.4byte	0x8e0
+ 1931 077f 8D070000 		.4byte	0x78d
+ 1932 0783 0B       		.uleb128 0xb
+ 1933 0784 01       		.uleb128 0x1
+ 1934 0785 50       		.byte	0x50
+ 1935 0786 05       		.uleb128 0x5
+ 1936 0787 03       		.byte	0x3
+ 1937 0788 3C000000 		.4byte	.LC6
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 40
+
+
+ 1938 078c 00       		.byte	0
+ 1939 078d 0A       		.uleb128 0xa
+ 1940 078e D8030000 		.4byte	.LVL97
+ 1941 0792 E0080000 		.4byte	0x8e0
+ 1942 0796 A4070000 		.4byte	0x7a4
+ 1943 079a 0B       		.uleb128 0xb
+ 1944 079b 01       		.uleb128 0x1
+ 1945 079c 50       		.byte	0x50
+ 1946 079d 05       		.uleb128 0x5
+ 1947 079e 03       		.byte	0x3
+ 1948 079f 54000000 		.4byte	.LC7
+ 1949 07a3 00       		.byte	0
+ 1950 07a4 0A       		.uleb128 0xa
+ 1951 07a5 E4030000 		.4byte	.LVL98
+ 1952 07a9 E0080000 		.4byte	0x8e0
+ 1953 07ad BB070000 		.4byte	0x7bb
+ 1954 07b1 0B       		.uleb128 0xb
+ 1955 07b2 01       		.uleb128 0x1
+ 1956 07b3 50       		.byte	0x50
+ 1957 07b4 05       		.uleb128 0x5
+ 1958 07b5 03       		.byte	0x3
+ 1959 07b6 6C000000 		.4byte	.LC8
+ 1960 07ba 00       		.byte	0
+ 1961 07bb 0A       		.uleb128 0xa
+ 1962 07bc EC030000 		.4byte	.LVL99
+ 1963 07c0 E0080000 		.4byte	0x8e0
+ 1964 07c4 D2070000 		.4byte	0x7d2
+ 1965 07c8 0B       		.uleb128 0xb
+ 1966 07c9 01       		.uleb128 0x1
+ 1967 07ca 50       		.byte	0x50
+ 1968 07cb 05       		.uleb128 0x5
+ 1969 07cc 03       		.byte	0x3
+ 1970 07cd 84000000 		.4byte	.LC9
+ 1971 07d1 00       		.byte	0
+ 1972 07d2 0A       		.uleb128 0xa
+ 1973 07d3 F6030000 		.4byte	.LVL100
+ 1974 07d7 E0080000 		.4byte	0x8e0
+ 1975 07db E9070000 		.4byte	0x7e9
+ 1976 07df 0B       		.uleb128 0xb
+ 1977 07e0 01       		.uleb128 0x1
+ 1978 07e1 50       		.byte	0x50
+ 1979 07e2 05       		.uleb128 0x5
+ 1980 07e3 03       		.byte	0x3
+ 1981 07e4 9C000000 		.4byte	.LC10
+ 1982 07e8 00       		.byte	0
+ 1983 07e9 0A       		.uleb128 0xa
+ 1984 07ea 04040000 		.4byte	.LVL101
+ 1985 07ee E0080000 		.4byte	0x8e0
+ 1986 07f2 00080000 		.4byte	0x800
+ 1987 07f6 0B       		.uleb128 0xb
+ 1988 07f7 01       		.uleb128 0x1
+ 1989 07f8 50       		.byte	0x50
+ 1990 07f9 05       		.uleb128 0x5
+ 1991 07fa 03       		.byte	0x3
+ 1992 07fb B4000000 		.4byte	.LC11
+ 1993 07ff 00       		.byte	0
+ 1994 0800 0A       		.uleb128 0xa
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 41
+
+
+ 1995 0801 12040000 		.4byte	.LVL102
+ 1996 0805 E0080000 		.4byte	0x8e0
+ 1997 0809 17080000 		.4byte	0x817
+ 1998 080d 0B       		.uleb128 0xb
+ 1999 080e 01       		.uleb128 0x1
+ 2000 080f 50       		.byte	0x50
+ 2001 0810 05       		.uleb128 0x5
+ 2002 0811 03       		.byte	0x3
+ 2003 0812 CC000000 		.4byte	.LC12
+ 2004 0816 00       		.byte	0
+ 2005 0817 0A       		.uleb128 0xa
+ 2006 0818 20040000 		.4byte	.LVL103
+ 2007 081c E0080000 		.4byte	0x8e0
+ 2008 0820 2E080000 		.4byte	0x82e
+ 2009 0824 0B       		.uleb128 0xb
+ 2010 0825 01       		.uleb128 0x1
+ 2011 0826 50       		.byte	0x50
+ 2012 0827 05       		.uleb128 0x5
+ 2013 0828 03       		.byte	0x3
+ 2014 0829 E4000000 		.4byte	.LC13
+ 2015 082d 00       		.byte	0
+ 2016 082e 0A       		.uleb128 0xa
+ 2017 082f 2A040000 		.4byte	.LVL104
+ 2018 0833 E0080000 		.4byte	0x8e0
+ 2019 0837 45080000 		.4byte	0x845
+ 2020 083b 0B       		.uleb128 0xb
+ 2021 083c 01       		.uleb128 0x1
+ 2022 083d 50       		.byte	0x50
+ 2023 083e 05       		.uleb128 0x5
+ 2024 083f 03       		.byte	0x3
+ 2025 0840 FC000000 		.4byte	.LC14
+ 2026 0844 00       		.byte	0
+ 2027 0845 0A       		.uleb128 0xa
+ 2028 0846 40040000 		.4byte	.LVL108
+ 2029 084a E0080000 		.4byte	0x8e0
+ 2030 084e 5C080000 		.4byte	0x85c
+ 2031 0852 0B       		.uleb128 0xb
+ 2032 0853 01       		.uleb128 0x1
+ 2033 0854 50       		.byte	0x50
+ 2034 0855 05       		.uleb128 0x5
+ 2035 0856 03       		.byte	0x3
+ 2036 0857 24010000 		.4byte	.LC16
+ 2037 085b 00       		.byte	0
+ 2038 085c 0A       		.uleb128 0xa
+ 2039 085d 46040000 		.4byte	.LVL109
+ 2040 0861 F6080000 		.4byte	0x8f6
+ 2041 0865 6F080000 		.4byte	0x86f
+ 2042 0869 0B       		.uleb128 0xb
+ 2043 086a 01       		.uleb128 0x1
+ 2044 086b 50       		.byte	0x50
+ 2045 086c 01       		.uleb128 0x1
+ 2046 086d 30       		.byte	0x30
+ 2047 086e 00       		.byte	0
+ 2048 086f 0A       		.uleb128 0xa
+ 2049 0870 4C040000 		.4byte	.LVL110
+ 2050 0874 0C090000 		.4byte	0x90c
+ 2051 0878 82080000 		.4byte	0x882
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 42
+
+
+ 2052 087c 0B       		.uleb128 0xb
+ 2053 087d 01       		.uleb128 0x1
+ 2054 087e 50       		.byte	0x50
+ 2055 087f 01       		.uleb128 0x1
+ 2056 0880 30       		.byte	0x30
+ 2057 0881 00       		.byte	0
+ 2058 0882 0C       		.uleb128 0xc
+ 2059 0883 54040000 		.4byte	.LVL111
+ 2060 0887 01090000 		.4byte	0x901
+ 2061 088b 0B       		.uleb128 0xb
+ 2062 088c 01       		.uleb128 0x1
+ 2063 088d 50       		.byte	0x50
+ 2064 088e 03       		.uleb128 0x3
+ 2065 088f 0A       		.byte	0xa
+ 2066 0890 8813     		.2byte	0x1388
+ 2067 0892 00       		.byte	0
+ 2068 0893 00       		.byte	0
+ 2069 0894 0D       		.uleb128 0xd
+ 2070 0895 68000000 		.4byte	0x68
+ 2071 0899 A4080000 		.4byte	0x8a4
+ 2072 089d 0E       		.uleb128 0xe
+ 2073 089e 9D000000 		.4byte	0x9d
+ 2074 08a2 05       		.byte	0x5
+ 2075 08a3 00       		.byte	0
+ 2076 08a4 0D       		.uleb128 0xd
+ 2077 08a5 68000000 		.4byte	0x68
+ 2078 08a9 B4080000 		.4byte	0x8b4
+ 2079 08ad 0E       		.uleb128 0xe
+ 2080 08ae 9D000000 		.4byte	0x9d
+ 2081 08b2 06       		.byte	0x6
+ 2082 08b3 00       		.byte	0
+ 2083 08b4 0D       		.uleb128 0xd
+ 2084 08b5 68000000 		.4byte	0x68
+ 2085 08b9 C4080000 		.4byte	0x8c4
+ 2086 08bd 0E       		.uleb128 0xe
+ 2087 08be 9D000000 		.4byte	0x9d
+ 2088 08c2 0B       		.byte	0xb
+ 2089 08c3 00       		.byte	0
+ 2090 08c4 0F       		.uleb128 0xf
+ 2091 08c5 03010000 		.4byte	.LASF34
+ 2092 08c9 0A       		.byte	0xa
+ 2093 08ca 1207     		.2byte	0x712
+ 2094 08cc D0080000 		.4byte	0x8d0
+ 2095 08d0 10       		.uleb128 0x10
+ 2096 08d1 76000000 		.4byte	0x76
+ 2097 08d5 11       		.uleb128 0x11
+ 2098 08d6 0C000000 		.4byte	.LASF23
+ 2099 08da 0C000000 		.4byte	.LASF23
+ 2100 08de 04       		.byte	0x4
+ 2101 08df 54       		.byte	0x54
+ 2102 08e0 11       		.uleb128 0x11
+ 2103 08e1 18020000 		.4byte	.LASF24
+ 2104 08e5 18020000 		.4byte	.LASF24
+ 2105 08e9 04       		.byte	0x4
+ 2106 08ea 8B       		.byte	0x8b
+ 2107 08eb 11       		.uleb128 0x11
+ 2108 08ec 10010000 		.4byte	.LASF25
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 43
+
+
+ 2109 08f0 10010000 		.4byte	.LASF25
+ 2110 08f4 05       		.byte	0x5
+ 2111 08f5 29       		.byte	0x29
+ 2112 08f6 11       		.uleb128 0x11
+ 2113 08f7 0C020000 		.4byte	.LASF26
+ 2114 08fb 0C020000 		.4byte	.LASF26
+ 2115 08ff 06       		.byte	0x6
+ 2116 0900 26       		.byte	0x26
+ 2117 0901 11       		.uleb128 0x11
+ 2118 0902 29020000 		.4byte	.LASF27
+ 2119 0906 29020000 		.4byte	.LASF27
+ 2120 090a 07       		.byte	0x7
+ 2121 090b 76       		.byte	0x76
+ 2122 090c 11       		.uleb128 0x11
+ 2123 090d 00000000 		.4byte	.LASF28
+ 2124 0911 00000000 		.4byte	.LASF28
+ 2125 0915 08       		.byte	0x8
+ 2126 0916 26       		.byte	0x26
+ 2127 0917 11       		.uleb128 0x11
+ 2128 0918 31000000 		.4byte	.LASF29
+ 2129 091c 31000000 		.4byte	.LASF29
+ 2130 0920 09       		.byte	0x9
+ 2131 0921 29       		.byte	0x29
+ 2132 0922 00       		.byte	0
+ 2133              		.section	.debug_abbrev,"",%progbits
+ 2134              	.Ldebug_abbrev0:
+ 2135 0000 01       		.uleb128 0x1
+ 2136 0001 11       		.uleb128 0x11
+ 2137 0002 01       		.byte	0x1
+ 2138 0003 25       		.uleb128 0x25
+ 2139 0004 0E       		.uleb128 0xe
+ 2140 0005 13       		.uleb128 0x13
+ 2141 0006 0B       		.uleb128 0xb
+ 2142 0007 03       		.uleb128 0x3
+ 2143 0008 0E       		.uleb128 0xe
+ 2144 0009 1B       		.uleb128 0x1b
+ 2145 000a 0E       		.uleb128 0xe
+ 2146 000b 55       		.uleb128 0x55
+ 2147 000c 17       		.uleb128 0x17
+ 2148 000d 11       		.uleb128 0x11
+ 2149 000e 01       		.uleb128 0x1
+ 2150 000f 10       		.uleb128 0x10
+ 2151 0010 17       		.uleb128 0x17
+ 2152 0011 00       		.byte	0
+ 2153 0012 00       		.byte	0
+ 2154 0013 02       		.uleb128 0x2
+ 2155 0014 24       		.uleb128 0x24
+ 2156 0015 00       		.byte	0
+ 2157 0016 0B       		.uleb128 0xb
+ 2158 0017 0B       		.uleb128 0xb
+ 2159 0018 3E       		.uleb128 0x3e
+ 2160 0019 0B       		.uleb128 0xb
+ 2161 001a 03       		.uleb128 0x3
+ 2162 001b 0E       		.uleb128 0xe
+ 2163 001c 00       		.byte	0
+ 2164 001d 00       		.byte	0
+ 2165 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 44
+
+
+ 2166 001f 16       		.uleb128 0x16
+ 2167 0020 00       		.byte	0
+ 2168 0021 03       		.uleb128 0x3
+ 2169 0022 0E       		.uleb128 0xe
+ 2170 0023 3A       		.uleb128 0x3a
+ 2171 0024 0B       		.uleb128 0xb
+ 2172 0025 3B       		.uleb128 0x3b
+ 2173 0026 0B       		.uleb128 0xb
+ 2174 0027 49       		.uleb128 0x49
+ 2175 0028 13       		.uleb128 0x13
+ 2176 0029 00       		.byte	0
+ 2177 002a 00       		.byte	0
+ 2178 002b 04       		.uleb128 0x4
+ 2179 002c 24       		.uleb128 0x24
+ 2180 002d 00       		.byte	0
+ 2181 002e 0B       		.uleb128 0xb
+ 2182 002f 0B       		.uleb128 0xb
+ 2183 0030 3E       		.uleb128 0x3e
+ 2184 0031 0B       		.uleb128 0xb
+ 2185 0032 03       		.uleb128 0x3
+ 2186 0033 08       		.uleb128 0x8
+ 2187 0034 00       		.byte	0
+ 2188 0035 00       		.byte	0
+ 2189 0036 05       		.uleb128 0x5
+ 2190 0037 2E       		.uleb128 0x2e
+ 2191 0038 01       		.byte	0x1
+ 2192 0039 3F       		.uleb128 0x3f
+ 2193 003a 19       		.uleb128 0x19
+ 2194 003b 03       		.uleb128 0x3
+ 2195 003c 0E       		.uleb128 0xe
+ 2196 003d 3A       		.uleb128 0x3a
+ 2197 003e 0B       		.uleb128 0xb
+ 2198 003f 3B       		.uleb128 0x3b
+ 2199 0040 0B       		.uleb128 0xb
+ 2200 0041 27       		.uleb128 0x27
+ 2201 0042 19       		.uleb128 0x19
+ 2202 0043 49       		.uleb128 0x49
+ 2203 0044 13       		.uleb128 0x13
+ 2204 0045 8701     		.uleb128 0x87
+ 2205 0047 19       		.uleb128 0x19
+ 2206 0048 11       		.uleb128 0x11
+ 2207 0049 01       		.uleb128 0x1
+ 2208 004a 12       		.uleb128 0x12
+ 2209 004b 06       		.uleb128 0x6
+ 2210 004c 40       		.uleb128 0x40
+ 2211 004d 18       		.uleb128 0x18
+ 2212 004e 9742     		.uleb128 0x2117
+ 2213 0050 19       		.uleb128 0x19
+ 2214 0051 01       		.uleb128 0x1
+ 2215 0052 13       		.uleb128 0x13
+ 2216 0053 00       		.byte	0
+ 2217 0054 00       		.byte	0
+ 2218 0055 06       		.uleb128 0x6
+ 2219 0056 34       		.uleb128 0x34
+ 2220 0057 00       		.byte	0
+ 2221 0058 03       		.uleb128 0x3
+ 2222 0059 0E       		.uleb128 0xe
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 45
+
+
+ 2223 005a 3A       		.uleb128 0x3a
+ 2224 005b 0B       		.uleb128 0xb
+ 2225 005c 3B       		.uleb128 0x3b
+ 2226 005d 0B       		.uleb128 0xb
+ 2227 005e 49       		.uleb128 0x49
+ 2228 005f 13       		.uleb128 0x13
+ 2229 0060 02       		.uleb128 0x2
+ 2230 0061 18       		.uleb128 0x18
+ 2231 0062 00       		.byte	0
+ 2232 0063 00       		.byte	0
+ 2233 0064 07       		.uleb128 0x7
+ 2234 0065 34       		.uleb128 0x34
+ 2235 0066 00       		.byte	0
+ 2236 0067 03       		.uleb128 0x3
+ 2237 0068 0E       		.uleb128 0xe
+ 2238 0069 3A       		.uleb128 0x3a
+ 2239 006a 0B       		.uleb128 0xb
+ 2240 006b 3B       		.uleb128 0x3b
+ 2241 006c 0B       		.uleb128 0xb
+ 2242 006d 49       		.uleb128 0x49
+ 2243 006e 13       		.uleb128 0x13
+ 2244 006f 02       		.uleb128 0x2
+ 2245 0070 17       		.uleb128 0x17
+ 2246 0071 00       		.byte	0
+ 2247 0072 00       		.byte	0
+ 2248 0073 08       		.uleb128 0x8
+ 2249 0074 34       		.uleb128 0x34
+ 2250 0075 00       		.byte	0
+ 2251 0076 03       		.uleb128 0x3
+ 2252 0077 08       		.uleb128 0x8
+ 2253 0078 3A       		.uleb128 0x3a
+ 2254 0079 0B       		.uleb128 0xb
+ 2255 007a 3B       		.uleb128 0x3b
+ 2256 007b 0B       		.uleb128 0xb
+ 2257 007c 49       		.uleb128 0x49
+ 2258 007d 13       		.uleb128 0x13
+ 2259 007e 02       		.uleb128 0x2
+ 2260 007f 17       		.uleb128 0x17
+ 2261 0080 00       		.byte	0
+ 2262 0081 00       		.byte	0
+ 2263 0082 09       		.uleb128 0x9
+ 2264 0083 898201   		.uleb128 0x4109
+ 2265 0086 00       		.byte	0
+ 2266 0087 11       		.uleb128 0x11
+ 2267 0088 01       		.uleb128 0x1
+ 2268 0089 31       		.uleb128 0x31
+ 2269 008a 13       		.uleb128 0x13
+ 2270 008b 00       		.byte	0
+ 2271 008c 00       		.byte	0
+ 2272 008d 0A       		.uleb128 0xa
+ 2273 008e 898201   		.uleb128 0x4109
+ 2274 0091 01       		.byte	0x1
+ 2275 0092 11       		.uleb128 0x11
+ 2276 0093 01       		.uleb128 0x1
+ 2277 0094 31       		.uleb128 0x31
+ 2278 0095 13       		.uleb128 0x13
+ 2279 0096 01       		.uleb128 0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 46
+
+
+ 2280 0097 13       		.uleb128 0x13
+ 2281 0098 00       		.byte	0
+ 2282 0099 00       		.byte	0
+ 2283 009a 0B       		.uleb128 0xb
+ 2284 009b 8A8201   		.uleb128 0x410a
+ 2285 009e 00       		.byte	0
+ 2286 009f 02       		.uleb128 0x2
+ 2287 00a0 18       		.uleb128 0x18
+ 2288 00a1 9142     		.uleb128 0x2111
+ 2289 00a3 18       		.uleb128 0x18
+ 2290 00a4 00       		.byte	0
+ 2291 00a5 00       		.byte	0
+ 2292 00a6 0C       		.uleb128 0xc
+ 2293 00a7 898201   		.uleb128 0x4109
+ 2294 00aa 01       		.byte	0x1
+ 2295 00ab 11       		.uleb128 0x11
+ 2296 00ac 01       		.uleb128 0x1
+ 2297 00ad 31       		.uleb128 0x31
+ 2298 00ae 13       		.uleb128 0x13
+ 2299 00af 00       		.byte	0
+ 2300 00b0 00       		.byte	0
+ 2301 00b1 0D       		.uleb128 0xd
+ 2302 00b2 01       		.uleb128 0x1
+ 2303 00b3 01       		.byte	0x1
+ 2304 00b4 49       		.uleb128 0x49
+ 2305 00b5 13       		.uleb128 0x13
+ 2306 00b6 01       		.uleb128 0x1
+ 2307 00b7 13       		.uleb128 0x13
+ 2308 00b8 00       		.byte	0
+ 2309 00b9 00       		.byte	0
+ 2310 00ba 0E       		.uleb128 0xe
+ 2311 00bb 21       		.uleb128 0x21
+ 2312 00bc 00       		.byte	0
+ 2313 00bd 49       		.uleb128 0x49
+ 2314 00be 13       		.uleb128 0x13
+ 2315 00bf 2F       		.uleb128 0x2f
+ 2316 00c0 0B       		.uleb128 0xb
+ 2317 00c1 00       		.byte	0
+ 2318 00c2 00       		.byte	0
+ 2319 00c3 0F       		.uleb128 0xf
+ 2320 00c4 34       		.uleb128 0x34
+ 2321 00c5 00       		.byte	0
+ 2322 00c6 03       		.uleb128 0x3
+ 2323 00c7 0E       		.uleb128 0xe
+ 2324 00c8 3A       		.uleb128 0x3a
+ 2325 00c9 0B       		.uleb128 0xb
+ 2326 00ca 3B       		.uleb128 0x3b
+ 2327 00cb 05       		.uleb128 0x5
+ 2328 00cc 49       		.uleb128 0x49
+ 2329 00cd 13       		.uleb128 0x13
+ 2330 00ce 3F       		.uleb128 0x3f
+ 2331 00cf 19       		.uleb128 0x19
+ 2332 00d0 3C       		.uleb128 0x3c
+ 2333 00d1 19       		.uleb128 0x19
+ 2334 00d2 00       		.byte	0
+ 2335 00d3 00       		.byte	0
+ 2336 00d4 10       		.uleb128 0x10
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 47
+
+
+ 2337 00d5 35       		.uleb128 0x35
+ 2338 00d6 00       		.byte	0
+ 2339 00d7 49       		.uleb128 0x49
+ 2340 00d8 13       		.uleb128 0x13
+ 2341 00d9 00       		.byte	0
+ 2342 00da 00       		.byte	0
+ 2343 00db 11       		.uleb128 0x11
+ 2344 00dc 2E       		.uleb128 0x2e
+ 2345 00dd 00       		.byte	0
+ 2346 00de 3F       		.uleb128 0x3f
+ 2347 00df 19       		.uleb128 0x19
+ 2348 00e0 3C       		.uleb128 0x3c
+ 2349 00e1 19       		.uleb128 0x19
+ 2350 00e2 6E       		.uleb128 0x6e
+ 2351 00e3 0E       		.uleb128 0xe
+ 2352 00e4 03       		.uleb128 0x3
+ 2353 00e5 0E       		.uleb128 0xe
+ 2354 00e6 3A       		.uleb128 0x3a
+ 2355 00e7 0B       		.uleb128 0xb
+ 2356 00e8 3B       		.uleb128 0x3b
+ 2357 00e9 0B       		.uleb128 0xb
+ 2358 00ea 00       		.byte	0
+ 2359 00eb 00       		.byte	0
+ 2360 00ec 00       		.byte	0
+ 2361              		.section	.debug_loc,"",%progbits
+ 2362              	.Ldebug_loc0:
+ 2363              	.LLST0:
+ 2364 0000 52000000 		.4byte	.LVL0
+ 2365 0004 5C000000 		.4byte	.LVL2
+ 2366 0008 0200     		.2byte	0x2
+ 2367 000a 35       		.byte	0x35
+ 2368 000b 9F       		.byte	0x9f
+ 2369 000c 5C000000 		.4byte	.LVL2
+ 2370 0010 84040000 		.4byte	.LFE64
+ 2371 0014 0100     		.2byte	0x1
+ 2372 0016 57       		.byte	0x57
+ 2373 0017 00000000 		.4byte	0
+ 2374 001b 00000000 		.4byte	0
+ 2375              	.LLST1:
+ 2376 001f 52000000 		.4byte	.LVL0
+ 2377 0023 5C000000 		.4byte	.LVL2
+ 2378 0027 0200     		.2byte	0x2
+ 2379 0029 35       		.byte	0x35
+ 2380 002a 9F       		.byte	0x9f
+ 2381 002b 5C000000 		.4byte	.LVL2
+ 2382 002f 84040000 		.4byte	.LFE64
+ 2383 0033 0100     		.2byte	0x1
+ 2384 0035 56       		.byte	0x56
+ 2385 0036 00000000 		.4byte	0
+ 2386 003a 00000000 		.4byte	0
+ 2387              	.LLST2:
+ 2388 003e 6A000000 		.4byte	.LVL5
+ 2389 0042 6E000000 		.4byte	.LVL6
+ 2390 0046 0200     		.2byte	0x2
+ 2391 0048 30       		.byte	0x30
+ 2392 0049 9F       		.byte	0x9f
+ 2393 004a 6E000000 		.4byte	.LVL6
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 48
+
+
+ 2394 004e 96000000 		.4byte	.LVL10
+ 2395 0052 0100     		.2byte	0x1
+ 2396 0054 54       		.byte	0x54
+ 2397 0055 96000000 		.4byte	.LVL10
+ 2398 0059 9A000000 		.4byte	.LVL11
+ 2399 005d 0200     		.2byte	0x2
+ 2400 005f 30       		.byte	0x30
+ 2401 0060 9F       		.byte	0x9f
+ 2402 0061 9A000000 		.4byte	.LVL11
+ 2403 0065 C0000000 		.4byte	.LVL15
+ 2404 0069 0100     		.2byte	0x1
+ 2405 006b 54       		.byte	0x54
+ 2406 006c C0000000 		.4byte	.LVL15
+ 2407 0070 C6000000 		.4byte	.LVL16
+ 2408 0074 0300     		.2byte	0x3
+ 2409 0076 74       		.byte	0x74
+ 2410 0077 03       		.sleb128 3
+ 2411 0078 9F       		.byte	0x9f
+ 2412 0079 C6000000 		.4byte	.LVL16
+ 2413 007d C8000000 		.4byte	.LVL17
+ 2414 0081 0200     		.2byte	0x2
+ 2415 0083 35       		.byte	0x35
+ 2416 0084 9F       		.byte	0x9f
+ 2417 0085 C8000000 		.4byte	.LVL17
+ 2418 0089 CA000000 		.4byte	.LVL18
+ 2419 008d 0300     		.2byte	0x3
+ 2420 008f 74       		.byte	0x74
+ 2421 0090 03       		.sleb128 3
+ 2422 0091 9F       		.byte	0x9f
+ 2423 0092 CA000000 		.4byte	.LVL18
+ 2424 0096 72010000 		.4byte	.LVL34
+ 2425 009a 0200     		.2byte	0x2
+ 2426 009c 36       		.byte	0x36
+ 2427 009d 9F       		.byte	0x9f
+ 2428 009e 72010000 		.4byte	.LVL34
+ 2429 00a2 26020000 		.4byte	.LVL53
+ 2430 00a6 0100     		.2byte	0x1
+ 2431 00a8 54       		.byte	0x54
+ 2432 00a9 44020000 		.4byte	.LVL58
+ 2433 00ad 64020000 		.4byte	.LVL62
+ 2434 00b1 0100     		.2byte	0x1
+ 2435 00b3 54       		.byte	0x54
+ 2436 00b4 66020000 		.4byte	.LVL63
+ 2437 00b8 70020000 		.4byte	.LVL64
+ 2438 00bc 0100     		.2byte	0x1
+ 2439 00be 54       		.byte	0x54
+ 2440 00bf 70020000 		.4byte	.LVL64
+ 2441 00c3 74020000 		.4byte	.LVL65
+ 2442 00c7 0200     		.2byte	0x2
+ 2443 00c9 30       		.byte	0x30
+ 2444 00ca 9F       		.byte	0x9f
+ 2445 00cb 74020000 		.4byte	.LVL65
+ 2446 00cf 9A020000 		.4byte	.LVL69
+ 2447 00d3 0100     		.2byte	0x1
+ 2448 00d5 54       		.byte	0x54
+ 2449 00d6 9A020000 		.4byte	.LVL69
+ 2450 00da A0020000 		.4byte	.LVL70
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 49
+
+
+ 2451 00de 0300     		.2byte	0x3
+ 2452 00e0 74       		.byte	0x74
+ 2453 00e1 03       		.sleb128 3
+ 2454 00e2 9F       		.byte	0x9f
+ 2455 00e3 A0020000 		.4byte	.LVL70
+ 2456 00e7 A2020000 		.4byte	.LVL71
+ 2457 00eb 0200     		.2byte	0x2
+ 2458 00ed 36       		.byte	0x36
+ 2459 00ee 9F       		.byte	0x9f
+ 2460 00ef A2020000 		.4byte	.LVL71
+ 2461 00f3 80030000 		.4byte	.LVL88
+ 2462 00f7 0300     		.2byte	0x3
+ 2463 00f9 74       		.byte	0x74
+ 2464 00fa 03       		.sleb128 3
+ 2465 00fb 9F       		.byte	0x9f
+ 2466 00fc 80030000 		.4byte	.LVL88
+ 2467 0100 34040000 		.4byte	.LVL107
+ 2468 0104 0100     		.2byte	0x1
+ 2469 0106 54       		.byte	0x54
+ 2470 0107 00000000 		.4byte	0
+ 2471 010b 00000000 		.4byte	0
+ 2472              	.LLST3:
+ 2473 010f 52000000 		.4byte	.LVL0
+ 2474 0113 5C000000 		.4byte	.LVL2
+ 2475 0117 0200     		.2byte	0x2
+ 2476 0119 30       		.byte	0x30
+ 2477 011a 9F       		.byte	0x9f
+ 2478 011b 5C000000 		.4byte	.LVL2
+ 2479 011f CA000000 		.4byte	.LVL18
+ 2480 0123 0100     		.2byte	0x1
+ 2481 0125 55       		.byte	0x55
+ 2482 0126 CA000000 		.4byte	.LVL18
+ 2483 012a 72010000 		.4byte	.LVL34
+ 2484 012e 0200     		.2byte	0x2
+ 2485 0130 30       		.byte	0x30
+ 2486 0131 9F       		.byte	0x9f
+ 2487 0132 72010000 		.4byte	.LVL34
+ 2488 0136 78010000 		.4byte	.LVL35
+ 2489 013a 0100     		.2byte	0x1
+ 2490 013c 55       		.byte	0x55
+ 2491 013d 78010000 		.4byte	.LVL35
+ 2492 0141 1E020000 		.4byte	.LVL51
+ 2493 0145 0200     		.2byte	0x2
+ 2494 0147 30       		.byte	0x30
+ 2495 0148 9F       		.byte	0x9f
+ 2496 0149 1E020000 		.4byte	.LVL51
+ 2497 014d A4020000 		.4byte	.LVL72
+ 2498 0151 0100     		.2byte	0x1
+ 2499 0153 55       		.byte	0x55
+ 2500 0154 A4020000 		.4byte	.LVL72
+ 2501 0158 80030000 		.4byte	.LVL88
+ 2502 015c 0200     		.2byte	0x2
+ 2503 015e 30       		.byte	0x30
+ 2504 015f 9F       		.byte	0x9f
+ 2505 0160 80030000 		.4byte	.LVL88
+ 2506 0164 A2030000 		.4byte	.LVL91
+ 2507 0168 0100     		.2byte	0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 50
+
+
+ 2508 016a 55       		.byte	0x55
+ 2509 016b A2030000 		.4byte	.LVL91
+ 2510 016f 2C040000 		.4byte	.LVL105
+ 2511 0173 0200     		.2byte	0x2
+ 2512 0175 30       		.byte	0x30
+ 2513 0176 9F       		.byte	0x9f
+ 2514 0177 2C040000 		.4byte	.LVL105
+ 2515 017b 84040000 		.4byte	.LFE64
+ 2516 017f 0100     		.2byte	0x1
+ 2517 0181 55       		.byte	0x55
+ 2518 0182 00000000 		.4byte	0
+ 2519 0186 00000000 		.4byte	0
+ 2520              		.section	.debug_aranges,"",%progbits
+ 2521 0000 1C000000 		.4byte	0x1c
+ 2522 0004 0200     		.2byte	0x2
+ 2523 0006 00000000 		.4byte	.Ldebug_info0
+ 2524 000a 04       		.byte	0x4
+ 2525 000b 00       		.byte	0
+ 2526 000c 0000     		.2byte	0
+ 2527 000e 0000     		.2byte	0
+ 2528 0010 00000000 		.4byte	.LFB64
+ 2529 0014 84040000 		.4byte	.LFE64-.LFB64
+ 2530 0018 00000000 		.4byte	0
+ 2531 001c 00000000 		.4byte	0
+ 2532              		.section	.debug_ranges,"",%progbits
+ 2533              	.Ldebug_ranges0:
+ 2534 0000 00000000 		.4byte	.LFB64
+ 2535 0004 84040000 		.4byte	.LFE64
+ 2536 0008 00000000 		.4byte	0
+ 2537 000c 00000000 		.4byte	0
+ 2538              		.section	.debug_line,"",%progbits
+ 2539              	.Ldebug_line0:
+ 2540 0000 D0020000 		.section	.debug_str,"MS",%progbits,1
+ 2540      02008201 
+ 2540      00000201 
+ 2540      FB0E0D00 
+ 2540      01010101 
+ 2541              	.LASF28:
+ 2542 0000 50696E5F 		.ascii	"Pin_2_Write\000"
+ 2542      325F5772 
+ 2542      69746500 
+ 2543              	.LASF23:
+ 2544 000c 55415254 		.ascii	"UART_1_Start\000"
+ 2544      5F315F53 
+ 2544      74617274 
+ 2544      00
+ 2545              	.LASF20:
+ 2546 0019 6C697665 		.ascii	"livesA\000"
+ 2546      734100
+ 2547              	.LASF21:
+ 2548 0020 6C697665 		.ascii	"livesB\000"
+ 2548      734200
+ 2549              	.LASF9:
+ 2550 0027 5F5F696E 		.ascii	"__int32_t\000"
+ 2550      7433325F 
+ 2550      7400
+ 2551              	.LASF29:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 51
+
+
+ 2552 0031 50696E5F 		.ascii	"Pin_4_Read\000"
+ 2552      345F5265 
+ 2552      616400
+ 2553              	.LASF11:
+ 2554 003c 666C6F61 		.ascii	"float\000"
+ 2554      7400
+ 2555              	.LASF1:
+ 2556 0042 756E7369 		.ascii	"unsigned char\000"
+ 2556      676E6564 
+ 2556      20636861 
+ 2556      7200
+ 2557              	.LASF30:
+ 2558 0050 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2558      43313120 
+ 2558      352E342E 
+ 2558      31203230 
+ 2558      31363036 
+ 2559 0083 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2559      20726576 
+ 2559      6973696F 
+ 2559      6E203233 
+ 2559      37373135 
+ 2560 00b6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2560      66756E63 
+ 2560      74696F6E 
+ 2560      2D736563 
+ 2560      74696F6E 
+ 2561              	.LASF5:
+ 2562 00de 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2562      20756E73 
+ 2562      69676E65 
+ 2562      6420696E 
+ 2562      7400
+ 2563              	.LASF3:
+ 2564 00f0 73686F72 		.ascii	"short unsigned int\000"
+ 2564      7420756E 
+ 2564      7369676E 
+ 2564      65642069 
+ 2564      6E7400
+ 2565              	.LASF34:
+ 2566 0103 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2566      52784275 
+ 2566      66666572 
+ 2566      00
+ 2567              	.LASF25:
+ 2568 0110 50696E5F 		.ascii	"Pin_3_Read\000"
+ 2568      335F5265 
+ 2568      616400
+ 2569              	.LASF12:
+ 2570 011b 646F7562 		.ascii	"double\000"
+ 2570      6C6500
+ 2571              	.LASF18:
+ 2572 0122 44656C61 		.ascii	"Delay\000"
+ 2572      7900
+ 2573              	.LASF33:
+ 2574 0128 6D61696E 		.ascii	"main\000"
+ 2574      00
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 52
+
+
+ 2575              	.LASF8:
+ 2576 012d 756E7369 		.ascii	"unsigned int\000"
+ 2576      676E6564 
+ 2576      20696E74 
+ 2576      00
+ 2577              	.LASF7:
+ 2578 013a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2578      206C6F6E 
+ 2578      6720756E 
+ 2578      7369676E 
+ 2578      65642069 
+ 2579              	.LASF16:
+ 2580 0151 706F6E67 		.ascii	"pong1\000"
+ 2580      3100
+ 2581              	.LASF17:
+ 2582 0157 706F6E67 		.ascii	"pong2\000"
+ 2582      3200
+ 2583              	.LASF10:
+ 2584 015d 696E7433 		.ascii	"int32_t\000"
+ 2584      325F7400 
+ 2585              	.LASF15:
+ 2586 0165 73697A65 		.ascii	"sizetype\000"
+ 2586      74797065 
+ 2586      00
+ 2587              	.LASF6:
+ 2588 016e 6C6F6E67 		.ascii	"long long int\000"
+ 2588      206C6F6E 
+ 2588      6720696E 
+ 2588      7400
+ 2589              	.LASF31:
+ 2590 017c 6D61696E 		.ascii	"main.c\000"
+ 2590      2E6300
+ 2591              	.LASF13:
+ 2592 0183 63686172 		.ascii	"char\000"
+ 2592      00
+ 2593              	.LASF22:
+ 2594 0188 44656C61 		.ascii	"Delaycount\000"
+ 2594      79636F75 
+ 2594      6E7400
+ 2595              	.LASF32:
+ 2596 0193 433A5C55 		.ascii	"C:\\Users\\atill\\OneDrive\\Documenten\\PSoC Creato"
+ 2596      73657273 
+ 2596      5C617469 
+ 2596      6C6C5C4F 
+ 2596      6E654472 
+ 2597 01c1 725C486F 		.ascii	"r\\Homework\\H Eindopdracht.cydsn\000"
+ 2597      6D65776F 
+ 2597      726B5C48 
+ 2597      2045696E 
+ 2597      646F7064 
+ 2598              	.LASF2:
+ 2599 01e1 73686F72 		.ascii	"short int\000"
+ 2599      7420696E 
+ 2599      7400
+ 2600              	.LASF4:
+ 2601 01eb 6C6F6E67 		.ascii	"long int\000"
+ 2601      20696E74 
+ARM GAS  C:\Users\atill\AppData\Local\Temp\cchbDaJL.s 			page 53
+
+
+ 2601      00
+ 2602              	.LASF14:
+ 2603 01f4 6C6F6E67 		.ascii	"long double\000"
+ 2603      20646F75 
+ 2603      626C6500 
+ 2604              	.LASF0:
+ 2605 0200 7369676E 		.ascii	"signed char\000"
+ 2605      65642063 
+ 2605      68617200 
+ 2606              	.LASF26:
+ 2607 020c 50696E5F 		.ascii	"Pin_1_Write\000"
+ 2607      315F5772 
+ 2607      69746500 
+ 2608              	.LASF24:
+ 2609 0218 55415254 		.ascii	"UART_1_PutString\000"
+ 2609      5F315F50 
+ 2609      75745374 
+ 2609      72696E67 
+ 2609      00
+ 2610              	.LASF27:
+ 2611 0229 43794465 		.ascii	"CyDelay\000"
+ 2611      6C617900 
+ 2612              	.LASF19:
+ 2613 0231 6C697665 		.ascii	"lives_display\000"
+ 2613      735F6469 
+ 2613      73706C61 
+ 2613      7900
+ 2614              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

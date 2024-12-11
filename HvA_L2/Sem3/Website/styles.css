@@ -1,0 +1,125 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body styling */
+body {
+    justify-content: center;
+    /* background-color: #353C40; */
+    background-color: #F0ECE1;
+    /* background-color: #F0EC; */
+}
+
+div {
+    padding: 10px;
+}
+
+div.container {
+    display: flex;
+}
+
+div.child {
+    flex: 1;
+}
+
+th {
+    background-color: #F0ECE1;
+}
+
+tr:nth-child(odd) {
+    background-color: #cec4c4;
+}
+
+h1 {
+    height: 50px;
+    width: fit-content;
+}
+
+.web-header {
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    width: auto;
+    border-style: none none solid none;
+    border-radius: 5px;
+}
+
+.gamepad-controls {
+    width: 400px;
+    display: grid;
+    gap: 1px;
+    height: 200px;
+    grid-template-columns: repeat(3, 100px);
+    /* border-style: solid; */
+}
+
+/* use the 5px for a less round finish and the 100px for a more round finish */
+#empty-div-top-left {
+    border-style: solid;
+    border-top-left-radius: 100px;
+    /* border-top-left-radius: 5px; */
+}
+
+#empty-div-top-right {
+    border-style: solid;
+    border-top-right-radius: 100px;
+    /* border-top-right-radius: 5px; */
+}
+
+#empty-div-bottom-left {
+    border-style: solid;
+    border-bottom-left-radius: 100px;
+    /* border-bottom-left-radius: 5px; */
+}
+
+#empty-div-bottom-right {
+    border-style: solid;
+    border-bottom-right-radius: 100px;
+    /* border-bottom-right-radius: 5px; */
+}
+
+.control-button {
+    background-color: rgb(28, 109, 180);
+    border-style: solid;
+}
+
+.control-choice-button {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    padding-left: 70px;
+}
+
+.sensor-data-table {
+    width: 400px;
+    /* border-style: solid; */
+}
+
+.sensor-data-type {
+    width: auto;
+    border-style: none solid solid none;
+    border-radius: 5px;
+}
+
+.sensor-data-value {
+    width: auto;
+    border-style: solid solid none none;
+    border-radius: 5px;
+}
+
+.event-logging-table {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F0ECE1;
+}
+
+.event-logging-table-header {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #F0ECE1;
+    border-style: none none solid none;
+    border-radius: 5px;
+}

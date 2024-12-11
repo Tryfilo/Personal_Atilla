@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Homework\A Blinkie\A Blinkie.cydwr\Pins">
+<ExpandedNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\TopDesign</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Pins</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Analog</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Clocks</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Interrupts</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\DMA</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\System</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Directives</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\Flash Security</v>
+<v>Homework\A Blinkie\A Blinkie.cydwr\EEPROM</v>
+<v>Homework\A Blinkie\Header Files</v>
+<v>Homework\A Blinkie\Header Files\cyapicallbacks.h</v>
+<v>Homework\A Blinkie\Source Files</v>
+<v>Homework\A Blinkie\Source Files\main.c</v>
+<v>Homework\B Ledbar\TopDesign</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Pins</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Analog</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Clocks</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Interrupts</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\DMA</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\System</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Directives</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\Flash Security</v>
+<v>Homework\B Ledbar\B Ledbar.cydwr\EEPROM</v>
+<v>Homework\B Ledbar\Header Files</v>
+<v>Homework\B Ledbar\Header Files\cyapicallbacks.h</v>
+<v>Homework\B Ledbar\Source Files</v>
+<v>Homework\B Ledbar\Source Files\main.c</v>
+<v>Homework\B Ledbar\Generated_Source</v>
+<v>Homework\B Ledbar\Generated_Source\PSoC5</v>
+<v>Homework\C Button\TopDesign</v>
+<v>Homework\C Button\C Button.cydwr</v>
+<v>Homework\C Button\C Button.cydwr\Pins</v>
+<v>Homework\C Button\C Button.cydwr\Analog</v>
+<v>Homework\C Button\C Button.cydwr\Clocks</v>
+<v>Homework\C Button\C Button.cydwr\Interrupts</v>
+<v>Homework\C Button\C Button.cydwr\DMA</v>
+<v>Homework\C Button\C Button.cydwr\System</v>
+<v>Homework\C Button\C Button.cydwr\Directives</v>
+<v>Homework\C Button\C Button.cydwr\Flash Security</v>
+<v>Homework\C Button\C Button.cydwr\EEPROM</v>
+<v>Homework\C Button\Header Files</v>
+<v>Homework\C Button\Header Files\cyapicallbacks.h</v>
+<v>Homework\C Button\Source Files</v>
+<v>Homework\C Button\Source Files\main.c</v>
+<v>Homework\C Button\Generated_Source</v>
+<v>Homework\C Button\Generated_Source\PSoC5</v>
+<v>Homework\D Potmeter\TopDesign</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Pins</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Analog</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Clocks</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Interrupts</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\DMA</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\System</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Directives</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\Flash Security</v>
+<v>Homework\D Potmeter\D Potmeter.cydwr\EEPROM</v>
+<v>Homework\D Potmeter\Header Files</v>
+<v>Homework\D Potmeter\Header Files\cyapicallbacks.h</v>
+<v>Homework\D Potmeter\Source Files</v>
+<v>Homework\D Potmeter\Source Files\main.c</v>
+<v>Homework\D Potmeter\Generated_Source</v>
+<v>Homework\D Potmeter\Generated_Source\PSoC5</v>
+<v>Homework\E Debouncer V2\TopDesign</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Pins</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Analog</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Clocks</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Interrupts</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\DMA</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\System</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Directives</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\Flash Security</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.cydwr\EEPROM</v>
+<v>Homework\E Debouncer V2\Header Files</v>
+<v>Homework\E Debouncer V2\Header Files\cyapicallbacks.h</v>
+<v>Homework\E Debouncer V2\Source Files</v>
+<v>Homework\E Debouncer V2\Source Files\main.c</v>
+<v>Homework\E Debouncer V2\Generated_Source</v>
+<v>Homework\E Debouncer V2\Generated_Source\PSoC5</v>
+<v>Homework\F PWM\TopDesign</v>
+<v>Homework\F PWM\F PWM.cydwr</v>
+<v>Homework\F PWM\F PWM.cydwr\Pins</v>
+<v>Homework\F PWM\F PWM.cydwr\Analog</v>
+<v>Homework\F PWM\F PWM.cydwr\Clocks</v>
+<v>Homework\F PWM\F PWM.cydwr\Interrupts</v>
+<v>Homework\F PWM\F PWM.cydwr\DMA</v>
+<v>Homework\F PWM\F PWM.cydwr\System</v>
+<v>Homework\F PWM\F PWM.cydwr\Directives</v>
+<v>Homework\F PWM\F PWM.cydwr\Flash Security</v>
+<v>Homework\F PWM\F PWM.cydwr\EEPROM</v>
+<v>Homework\F PWM\Header Files</v>
+<v>Homework\F PWM\Header Files\cyapicallbacks.h</v>
+<v>Homework\F PWM\Source Files</v>
+<v>Homework\F PWM\Source Files\main.c</v>
+<v>Homework\F PWM\Generated_Source</v>
+<v>Homework\F PWM\Generated_Source\PSoC5</v>
+<v>Homework\G</v>
+<v>Homework\G\TopDesign</v>
+<v>Homework\G\G.cydwr</v>
+<v>Homework\G\G.cydwr\Pins</v>
+<v>Homework\G\G.cydwr\Analog</v>
+<v>Homework\G\G.cydwr\Clocks</v>
+<v>Homework\G\G.cydwr\Interrupts</v>
+<v>Homework\G\G.cydwr\DMA</v>
+<v>Homework\G\G.cydwr\System</v>
+<v>Homework\G\G.cydwr\Directives</v>
+<v>Homework\G\G.cydwr\Flash Security</v>
+<v>Homework\G\G.cydwr\EEPROM</v>
+<v>Homework\G\Header Files</v>
+<v>Homework\G\Header Files\cyapicallbacks.h</v>
+<v>Homework\G\Source Files</v>
+<v>Homework\G\Source Files\main.c</v>
+<v>Homework\G\Generated_Source</v>
+<v>Homework\G\Generated_Source\PSoC5</v>
+<v>Homework\H Eindopdracht\TopDesign</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Pins</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Analog</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Clocks</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Interrupts</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\DMA</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\System</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Directives</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\Flash Security</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.cydwr\EEPROM</v>
+<v>Homework\H Eindopdracht\Header Files</v>
+<v>Homework\H Eindopdracht\Header Files\cyapicallbacks.h</v>
+<v>Homework\H Eindopdracht\Source Files</v>
+<v>Homework\H Eindopdracht\Source Files\main.c</v>
+<v>Homework\H Eindopdracht\Generated_Source</v>
+<v>Homework\H Eindopdracht\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Homework\E Debouncer V2</v>
+<v>Homework\F PWM</v>
+<v>Homework\G</v>
+<v>Homework\G\TopDesign</v>
+<v>Homework\G\G.cydwr</v>
+<v>Homework\G\G.cydwr\Pins</v>
+<v>Homework\G\G.cydwr\Analog</v>
+<v>Homework\G\G.cydwr\Clocks</v>
+<v>Homework\G\G.cydwr\Interrupts</v>
+<v>Homework\G\G.cydwr\DMA</v>
+<v>Homework\G\G.cydwr\System</v>
+<v>Homework\G\G.cydwr\Directives</v>
+<v>Homework\G\G.cydwr\Flash Security</v>
+<v>Homework\G\G.cydwr\EEPROM</v>
+<v>Homework\G\Header Files</v>
+<v>Homework\G\Header Files\cyapicallbacks.h</v>
+<v>Homework\G\Source Files</v>
+<v>Homework\G\Source Files\main.c</v>
+<v>Homework\G\Generated_Source</v>
+<v>Homework\G\Generated_Source\PSoC5</v>
+<v>Homework\G\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>Homework\G\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>Homework\G\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>Homework\G\Generated_Source\PSoC5\Clock_1</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\TopDesign</v>
+<v>Homework\A Blinkie\TopDesign\TopDesign.cysch</v>
+<v>Homework\B Ledbar</v>
+<v>Homework\B Ledbar\TopDesign</v>
+<v>Homework\B Ledbar\TopDesign\TopDesign.cysch</v>
+<v>Homework\C Button</v>
+<v>Homework\C Button\TopDesign</v>
+<v>Homework\C Button\TopDesign\TopDesign.cysch</v>
+<v>Homework\D Potmeter</v>
+<v>Homework\D Potmeter\TopDesign</v>
+<v>Homework\D Potmeter\TopDesign\TopDesign.cysch</v>
+<v>Homework\E Debouncer V2</v>
+<v>Homework\E Debouncer V2\TopDesign</v>
+<v>Homework\E Debouncer V2\TopDesign\TopDesign.cysch</v>
+<v>Homework\F PWM</v>
+<v>Homework\F PWM\TopDesign</v>
+<v>Homework\F PWM\TopDesign\TopDesign.cysch</v>
+<v>Homework\G</v>
+<v>Homework\G\TopDesign</v>
+<v>Homework\G\TopDesign\TopDesign.cysch</v>
+<v>Homework\H Eindopdracht</v>
+<v>Homework\H Eindopdracht\TopDesign</v>
+<v>Homework\H Eindopdracht\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\TopDesign</v>
+<v>Homework\A Blinkie\TopDesign\TopDesign.cysch</v>
+<v>Homework\B Ledbar</v>
+<v>Homework\B Ledbar\TopDesign</v>
+<v>Homework\B Ledbar\TopDesign\TopDesign.cysch</v>
+<v>Homework\C Button</v>
+<v>Homework\C Button\TopDesign</v>
+<v>Homework\C Button\TopDesign\TopDesign.cysch</v>
+<v>Homework\D Potmeter</v>
+<v>Homework\D Potmeter\TopDesign</v>
+<v>Homework\D Potmeter\TopDesign\TopDesign.cysch</v>
+<v>Homework\E Debouncer V2</v>
+<v>Homework\E Debouncer V2\TopDesign</v>
+<v>Homework\E Debouncer V2\TopDesign\TopDesign.cysch</v>
+<v>Homework\F PWM</v>
+<v>Homework\F PWM\TopDesign</v>
+<v>Homework\F PWM\TopDesign\TopDesign.cysch</v>
+<v>Homework\G</v>
+<v>Homework\G\TopDesign</v>
+<v>Homework\G\TopDesign\TopDesign.cysch</v>
+<v>Homework\H Eindopdracht</v>
+<v>Homework\H Eindopdracht\TopDesign</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\CortexM3</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LED_BLINKIE.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.elf</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.hex</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.map</v>
+<v>Homework\A Blinkie\A Blinkie.gpdsc</v>
+<v>Homework\A Blinkie\A Blinkie.rpt</v>
+<v>Homework\A Blinkie\A Blinkie_timing.html</v>
+<v>Homework\B Ledbar</v>
+<v>Homework\B Ledbar\CortexM3</v>
+<v>Homework\B Ledbar\CortexM3\ARM_GCC_541</v>
+<v>Homework\B Ledbar\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\B Ledbar\CortexM3\ARM_GCC_541\Debug\B Ledbar.elf</v>
+<v>Homework\B Ledbar\CortexM3\ARM_GCC_541\Debug\B Ledbar.hex</v>
+<v>Homework\B Ledbar\CortexM3\ARM_GCC_541\Debug\B Ledbar.map</v>
+<v>Homework\B Ledbar\B Ledbar.gpdsc</v>
+<v>Homework\B Ledbar\B Ledbar.rpt</v>
+<v>Homework\B Ledbar\B Ledbar_timing.html</v>
+<v>Homework\C Button</v>
+<v>Homework\C Button\CortexM3</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_A.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_B.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\C Button.elf</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\C Button.hex</v>
+<v>Homework\C Button\CortexM3\ARM_GCC_541\Debug\C Button.map</v>
+<v>Homework\C Button\C Button.gpdsc</v>
+<v>Homework\C Button\C Button.rpt</v>
+<v>Homework\C Button\C Button_timing.html</v>
+<v>Homework\D Potmeter</v>
+<v>Homework\D Potmeter\CortexM3</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_A.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_B.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\D Potmeter.elf</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\D Potmeter.hex</v>
+<v>Homework\D Potmeter\CortexM3\ARM_GCC_541\Debug\D Potmeter.map</v>
+<v>Homework\D Potmeter\D Potmeter.gpdsc</v>
+<v>Homework\D Potmeter\D Potmeter.rpt</v>
+<v>Homework\D Potmeter\D Potmeter_timing.html</v>
+<v>Homework\E Debouncer V2</v>
+<v>Homework\E Debouncer V2\CortexM3</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_A.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\HELFT_B.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Outdiv2.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\E Debouncer V2.elf</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\E Debouncer V2.hex</v>
+<v>Homework\E Debouncer V2\CortexM3\ARM_GCC_541\Debug\E Debouncer V2.map</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.gpdsc</v>
+<v>Homework\E Debouncer V2\E Debouncer V2.rpt</v>
+<v>Homework\E Debouncer V2\E Debouncer V2_timing.html</v>
+<v>Homework\F PWM</v>
+<v>Homework\F PWM\CortexM3</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\F PWM.elf</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\F PWM.hex</v>
+<v>Homework\F PWM\CortexM3\ARM_GCC_541\Debug\F PWM.map</v>
+<v>Homework\F PWM\F PWM.gpdsc</v>
+<v>Homework\F PWM\F PWM.rpt</v>
+<v>Homework\F PWM\F PWM_timing.html</v>
+<v>Homework\G</v>
+<v>Homework\G\CortexM3</v>
+<v>Homework\G\CortexM3\ARM_GCC_541</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_2.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_2_PM.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\G.elf</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\G.hex</v>
+<v>Homework\G\CortexM3\ARM_GCC_541\Debug\G.map</v>
+<v>Homework\G\G.gpdsc</v>
+<v>Homework\G\G.rpt</v>
+<v>Homework\G\G_timing.html</v>
+<v>Homework\H Eindopdracht</v>
+<v>Homework\H Eindopdracht\CortexM3</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\H Eindopdracht.elf</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\H Eindopdracht.hex</v>
+<v>Homework\H Eindopdracht\CortexM3\ARM_GCC_541\Debug\H Eindopdracht.map</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.gpdsc</v>
+<v>Homework\H Eindopdracht\H Eindopdracht.rpt</v>
+<v>Homework\H Eindopdracht\H Eindopdracht_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\CortexM3</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LED_BLINKIE.lst</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.elf</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.hex</v>
+<v>Homework\A Blinkie\CortexM3\ARM_GCC_541\Debug\A Blinkie.map</v>
+<v>Homework\A Blinkie\A Blinkie.gpdsc</v>
+<v>Homework\A Blinkie\A Blinkie.rpt</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\PSoC 5LP Architecture TRM</v>
+<v>Homework\A Blinkie\CY8C58LP Family Datasheet</v>
+<v>Homework\A Blinkie\System Reference Guides</v>
+<v>Homework\A Blinkie\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\A Blinkie\cy_pins_v2_20.pdf</v>
+<v>Homework\B Ledbar</v>
+<v>Homework\B Ledbar\PSoC 5LP Architecture TRM</v>
+<v>Homework\B Ledbar\CY8C58LP Family Datasheet</v>
+<v>Homework\B Ledbar\System Reference Guides</v>
+<v>Homework\B Ledbar\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\B Ledbar\cy_pins_v2_20</v>
+<v>Homework\B Ledbar\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\C Button</v>
+<v>Homework\C Button\PSoC 5LP Architecture TRM</v>
+<v>Homework\C Button\CY8C58LP Family Datasheet</v>
+<v>Homework\C Button\System Reference Guides</v>
+<v>Homework\C Button\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\C Button\cy_pins_v2_20</v>
+<v>Homework\C Button\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\C Button\Gnd_v1_0</v>
+<v>Homework\C Button\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Homework\C Button\LED_v1_0</v>
+<v>Homework\C Button\LED_v1_0\LED_v1_0.pdf</v>
+<v>Homework\C Button\Resistor_v1_0</v>
+<v>Homework\C Button\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Homework\D Potmeter</v>
+<v>Homework\D Potmeter\PSoC 5LP Architecture TRM</v>
+<v>Homework\D Potmeter\CY8C58LP Family Datasheet</v>
+<v>Homework\D Potmeter\System Reference Guides</v>
+<v>Homework\D Potmeter\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\D Potmeter\ADC_SAR_v3_10.pdf</v>
+<v>Homework\D Potmeter\cy_pins_v2_20</v>
+<v>Homework\D Potmeter\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\D Potmeter\Gnd_v1_0</v>
+<v>Homework\D Potmeter\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Homework\D Potmeter\LED_v1_0</v>
+<v>Homework\D Potmeter\LED_v1_0\LED_v1_0.pdf</v>
+<v>Homework\D Potmeter\Resistor_v1_0</v>
+<v>Homework\D Potmeter\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Homework\E Debouncer V2</v>
+<v>Homework\E Debouncer V2\PSoC 5LP Architecture TRM</v>
+<v>Homework\E Debouncer V2\CY8C58LP Family Datasheet</v>
+<v>Homework\E Debouncer V2\System Reference Guides</v>
+<v>Homework\E Debouncer V2\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\E Debouncer V2\ADC_SAR_v3_10.pdf</v>
+<v>Homework\E Debouncer V2\cy_clock_v2_20.pdf</v>
+<v>Homework\E Debouncer V2\cy_pins_v2_20</v>
+<v>Homework\E Debouncer V2\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\E Debouncer V2\cydff_v1_30.pdf</v>
+<v>Homework\E Debouncer V2\Debouncer_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\Gnd_v1_0</v>
+<v>Homework\E Debouncer V2\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\LED_v1_0</v>
+<v>Homework\E Debouncer V2\LED_v1_0\LED_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\not_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\Power_v1_0</v>
+<v>Homework\E Debouncer V2\Power_v1_0\Power_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\Resistor_v1_0</v>
+<v>Homework\E Debouncer V2\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Homework\E Debouncer V2\SwitchSPST_v1_0</v>
+<v>Homework\E Debouncer V2\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
+<v>Homework\F PWM</v>
+<v>Homework\F PWM\PSoC 5LP Architecture TRM</v>
+<v>Homework\F PWM\CY8C58LP Family Datasheet</v>
+<v>Homework\F PWM\System Reference Guides</v>
+<v>Homework\F PWM\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\F PWM\cy_clock_v2_20.pdf</v>
+<v>Homework\F PWM\cy_pins_v2_20.pdf</v>
+<v>Homework\F PWM\Gnd_v1_0.pdf</v>
+<v>Homework\F PWM\LED_v1_0.pdf</v>
+<v>Homework\F PWM\PWM_v3_30</v>
+<v>Homework\F PWM\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Homework\F PWM\Resistor_v1_0.pdf</v>
+<v>Homework\F PWM\xor_v1_0.pdf</v>
+<v>Homework\G</v>
+<v>Homework\G\PSoC 5LP Architecture TRM</v>
+<v>Homework\G\CY8C58LP Family Datasheet</v>
+<v>Homework\G\System Reference Guides</v>
+<v>Homework\G\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\G\ADC_SAR_v3_10.pdf</v>
+<v>Homework\G\and_v1_0</v>
+<v>Homework\G\and_v1_0\and_v1_0.pdf</v>
+<v>Homework\G\cy_clock_v2_20.pdf</v>
+<v>Homework\G\cy_pins_v2_20</v>
+<v>Homework\G\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\G\CyControlReg_v1_80</v>
+<v>Homework\G\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>Homework\G\PWM_v3_30.pdf</v>
+<v>Homework\G\UART_v2_50.pdf</v>
+<v>Homework\H Eindopdracht</v>
+<v>Homework\H Eindopdracht\PSoC 5LP Architecture TRM</v>
+<v>Homework\H Eindopdracht\CY8C58LP Family Datasheet</v>
+<v>Homework\H Eindopdracht\System Reference Guides</v>
+<v>Homework\H Eindopdracht\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\H Eindopdracht\cy_pins_v2_20</v>
+<v>Homework\H Eindopdracht\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\H Eindopdracht\Gnd_v1_0</v>
+<v>Homework\H Eindopdracht\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Homework\H Eindopdracht\LED_v1_0</v>
+<v>Homework\H Eindopdracht\LED_v1_0\LED_v1_0.pdf</v>
+<v>Homework\H Eindopdracht\Power_v1_0</v>
+<v>Homework\H Eindopdracht\Power_v1_0\Power_v1_0.pdf</v>
+<v>Homework\H Eindopdracht\Resistor_v1_0</v>
+<v>Homework\H Eindopdracht\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Homework\H Eindopdracht\SwitchSPST_v1_0</v>
+<v>Homework\H Eindopdracht\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
+<v>Homework\H Eindopdracht\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Homework</v>
+<v>Homework\A Blinkie</v>
+<v>Homework\A Blinkie\PSoC 5LP Architecture TRM</v>
+<v>Homework\A Blinkie\CY8C58LP Family Datasheet</v>
+<v>Homework\A Blinkie\System Reference Guides</v>
+<v>Homework\A Blinkie\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\A Blinkie\cy_pins_v2_20.pdf</v>
+<v>Homework\B Ledbar</v>
+<v>Homework\B Ledbar\PSoC 5LP Architecture TRM</v>
+<v>Homework\B Ledbar\CY8C58LP Family Datasheet</v>
+<v>Homework\B Ledbar\System Reference Guides</v>
+<v>Homework\B Ledbar\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\B Ledbar\cy_pins_v2_20</v>
+<v>Homework\B Ledbar\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\C Button</v>
+<v>Homework\C Button\PSoC 5LP Architecture TRM</v>
+<v>Homework\C Button\CY8C58LP Family Datasheet</v>
+<v>Homework\C Button\System Reference Guides</v>
+<v>Homework\C Button\System Reference Guides\cy_boot_v6_0</v>
+<v>Homework\C Button\cy_pins_v2_20</v>
+<v>Homework\C Button\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Homework\C Button\Gnd_v1_0</v>
+<v>Homework\C Button\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Homework\C Button\LED_v1_0</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\H Eindopdracht.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\H Eindopdracht.cydsn\H Eindopdracht.cydwr" />
+<name v=".\H Eindopdracht.cydsn\main.c" />
+<name v=".\E Debouncer V2.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\C Button.cydsn\main.c" />
+<name v=".\A Blinkie.cydsn\main.c" />
+<name v=".\A Blinkie.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\A Blinkie.cydsn\A Blinkie.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1159, 495" SelectedTabbedMdiWindow="e6cf64b3-1461-44e1-9ed7-44570aabf442"><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\H Eindopdracht.cydsn\TopDesign\TopDesign.cysch" Guid="f6c8ef0d-59fd-4b54-a806-116a6233176f" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\H Eindopdracht.cydsn\H Eindopdracht.cydwr" Guid="487d47c9-e438-4dbc-b477-9f5d5e12ce42" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\H Eindopdracht.cydsn\main.c" Guid="e6cf64b3-1461-44e1-9ed7-44570aabf442" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\E Debouncer V2.cydsn\TopDesign\TopDesign.cysch" Guid="e2211682-d8ea-42e2-8fb9-b850d5b6064d" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\C Button.cydsn\main.c" Guid="29fca8f5-d584-48a8-b690-47b8c5a3e0a7" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5b2e8f68-b738-4cdf-9873-e992a1eaf14b" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\A Blinkie.cydsn\main.c" Guid="5d4ed26c-ad37-4c50-b024-3ecf97cb93d1" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\A Blinkie.cydsn\TopDesign\TopDesign.cysch" Guid="11b12467-8f6b-4ed7-a0a8-e5e2ca11317d" /><DocumentWindow Key="C:\Users\atill\OneDrive\Documenten\PSoC Creator\Homework\A Blinkie.cydsn\A Blinkie.cydwr" Guid="b7169934-fa39-4577-8cd1-befe6217e8ef" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="Debug" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

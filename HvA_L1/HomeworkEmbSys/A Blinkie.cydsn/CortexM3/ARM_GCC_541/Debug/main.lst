@@ -1,0 +1,1101 @@
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 16 0
+  38              		.syntax unified
+  39              	@ 16 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 2
+
+
+  42              		.thumb
+  43              		.syntax unified
+  44              	.L2:
+  17:main.c        **** 
+  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  19:main.c        **** 
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         Pin_LED_BLINKIE_Write(1);
+  45              		.loc 1 22 0 discriminator 1
+  46 0004 0120     		movs	r0, #1
+  47 0006 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  48              	.LVL0:
+  23:main.c        ****         CyDelay(200);
+  49              		.loc 1 23 0 discriminator 1
+  50 000a C820     		movs	r0, #200
+  51 000c FFF7FEFF 		bl	CyDelay
+  52              	.LVL1:
+  24:main.c        ****         Pin_LED_BLINKIE_Write(0);
+  53              		.loc 1 24 0 discriminator 1
+  54 0010 0020     		movs	r0, #0
+  55 0012 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  56              	.LVL2:
+  25:main.c        ****         CyDelay(200);
+  57              		.loc 1 25 0 discriminator 1
+  58 0016 C820     		movs	r0, #200
+  59 0018 FFF7FEFF 		bl	CyDelay
+  60              	.LVL3:
+  26:main.c        ****         Pin_LED_BLINKIE_Write(1);
+  61              		.loc 1 26 0 discriminator 1
+  62 001c 0120     		movs	r0, #1
+  63 001e FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  64              	.LVL4:
+  27:main.c        ****         CyDelay(200);
+  65              		.loc 1 27 0 discriminator 1
+  66 0022 C820     		movs	r0, #200
+  67 0024 FFF7FEFF 		bl	CyDelay
+  68              	.LVL5:
+  28:main.c        ****         Pin_LED_BLINKIE_Write(0);
+  69              		.loc 1 28 0 discriminator 1
+  70 0028 0020     		movs	r0, #0
+  71 002a FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  72              	.LVL6:
+  29:main.c        ****         CyDelay(200);
+  73              		.loc 1 29 0 discriminator 1
+  74 002e C820     		movs	r0, #200
+  75 0030 FFF7FEFF 		bl	CyDelay
+  76              	.LVL7:
+  30:main.c        ****         Pin_LED_BLINKIE_Write(1);
+  77              		.loc 1 30 0 discriminator 1
+  78 0034 0120     		movs	r0, #1
+  79 0036 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  80              	.LVL8:
+  31:main.c        ****         CyDelay(200);
+  81              		.loc 1 31 0 discriminator 1
+  82 003a C820     		movs	r0, #200
+  83 003c FFF7FEFF 		bl	CyDelay
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 3
+
+
+  84              	.LVL9:
+  32:main.c        ****         Pin_LED_BLINKIE_Write(0);
+  85              		.loc 1 32 0 discriminator 1
+  86 0040 0020     		movs	r0, #0
+  87 0042 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  88              	.LVL10:
+  33:main.c        ****         CyDelay(1000);
+  89              		.loc 1 33 0 discriminator 1
+  90 0046 4FF47A70 		mov	r0, #1000
+  91 004a FFF7FEFF 		bl	CyDelay
+  92              	.LVL11:
+  34:main.c        ****         Pin_LED_BLINKIE_Write(1);
+  93              		.loc 1 34 0 discriminator 1
+  94 004e 0120     		movs	r0, #1
+  95 0050 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+  96              	.LVL12:
+  35:main.c        ****         CyDelay(1000);
+  97              		.loc 1 35 0 discriminator 1
+  98 0054 4FF47A70 		mov	r0, #1000
+  99 0058 FFF7FEFF 		bl	CyDelay
+ 100              	.LVL13:
+  36:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 101              		.loc 1 36 0 discriminator 1
+ 102 005c 0020     		movs	r0, #0
+ 103 005e FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 104              	.LVL14:
+  37:main.c        ****         CyDelay(200);
+ 105              		.loc 1 37 0 discriminator 1
+ 106 0062 C820     		movs	r0, #200
+ 107 0064 FFF7FEFF 		bl	CyDelay
+ 108              	.LVL15:
+  38:main.c        ****         Pin_LED_BLINKIE_Write(1);
+ 109              		.loc 1 38 0 discriminator 1
+ 110 0068 0120     		movs	r0, #1
+ 111 006a FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 112              	.LVL16:
+  39:main.c        ****         CyDelay(1000);
+ 113              		.loc 1 39 0 discriminator 1
+ 114 006e 4FF47A70 		mov	r0, #1000
+ 115 0072 FFF7FEFF 		bl	CyDelay
+ 116              	.LVL17:
+  40:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 117              		.loc 1 40 0 discriminator 1
+ 118 0076 0020     		movs	r0, #0
+ 119 0078 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 120              	.LVL18:
+  41:main.c        ****         CyDelay(200);
+ 121              		.loc 1 41 0 discriminator 1
+ 122 007c C820     		movs	r0, #200
+ 123 007e FFF7FEFF 		bl	CyDelay
+ 124              	.LVL19:
+  42:main.c        ****         Pin_LED_BLINKIE_Write(1);
+ 125              		.loc 1 42 0 discriminator 1
+ 126 0082 0120     		movs	r0, #1
+ 127 0084 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 128              	.LVL20:
+  43:main.c        ****         CyDelay(1000);
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 4
+
+
+ 129              		.loc 1 43 0 discriminator 1
+ 130 0088 4FF47A70 		mov	r0, #1000
+ 131 008c FFF7FEFF 		bl	CyDelay
+ 132              	.LVL21:
+  44:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 133              		.loc 1 44 0 discriminator 1
+ 134 0090 0020     		movs	r0, #0
+ 135 0092 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 136              	.LVL22:
+  45:main.c        ****         CyDelay(1000);
+ 137              		.loc 1 45 0 discriminator 1
+ 138 0096 4FF47A70 		mov	r0, #1000
+ 139 009a FFF7FEFF 		bl	CyDelay
+ 140              	.LVL23:
+  46:main.c        ****         Pin_LED_BLINKIE_Write(1);
+ 141              		.loc 1 46 0 discriminator 1
+ 142 009e 0120     		movs	r0, #1
+ 143 00a0 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 144              	.LVL24:
+  47:main.c        ****         CyDelay(200);
+ 145              		.loc 1 47 0 discriminator 1
+ 146 00a4 C820     		movs	r0, #200
+ 147 00a6 FFF7FEFF 		bl	CyDelay
+ 148              	.LVL25:
+  48:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 149              		.loc 1 48 0 discriminator 1
+ 150 00aa 0020     		movs	r0, #0
+ 151 00ac FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 152              	.LVL26:
+  49:main.c        ****         CyDelay(200);
+ 153              		.loc 1 49 0 discriminator 1
+ 154 00b0 C820     		movs	r0, #200
+ 155 00b2 FFF7FEFF 		bl	CyDelay
+ 156              	.LVL27:
+  50:main.c        ****         Pin_LED_BLINKIE_Write(1);
+ 157              		.loc 1 50 0 discriminator 1
+ 158 00b6 0120     		movs	r0, #1
+ 159 00b8 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 160              	.LVL28:
+  51:main.c        ****         CyDelay(200);
+ 161              		.loc 1 51 0 discriminator 1
+ 162 00bc C820     		movs	r0, #200
+ 163 00be FFF7FEFF 		bl	CyDelay
+ 164              	.LVL29:
+  52:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 165              		.loc 1 52 0 discriminator 1
+ 166 00c2 0020     		movs	r0, #0
+ 167 00c4 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 168              	.LVL30:
+  53:main.c        ****         CyDelay(200);
+ 169              		.loc 1 53 0 discriminator 1
+ 170 00c8 C820     		movs	r0, #200
+ 171 00ca FFF7FEFF 		bl	CyDelay
+ 172              	.LVL31:
+  54:main.c        ****         Pin_LED_BLINKIE_Write(1);
+ 173              		.loc 1 54 0 discriminator 1
+ 174 00ce 0120     		movs	r0, #1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 5
+
+
+ 175 00d0 FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 176              	.LVL32:
+  55:main.c        ****         CyDelay(200);
+ 177              		.loc 1 55 0 discriminator 1
+ 178 00d4 C820     		movs	r0, #200
+ 179 00d6 FFF7FEFF 		bl	CyDelay
+ 180              	.LVL33:
+  56:main.c        ****         Pin_LED_BLINKIE_Write(0);
+ 181              		.loc 1 56 0 discriminator 1
+ 182 00da 0020     		movs	r0, #0
+ 183 00dc FFF7FEFF 		bl	Pin_LED_BLINKIE_Write
+ 184              	.LVL34:
+  57:main.c        ****         CyDelay(3000);
+ 185              		.loc 1 57 0 discriminator 1
+ 186 00e0 40F6B830 		movw	r0, #3000
+ 187 00e4 FFF7FEFF 		bl	CyDelay
+ 188              	.LVL35:
+ 189 00e8 8CE7     		b	.L2
+ 190              		.cfi_endproc
+ 191              	.LFE63:
+ 192              		.size	main, .-main
+ 193 00ea 00BF     		.text
+ 194              	.Letext0:
+ 195              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 196              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 197              		.file 4 "Generated_Source\\PSoC5/Pin_LED_BLINKIE.h"
+ 198              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 199              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 200              		.section	.debug_info,"",%progbits
+ 201              	.Ldebug_info0:
+ 202 0000 A2030000 		.4byte	0x3a2
+ 203 0004 0400     		.2byte	0x4
+ 204 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 205 000a 04       		.byte	0x4
+ 206 000b 01       		.uleb128 0x1
+ 207 000c 3D000000 		.4byte	.LASF18
+ 208 0010 0C       		.byte	0xc
+ 209 0011 31000000 		.4byte	.LASF19
+ 210 0015 71010000 		.4byte	.LASF20
+ 211 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 212 001d 00000000 		.4byte	0
+ 213 0021 00000000 		.4byte	.Ldebug_line0
+ 214 0025 02       		.uleb128 0x2
+ 215 0026 01       		.byte	0x1
+ 216 0027 06       		.byte	0x6
+ 217 0028 49010000 		.4byte	.LASF0
+ 218 002c 02       		.uleb128 0x2
+ 219 002d 01       		.byte	0x1
+ 220 002e 08       		.byte	0x8
+ 221 002f 0F010000 		.4byte	.LASF1
+ 222 0033 02       		.uleb128 0x2
+ 223 0034 02       		.byte	0x2
+ 224 0035 05       		.byte	0x5
+ 225 0036 2B010000 		.4byte	.LASF2
+ 226 003a 02       		.uleb128 0x2
+ 227 003b 02       		.byte	0x2
+ 228 003c 07       		.byte	0x7
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 6
+
+
+ 229 003d FC000000 		.4byte	.LASF3
+ 230 0041 03       		.uleb128 0x3
+ 231 0042 61010000 		.4byte	.LASF9
+ 232 0046 02       		.byte	0x2
+ 233 0047 3F       		.byte	0x3f
+ 234 0048 4C000000 		.4byte	0x4c
+ 235 004c 02       		.uleb128 0x2
+ 236 004d 04       		.byte	0x4
+ 237 004e 05       		.byte	0x5
+ 238 004f 22010000 		.4byte	.LASF4
+ 239 0053 02       		.uleb128 0x2
+ 240 0054 04       		.byte	0x4
+ 241 0055 07       		.byte	0x7
+ 242 0056 D3000000 		.4byte	.LASF5
+ 243 005a 02       		.uleb128 0x2
+ 244 005b 08       		.byte	0x8
+ 245 005c 05       		.byte	0x5
+ 246 005d 00000000 		.4byte	.LASF6
+ 247 0061 02       		.uleb128 0x2
+ 248 0062 08       		.byte	0x8
+ 249 0063 07       		.byte	0x7
+ 250 0064 E5000000 		.4byte	.LASF7
+ 251 0068 04       		.uleb128 0x4
+ 252 0069 04       		.byte	0x4
+ 253 006a 05       		.byte	0x5
+ 254 006b 696E7400 		.ascii	"int\000"
+ 255 006f 02       		.uleb128 0x2
+ 256 0070 04       		.byte	0x4
+ 257 0071 07       		.byte	0x7
+ 258 0072 24000000 		.4byte	.LASF8
+ 259 0076 03       		.uleb128 0x3
+ 260 0077 B8010000 		.4byte	.LASF10
+ 261 007b 03       		.byte	0x3
+ 262 007c 2C       		.byte	0x2c
+ 263 007d 41000000 		.4byte	0x41
+ 264 0081 02       		.uleb128 0x2
+ 265 0082 04       		.byte	0x4
+ 266 0083 04       		.byte	0x4
+ 267 0084 6B010000 		.4byte	.LASF11
+ 268 0088 02       		.uleb128 0x2
+ 269 0089 08       		.byte	0x8
+ 270 008a 04       		.byte	0x4
+ 271 008b 35010000 		.4byte	.LASF12
+ 272 008f 02       		.uleb128 0x2
+ 273 0090 01       		.byte	0x1
+ 274 0091 08       		.byte	0x8
+ 275 0092 1D010000 		.4byte	.LASF13
+ 276 0096 02       		.uleb128 0x2
+ 277 0097 04       		.byte	0x4
+ 278 0098 07       		.byte	0x7
+ 279 0099 C0010000 		.4byte	.LASF14
+ 280 009d 02       		.uleb128 0x2
+ 281 009e 08       		.byte	0x8
+ 282 009f 04       		.byte	0x4
+ 283 00a0 55010000 		.4byte	.LASF15
+ 284 00a4 05       		.uleb128 0x5
+ 285 00a5 38000000 		.4byte	.LASF21
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 7
+
+
+ 286 00a9 01       		.byte	0x1
+ 287 00aa 0E       		.byte	0xe
+ 288 00ab 68000000 		.4byte	0x68
+ 289 00af 00000000 		.4byte	.LFB63
+ 290 00b3 EA000000 		.4byte	.LFE63-.LFB63
+ 291 00b7 01       		.uleb128 0x1
+ 292 00b8 9C       		.byte	0x9c
+ 293 00b9 7E030000 		.4byte	0x37e
+ 294 00bd 06       		.uleb128 0x6
+ 295 00be 0A000000 		.4byte	.LVL0
+ 296 00c2 8F030000 		.4byte	0x38f
+ 297 00c6 D0000000 		.4byte	0xd0
+ 298 00ca 07       		.uleb128 0x7
+ 299 00cb 01       		.uleb128 0x1
+ 300 00cc 50       		.byte	0x50
+ 301 00cd 01       		.uleb128 0x1
+ 302 00ce 31       		.byte	0x31
+ 303 00cf 00       		.byte	0
+ 304 00d0 06       		.uleb128 0x6
+ 305 00d1 10000000 		.4byte	.LVL1
+ 306 00d5 9A030000 		.4byte	0x39a
+ 307 00d9 E4000000 		.4byte	0xe4
+ 308 00dd 07       		.uleb128 0x7
+ 309 00de 01       		.uleb128 0x1
+ 310 00df 50       		.byte	0x50
+ 311 00e0 02       		.uleb128 0x2
+ 312 00e1 08       		.byte	0x8
+ 313 00e2 C8       		.byte	0xc8
+ 314 00e3 00       		.byte	0
+ 315 00e4 06       		.uleb128 0x6
+ 316 00e5 16000000 		.4byte	.LVL2
+ 317 00e9 8F030000 		.4byte	0x38f
+ 318 00ed F7000000 		.4byte	0xf7
+ 319 00f1 07       		.uleb128 0x7
+ 320 00f2 01       		.uleb128 0x1
+ 321 00f3 50       		.byte	0x50
+ 322 00f4 01       		.uleb128 0x1
+ 323 00f5 30       		.byte	0x30
+ 324 00f6 00       		.byte	0
+ 325 00f7 06       		.uleb128 0x6
+ 326 00f8 1C000000 		.4byte	.LVL3
+ 327 00fc 9A030000 		.4byte	0x39a
+ 328 0100 0B010000 		.4byte	0x10b
+ 329 0104 07       		.uleb128 0x7
+ 330 0105 01       		.uleb128 0x1
+ 331 0106 50       		.byte	0x50
+ 332 0107 02       		.uleb128 0x2
+ 333 0108 08       		.byte	0x8
+ 334 0109 C8       		.byte	0xc8
+ 335 010a 00       		.byte	0
+ 336 010b 06       		.uleb128 0x6
+ 337 010c 22000000 		.4byte	.LVL4
+ 338 0110 8F030000 		.4byte	0x38f
+ 339 0114 1E010000 		.4byte	0x11e
+ 340 0118 07       		.uleb128 0x7
+ 341 0119 01       		.uleb128 0x1
+ 342 011a 50       		.byte	0x50
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 8
+
+
+ 343 011b 01       		.uleb128 0x1
+ 344 011c 31       		.byte	0x31
+ 345 011d 00       		.byte	0
+ 346 011e 06       		.uleb128 0x6
+ 347 011f 28000000 		.4byte	.LVL5
+ 348 0123 9A030000 		.4byte	0x39a
+ 349 0127 32010000 		.4byte	0x132
+ 350 012b 07       		.uleb128 0x7
+ 351 012c 01       		.uleb128 0x1
+ 352 012d 50       		.byte	0x50
+ 353 012e 02       		.uleb128 0x2
+ 354 012f 08       		.byte	0x8
+ 355 0130 C8       		.byte	0xc8
+ 356 0131 00       		.byte	0
+ 357 0132 06       		.uleb128 0x6
+ 358 0133 2E000000 		.4byte	.LVL6
+ 359 0137 8F030000 		.4byte	0x38f
+ 360 013b 45010000 		.4byte	0x145
+ 361 013f 07       		.uleb128 0x7
+ 362 0140 01       		.uleb128 0x1
+ 363 0141 50       		.byte	0x50
+ 364 0142 01       		.uleb128 0x1
+ 365 0143 30       		.byte	0x30
+ 366 0144 00       		.byte	0
+ 367 0145 06       		.uleb128 0x6
+ 368 0146 34000000 		.4byte	.LVL7
+ 369 014a 9A030000 		.4byte	0x39a
+ 370 014e 59010000 		.4byte	0x159
+ 371 0152 07       		.uleb128 0x7
+ 372 0153 01       		.uleb128 0x1
+ 373 0154 50       		.byte	0x50
+ 374 0155 02       		.uleb128 0x2
+ 375 0156 08       		.byte	0x8
+ 376 0157 C8       		.byte	0xc8
+ 377 0158 00       		.byte	0
+ 378 0159 06       		.uleb128 0x6
+ 379 015a 3A000000 		.4byte	.LVL8
+ 380 015e 8F030000 		.4byte	0x38f
+ 381 0162 6C010000 		.4byte	0x16c
+ 382 0166 07       		.uleb128 0x7
+ 383 0167 01       		.uleb128 0x1
+ 384 0168 50       		.byte	0x50
+ 385 0169 01       		.uleb128 0x1
+ 386 016a 31       		.byte	0x31
+ 387 016b 00       		.byte	0
+ 388 016c 06       		.uleb128 0x6
+ 389 016d 40000000 		.4byte	.LVL9
+ 390 0171 9A030000 		.4byte	0x39a
+ 391 0175 80010000 		.4byte	0x180
+ 392 0179 07       		.uleb128 0x7
+ 393 017a 01       		.uleb128 0x1
+ 394 017b 50       		.byte	0x50
+ 395 017c 02       		.uleb128 0x2
+ 396 017d 08       		.byte	0x8
+ 397 017e C8       		.byte	0xc8
+ 398 017f 00       		.byte	0
+ 399 0180 06       		.uleb128 0x6
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 9
+
+
+ 400 0181 46000000 		.4byte	.LVL10
+ 401 0185 8F030000 		.4byte	0x38f
+ 402 0189 93010000 		.4byte	0x193
+ 403 018d 07       		.uleb128 0x7
+ 404 018e 01       		.uleb128 0x1
+ 405 018f 50       		.byte	0x50
+ 406 0190 01       		.uleb128 0x1
+ 407 0191 30       		.byte	0x30
+ 408 0192 00       		.byte	0
+ 409 0193 06       		.uleb128 0x6
+ 410 0194 4E000000 		.4byte	.LVL11
+ 411 0198 9A030000 		.4byte	0x39a
+ 412 019c A8010000 		.4byte	0x1a8
+ 413 01a0 07       		.uleb128 0x7
+ 414 01a1 01       		.uleb128 0x1
+ 415 01a2 50       		.byte	0x50
+ 416 01a3 03       		.uleb128 0x3
+ 417 01a4 0A       		.byte	0xa
+ 418 01a5 E803     		.2byte	0x3e8
+ 419 01a7 00       		.byte	0
+ 420 01a8 06       		.uleb128 0x6
+ 421 01a9 54000000 		.4byte	.LVL12
+ 422 01ad 8F030000 		.4byte	0x38f
+ 423 01b1 BB010000 		.4byte	0x1bb
+ 424 01b5 07       		.uleb128 0x7
+ 425 01b6 01       		.uleb128 0x1
+ 426 01b7 50       		.byte	0x50
+ 427 01b8 01       		.uleb128 0x1
+ 428 01b9 31       		.byte	0x31
+ 429 01ba 00       		.byte	0
+ 430 01bb 06       		.uleb128 0x6
+ 431 01bc 5C000000 		.4byte	.LVL13
+ 432 01c0 9A030000 		.4byte	0x39a
+ 433 01c4 D0010000 		.4byte	0x1d0
+ 434 01c8 07       		.uleb128 0x7
+ 435 01c9 01       		.uleb128 0x1
+ 436 01ca 50       		.byte	0x50
+ 437 01cb 03       		.uleb128 0x3
+ 438 01cc 0A       		.byte	0xa
+ 439 01cd E803     		.2byte	0x3e8
+ 440 01cf 00       		.byte	0
+ 441 01d0 06       		.uleb128 0x6
+ 442 01d1 62000000 		.4byte	.LVL14
+ 443 01d5 8F030000 		.4byte	0x38f
+ 444 01d9 E3010000 		.4byte	0x1e3
+ 445 01dd 07       		.uleb128 0x7
+ 446 01de 01       		.uleb128 0x1
+ 447 01df 50       		.byte	0x50
+ 448 01e0 01       		.uleb128 0x1
+ 449 01e1 30       		.byte	0x30
+ 450 01e2 00       		.byte	0
+ 451 01e3 06       		.uleb128 0x6
+ 452 01e4 68000000 		.4byte	.LVL15
+ 453 01e8 9A030000 		.4byte	0x39a
+ 454 01ec F7010000 		.4byte	0x1f7
+ 455 01f0 07       		.uleb128 0x7
+ 456 01f1 01       		.uleb128 0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 10
+
+
+ 457 01f2 50       		.byte	0x50
+ 458 01f3 02       		.uleb128 0x2
+ 459 01f4 08       		.byte	0x8
+ 460 01f5 C8       		.byte	0xc8
+ 461 01f6 00       		.byte	0
+ 462 01f7 06       		.uleb128 0x6
+ 463 01f8 6E000000 		.4byte	.LVL16
+ 464 01fc 8F030000 		.4byte	0x38f
+ 465 0200 0A020000 		.4byte	0x20a
+ 466 0204 07       		.uleb128 0x7
+ 467 0205 01       		.uleb128 0x1
+ 468 0206 50       		.byte	0x50
+ 469 0207 01       		.uleb128 0x1
+ 470 0208 31       		.byte	0x31
+ 471 0209 00       		.byte	0
+ 472 020a 06       		.uleb128 0x6
+ 473 020b 76000000 		.4byte	.LVL17
+ 474 020f 9A030000 		.4byte	0x39a
+ 475 0213 1F020000 		.4byte	0x21f
+ 476 0217 07       		.uleb128 0x7
+ 477 0218 01       		.uleb128 0x1
+ 478 0219 50       		.byte	0x50
+ 479 021a 03       		.uleb128 0x3
+ 480 021b 0A       		.byte	0xa
+ 481 021c E803     		.2byte	0x3e8
+ 482 021e 00       		.byte	0
+ 483 021f 06       		.uleb128 0x6
+ 484 0220 7C000000 		.4byte	.LVL18
+ 485 0224 8F030000 		.4byte	0x38f
+ 486 0228 32020000 		.4byte	0x232
+ 487 022c 07       		.uleb128 0x7
+ 488 022d 01       		.uleb128 0x1
+ 489 022e 50       		.byte	0x50
+ 490 022f 01       		.uleb128 0x1
+ 491 0230 30       		.byte	0x30
+ 492 0231 00       		.byte	0
+ 493 0232 06       		.uleb128 0x6
+ 494 0233 82000000 		.4byte	.LVL19
+ 495 0237 9A030000 		.4byte	0x39a
+ 496 023b 46020000 		.4byte	0x246
+ 497 023f 07       		.uleb128 0x7
+ 498 0240 01       		.uleb128 0x1
+ 499 0241 50       		.byte	0x50
+ 500 0242 02       		.uleb128 0x2
+ 501 0243 08       		.byte	0x8
+ 502 0244 C8       		.byte	0xc8
+ 503 0245 00       		.byte	0
+ 504 0246 06       		.uleb128 0x6
+ 505 0247 88000000 		.4byte	.LVL20
+ 506 024b 8F030000 		.4byte	0x38f
+ 507 024f 59020000 		.4byte	0x259
+ 508 0253 07       		.uleb128 0x7
+ 509 0254 01       		.uleb128 0x1
+ 510 0255 50       		.byte	0x50
+ 511 0256 01       		.uleb128 0x1
+ 512 0257 31       		.byte	0x31
+ 513 0258 00       		.byte	0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 11
+
+
+ 514 0259 06       		.uleb128 0x6
+ 515 025a 90000000 		.4byte	.LVL21
+ 516 025e 9A030000 		.4byte	0x39a
+ 517 0262 6E020000 		.4byte	0x26e
+ 518 0266 07       		.uleb128 0x7
+ 519 0267 01       		.uleb128 0x1
+ 520 0268 50       		.byte	0x50
+ 521 0269 03       		.uleb128 0x3
+ 522 026a 0A       		.byte	0xa
+ 523 026b E803     		.2byte	0x3e8
+ 524 026d 00       		.byte	0
+ 525 026e 06       		.uleb128 0x6
+ 526 026f 96000000 		.4byte	.LVL22
+ 527 0273 8F030000 		.4byte	0x38f
+ 528 0277 81020000 		.4byte	0x281
+ 529 027b 07       		.uleb128 0x7
+ 530 027c 01       		.uleb128 0x1
+ 531 027d 50       		.byte	0x50
+ 532 027e 01       		.uleb128 0x1
+ 533 027f 30       		.byte	0x30
+ 534 0280 00       		.byte	0
+ 535 0281 06       		.uleb128 0x6
+ 536 0282 9E000000 		.4byte	.LVL23
+ 537 0286 9A030000 		.4byte	0x39a
+ 538 028a 96020000 		.4byte	0x296
+ 539 028e 07       		.uleb128 0x7
+ 540 028f 01       		.uleb128 0x1
+ 541 0290 50       		.byte	0x50
+ 542 0291 03       		.uleb128 0x3
+ 543 0292 0A       		.byte	0xa
+ 544 0293 E803     		.2byte	0x3e8
+ 545 0295 00       		.byte	0
+ 546 0296 06       		.uleb128 0x6
+ 547 0297 A4000000 		.4byte	.LVL24
+ 548 029b 8F030000 		.4byte	0x38f
+ 549 029f A9020000 		.4byte	0x2a9
+ 550 02a3 07       		.uleb128 0x7
+ 551 02a4 01       		.uleb128 0x1
+ 552 02a5 50       		.byte	0x50
+ 553 02a6 01       		.uleb128 0x1
+ 554 02a7 31       		.byte	0x31
+ 555 02a8 00       		.byte	0
+ 556 02a9 06       		.uleb128 0x6
+ 557 02aa AA000000 		.4byte	.LVL25
+ 558 02ae 9A030000 		.4byte	0x39a
+ 559 02b2 BD020000 		.4byte	0x2bd
+ 560 02b6 07       		.uleb128 0x7
+ 561 02b7 01       		.uleb128 0x1
+ 562 02b8 50       		.byte	0x50
+ 563 02b9 02       		.uleb128 0x2
+ 564 02ba 08       		.byte	0x8
+ 565 02bb C8       		.byte	0xc8
+ 566 02bc 00       		.byte	0
+ 567 02bd 06       		.uleb128 0x6
+ 568 02be B0000000 		.4byte	.LVL26
+ 569 02c2 8F030000 		.4byte	0x38f
+ 570 02c6 D0020000 		.4byte	0x2d0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 12
+
+
+ 571 02ca 07       		.uleb128 0x7
+ 572 02cb 01       		.uleb128 0x1
+ 573 02cc 50       		.byte	0x50
+ 574 02cd 01       		.uleb128 0x1
+ 575 02ce 30       		.byte	0x30
+ 576 02cf 00       		.byte	0
+ 577 02d0 06       		.uleb128 0x6
+ 578 02d1 B6000000 		.4byte	.LVL27
+ 579 02d5 9A030000 		.4byte	0x39a
+ 580 02d9 E4020000 		.4byte	0x2e4
+ 581 02dd 07       		.uleb128 0x7
+ 582 02de 01       		.uleb128 0x1
+ 583 02df 50       		.byte	0x50
+ 584 02e0 02       		.uleb128 0x2
+ 585 02e1 08       		.byte	0x8
+ 586 02e2 C8       		.byte	0xc8
+ 587 02e3 00       		.byte	0
+ 588 02e4 06       		.uleb128 0x6
+ 589 02e5 BC000000 		.4byte	.LVL28
+ 590 02e9 8F030000 		.4byte	0x38f
+ 591 02ed F7020000 		.4byte	0x2f7
+ 592 02f1 07       		.uleb128 0x7
+ 593 02f2 01       		.uleb128 0x1
+ 594 02f3 50       		.byte	0x50
+ 595 02f4 01       		.uleb128 0x1
+ 596 02f5 31       		.byte	0x31
+ 597 02f6 00       		.byte	0
+ 598 02f7 06       		.uleb128 0x6
+ 599 02f8 C2000000 		.4byte	.LVL29
+ 600 02fc 9A030000 		.4byte	0x39a
+ 601 0300 0B030000 		.4byte	0x30b
+ 602 0304 07       		.uleb128 0x7
+ 603 0305 01       		.uleb128 0x1
+ 604 0306 50       		.byte	0x50
+ 605 0307 02       		.uleb128 0x2
+ 606 0308 08       		.byte	0x8
+ 607 0309 C8       		.byte	0xc8
+ 608 030a 00       		.byte	0
+ 609 030b 06       		.uleb128 0x6
+ 610 030c C8000000 		.4byte	.LVL30
+ 611 0310 8F030000 		.4byte	0x38f
+ 612 0314 1E030000 		.4byte	0x31e
+ 613 0318 07       		.uleb128 0x7
+ 614 0319 01       		.uleb128 0x1
+ 615 031a 50       		.byte	0x50
+ 616 031b 01       		.uleb128 0x1
+ 617 031c 30       		.byte	0x30
+ 618 031d 00       		.byte	0
+ 619 031e 06       		.uleb128 0x6
+ 620 031f CE000000 		.4byte	.LVL31
+ 621 0323 9A030000 		.4byte	0x39a
+ 622 0327 32030000 		.4byte	0x332
+ 623 032b 07       		.uleb128 0x7
+ 624 032c 01       		.uleb128 0x1
+ 625 032d 50       		.byte	0x50
+ 626 032e 02       		.uleb128 0x2
+ 627 032f 08       		.byte	0x8
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 13
+
+
+ 628 0330 C8       		.byte	0xc8
+ 629 0331 00       		.byte	0
+ 630 0332 06       		.uleb128 0x6
+ 631 0333 D4000000 		.4byte	.LVL32
+ 632 0337 8F030000 		.4byte	0x38f
+ 633 033b 45030000 		.4byte	0x345
+ 634 033f 07       		.uleb128 0x7
+ 635 0340 01       		.uleb128 0x1
+ 636 0341 50       		.byte	0x50
+ 637 0342 01       		.uleb128 0x1
+ 638 0343 31       		.byte	0x31
+ 639 0344 00       		.byte	0
+ 640 0345 06       		.uleb128 0x6
+ 641 0346 DA000000 		.4byte	.LVL33
+ 642 034a 9A030000 		.4byte	0x39a
+ 643 034e 59030000 		.4byte	0x359
+ 644 0352 07       		.uleb128 0x7
+ 645 0353 01       		.uleb128 0x1
+ 646 0354 50       		.byte	0x50
+ 647 0355 02       		.uleb128 0x2
+ 648 0356 08       		.byte	0x8
+ 649 0357 C8       		.byte	0xc8
+ 650 0358 00       		.byte	0
+ 651 0359 06       		.uleb128 0x6
+ 652 035a E0000000 		.4byte	.LVL34
+ 653 035e 8F030000 		.4byte	0x38f
+ 654 0362 6C030000 		.4byte	0x36c
+ 655 0366 07       		.uleb128 0x7
+ 656 0367 01       		.uleb128 0x1
+ 657 0368 50       		.byte	0x50
+ 658 0369 01       		.uleb128 0x1
+ 659 036a 30       		.byte	0x30
+ 660 036b 00       		.byte	0
+ 661 036c 08       		.uleb128 0x8
+ 662 036d E8000000 		.4byte	.LVL35
+ 663 0371 9A030000 		.4byte	0x39a
+ 664 0375 07       		.uleb128 0x7
+ 665 0376 01       		.uleb128 0x1
+ 666 0377 50       		.byte	0x50
+ 667 0378 03       		.uleb128 0x3
+ 668 0379 0A       		.byte	0xa
+ 669 037a B80B     		.2byte	0xbb8
+ 670 037c 00       		.byte	0
+ 671 037d 00       		.byte	0
+ 672 037e 09       		.uleb128 0x9
+ 673 037f 3C010000 		.4byte	.LASF22
+ 674 0383 06       		.byte	0x6
+ 675 0384 1207     		.2byte	0x712
+ 676 0386 8A030000 		.4byte	0x38a
+ 677 038a 0A       		.uleb128 0xa
+ 678 038b 76000000 		.4byte	0x76
+ 679 038f 0B       		.uleb128 0xb
+ 680 0390 0E000000 		.4byte	.LASF16
+ 681 0394 0E000000 		.4byte	.LASF16
+ 682 0398 04       		.byte	0x4
+ 683 0399 26       		.byte	0x26
+ 684 039a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 14
+
+
+ 685 039b CB000000 		.4byte	.LASF17
+ 686 039f CB000000 		.4byte	.LASF17
+ 687 03a3 05       		.byte	0x5
+ 688 03a4 76       		.byte	0x76
+ 689 03a5 00       		.byte	0
+ 690              		.section	.debug_abbrev,"",%progbits
+ 691              	.Ldebug_abbrev0:
+ 692 0000 01       		.uleb128 0x1
+ 693 0001 11       		.uleb128 0x11
+ 694 0002 01       		.byte	0x1
+ 695 0003 25       		.uleb128 0x25
+ 696 0004 0E       		.uleb128 0xe
+ 697 0005 13       		.uleb128 0x13
+ 698 0006 0B       		.uleb128 0xb
+ 699 0007 03       		.uleb128 0x3
+ 700 0008 0E       		.uleb128 0xe
+ 701 0009 1B       		.uleb128 0x1b
+ 702 000a 0E       		.uleb128 0xe
+ 703 000b 55       		.uleb128 0x55
+ 704 000c 17       		.uleb128 0x17
+ 705 000d 11       		.uleb128 0x11
+ 706 000e 01       		.uleb128 0x1
+ 707 000f 10       		.uleb128 0x10
+ 708 0010 17       		.uleb128 0x17
+ 709 0011 00       		.byte	0
+ 710 0012 00       		.byte	0
+ 711 0013 02       		.uleb128 0x2
+ 712 0014 24       		.uleb128 0x24
+ 713 0015 00       		.byte	0
+ 714 0016 0B       		.uleb128 0xb
+ 715 0017 0B       		.uleb128 0xb
+ 716 0018 3E       		.uleb128 0x3e
+ 717 0019 0B       		.uleb128 0xb
+ 718 001a 03       		.uleb128 0x3
+ 719 001b 0E       		.uleb128 0xe
+ 720 001c 00       		.byte	0
+ 721 001d 00       		.byte	0
+ 722 001e 03       		.uleb128 0x3
+ 723 001f 16       		.uleb128 0x16
+ 724 0020 00       		.byte	0
+ 725 0021 03       		.uleb128 0x3
+ 726 0022 0E       		.uleb128 0xe
+ 727 0023 3A       		.uleb128 0x3a
+ 728 0024 0B       		.uleb128 0xb
+ 729 0025 3B       		.uleb128 0x3b
+ 730 0026 0B       		.uleb128 0xb
+ 731 0027 49       		.uleb128 0x49
+ 732 0028 13       		.uleb128 0x13
+ 733 0029 00       		.byte	0
+ 734 002a 00       		.byte	0
+ 735 002b 04       		.uleb128 0x4
+ 736 002c 24       		.uleb128 0x24
+ 737 002d 00       		.byte	0
+ 738 002e 0B       		.uleb128 0xb
+ 739 002f 0B       		.uleb128 0xb
+ 740 0030 3E       		.uleb128 0x3e
+ 741 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 15
+
+
+ 742 0032 03       		.uleb128 0x3
+ 743 0033 08       		.uleb128 0x8
+ 744 0034 00       		.byte	0
+ 745 0035 00       		.byte	0
+ 746 0036 05       		.uleb128 0x5
+ 747 0037 2E       		.uleb128 0x2e
+ 748 0038 01       		.byte	0x1
+ 749 0039 3F       		.uleb128 0x3f
+ 750 003a 19       		.uleb128 0x19
+ 751 003b 03       		.uleb128 0x3
+ 752 003c 0E       		.uleb128 0xe
+ 753 003d 3A       		.uleb128 0x3a
+ 754 003e 0B       		.uleb128 0xb
+ 755 003f 3B       		.uleb128 0x3b
+ 756 0040 0B       		.uleb128 0xb
+ 757 0041 27       		.uleb128 0x27
+ 758 0042 19       		.uleb128 0x19
+ 759 0043 49       		.uleb128 0x49
+ 760 0044 13       		.uleb128 0x13
+ 761 0045 8701     		.uleb128 0x87
+ 762 0047 19       		.uleb128 0x19
+ 763 0048 11       		.uleb128 0x11
+ 764 0049 01       		.uleb128 0x1
+ 765 004a 12       		.uleb128 0x12
+ 766 004b 06       		.uleb128 0x6
+ 767 004c 40       		.uleb128 0x40
+ 768 004d 18       		.uleb128 0x18
+ 769 004e 9742     		.uleb128 0x2117
+ 770 0050 19       		.uleb128 0x19
+ 771 0051 01       		.uleb128 0x1
+ 772 0052 13       		.uleb128 0x13
+ 773 0053 00       		.byte	0
+ 774 0054 00       		.byte	0
+ 775 0055 06       		.uleb128 0x6
+ 776 0056 898201   		.uleb128 0x4109
+ 777 0059 01       		.byte	0x1
+ 778 005a 11       		.uleb128 0x11
+ 779 005b 01       		.uleb128 0x1
+ 780 005c 31       		.uleb128 0x31
+ 781 005d 13       		.uleb128 0x13
+ 782 005e 01       		.uleb128 0x1
+ 783 005f 13       		.uleb128 0x13
+ 784 0060 00       		.byte	0
+ 785 0061 00       		.byte	0
+ 786 0062 07       		.uleb128 0x7
+ 787 0063 8A8201   		.uleb128 0x410a
+ 788 0066 00       		.byte	0
+ 789 0067 02       		.uleb128 0x2
+ 790 0068 18       		.uleb128 0x18
+ 791 0069 9142     		.uleb128 0x2111
+ 792 006b 18       		.uleb128 0x18
+ 793 006c 00       		.byte	0
+ 794 006d 00       		.byte	0
+ 795 006e 08       		.uleb128 0x8
+ 796 006f 898201   		.uleb128 0x4109
+ 797 0072 01       		.byte	0x1
+ 798 0073 11       		.uleb128 0x11
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 16
+
+
+ 799 0074 01       		.uleb128 0x1
+ 800 0075 31       		.uleb128 0x31
+ 801 0076 13       		.uleb128 0x13
+ 802 0077 00       		.byte	0
+ 803 0078 00       		.byte	0
+ 804 0079 09       		.uleb128 0x9
+ 805 007a 34       		.uleb128 0x34
+ 806 007b 00       		.byte	0
+ 807 007c 03       		.uleb128 0x3
+ 808 007d 0E       		.uleb128 0xe
+ 809 007e 3A       		.uleb128 0x3a
+ 810 007f 0B       		.uleb128 0xb
+ 811 0080 3B       		.uleb128 0x3b
+ 812 0081 05       		.uleb128 0x5
+ 813 0082 49       		.uleb128 0x49
+ 814 0083 13       		.uleb128 0x13
+ 815 0084 3F       		.uleb128 0x3f
+ 816 0085 19       		.uleb128 0x19
+ 817 0086 3C       		.uleb128 0x3c
+ 818 0087 19       		.uleb128 0x19
+ 819 0088 00       		.byte	0
+ 820 0089 00       		.byte	0
+ 821 008a 0A       		.uleb128 0xa
+ 822 008b 35       		.uleb128 0x35
+ 823 008c 00       		.byte	0
+ 824 008d 49       		.uleb128 0x49
+ 825 008e 13       		.uleb128 0x13
+ 826 008f 00       		.byte	0
+ 827 0090 00       		.byte	0
+ 828 0091 0B       		.uleb128 0xb
+ 829 0092 2E       		.uleb128 0x2e
+ 830 0093 00       		.byte	0
+ 831 0094 3F       		.uleb128 0x3f
+ 832 0095 19       		.uleb128 0x19
+ 833 0096 3C       		.uleb128 0x3c
+ 834 0097 19       		.uleb128 0x19
+ 835 0098 6E       		.uleb128 0x6e
+ 836 0099 0E       		.uleb128 0xe
+ 837 009a 03       		.uleb128 0x3
+ 838 009b 0E       		.uleb128 0xe
+ 839 009c 3A       		.uleb128 0x3a
+ 840 009d 0B       		.uleb128 0xb
+ 841 009e 3B       		.uleb128 0x3b
+ 842 009f 0B       		.uleb128 0xb
+ 843 00a0 00       		.byte	0
+ 844 00a1 00       		.byte	0
+ 845 00a2 00       		.byte	0
+ 846              		.section	.debug_aranges,"",%progbits
+ 847 0000 1C000000 		.4byte	0x1c
+ 848 0004 0200     		.2byte	0x2
+ 849 0006 00000000 		.4byte	.Ldebug_info0
+ 850 000a 04       		.byte	0x4
+ 851 000b 00       		.byte	0
+ 852 000c 0000     		.2byte	0
+ 853 000e 0000     		.2byte	0
+ 854 0010 00000000 		.4byte	.LFB63
+ 855 0014 EA000000 		.4byte	.LFE63-.LFB63
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 17
+
+
+ 856 0018 00000000 		.4byte	0
+ 857 001c 00000000 		.4byte	0
+ 858              		.section	.debug_ranges,"",%progbits
+ 859              	.Ldebug_ranges0:
+ 860 0000 00000000 		.4byte	.LFB63
+ 861 0004 EA000000 		.4byte	.LFE63
+ 862 0008 00000000 		.4byte	0
+ 863 000c 00000000 		.4byte	0
+ 864              		.section	.debug_line,"",%progbits
+ 865              	.Ldebug_line0:
+ 866 0000 29020000 		.section	.debug_str,"MS",%progbits,1
+ 866      02005F01 
+ 866      00000201 
+ 866      FB0E0D00 
+ 866      01010101 
+ 867              	.LASF6:
+ 868 0000 6C6F6E67 		.ascii	"long long int\000"
+ 868      206C6F6E 
+ 868      6720696E 
+ 868      7400
+ 869              	.LASF16:
+ 870 000e 50696E5F 		.ascii	"Pin_LED_BLINKIE_Write\000"
+ 870      4C45445F 
+ 870      424C494E 
+ 870      4B49455F 
+ 870      57726974 
+ 871              	.LASF8:
+ 872 0024 756E7369 		.ascii	"unsigned int\000"
+ 872      676E6564 
+ 872      20696E74 
+ 872      00
+ 873              	.LASF19:
+ 874 0031 6D61696E 		.ascii	"main.c\000"
+ 874      2E6300
+ 875              	.LASF21:
+ 876 0038 6D61696E 		.ascii	"main\000"
+ 876      00
+ 877              	.LASF18:
+ 878 003d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 878      43313120 
+ 878      352E342E 
+ 878      31203230 
+ 878      31363036 
+ 879 0070 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 879      20726576 
+ 879      6973696F 
+ 879      6E203233 
+ 879      37373135 
+ 880 00a3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 880      66756E63 
+ 880      74696F6E 
+ 880      2D736563 
+ 880      74696F6E 
+ 881              	.LASF17:
+ 882 00cb 43794465 		.ascii	"CyDelay\000"
+ 882      6C617900 
+ 883              	.LASF5:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 18
+
+
+ 884 00d3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 884      20756E73 
+ 884      69676E65 
+ 884      6420696E 
+ 884      7400
+ 885              	.LASF7:
+ 886 00e5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 886      206C6F6E 
+ 886      6720756E 
+ 886      7369676E 
+ 886      65642069 
+ 887              	.LASF3:
+ 888 00fc 73686F72 		.ascii	"short unsigned int\000"
+ 888      7420756E 
+ 888      7369676E 
+ 888      65642069 
+ 888      6E7400
+ 889              	.LASF1:
+ 890 010f 756E7369 		.ascii	"unsigned char\000"
+ 890      676E6564 
+ 890      20636861 
+ 890      7200
+ 891              	.LASF13:
+ 892 011d 63686172 		.ascii	"char\000"
+ 892      00
+ 893              	.LASF4:
+ 894 0122 6C6F6E67 		.ascii	"long int\000"
+ 894      20696E74 
+ 894      00
+ 895              	.LASF2:
+ 896 012b 73686F72 		.ascii	"short int\000"
+ 896      7420696E 
+ 896      7400
+ 897              	.LASF12:
+ 898 0135 646F7562 		.ascii	"double\000"
+ 898      6C6500
+ 899              	.LASF22:
+ 900 013c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 900      52784275 
+ 900      66666572 
+ 900      00
+ 901              	.LASF0:
+ 902 0149 7369676E 		.ascii	"signed char\000"
+ 902      65642063 
+ 902      68617200 
+ 903              	.LASF15:
+ 904 0155 6C6F6E67 		.ascii	"long double\000"
+ 904      20646F75 
+ 904      626C6500 
+ 905              	.LASF9:
+ 906 0161 5F5F696E 		.ascii	"__int32_t\000"
+ 906      7433325F 
+ 906      7400
+ 907              	.LASF11:
+ 908 016b 666C6F61 		.ascii	"float\000"
+ 908      7400
+ 909              	.LASF20:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccPUsKvU.s 			page 19
+
+
+ 910 0171 433A5C55 		.ascii	"C:\\Users\\atill\\OneDrive\\Documenten\\PSoC Creato"
+ 910      73657273 
+ 910      5C617469 
+ 910      6C6C5C4F 
+ 910      6E654472 
+ 911 019f 725C486F 		.ascii	"r\\Homework\\Blinkie.cydsn\000"
+ 911      6D65776F 
+ 911      726B5C42 
+ 911      6C696E6B 
+ 911      69652E63 
+ 912              	.LASF10:
+ 913 01b8 696E7433 		.ascii	"int32_t\000"
+ 913      325F7400 
+ 914              	.LASF14:
+ 915 01c0 73697A65 		.ascii	"sizetype\000"
+ 915      74797065 
+ 915      00
+ 916              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

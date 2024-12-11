@@ -1,0 +1,19 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2020-11-16T07:51:10Z")
+ (DESIGN "Blinkie")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.4")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Blinkie")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT Pin_LED_BLINKIE\(0\)_PAD Pin_LED_BLINKIE\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

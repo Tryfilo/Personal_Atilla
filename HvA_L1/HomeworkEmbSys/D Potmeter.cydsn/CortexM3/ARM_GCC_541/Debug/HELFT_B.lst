@@ -1,0 +1,824 @@
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"HELFT_B.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HELFT_B_Write,"ax",%progbits
+  20              		.align	2
+  21              		.global	HELFT_B_Write
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	HELFT_B_Write, %function
+  25              	HELFT_B_Write:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\HELFT_B.c"
+   1:Generated_Source\PSoC5/HELFT_B.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/HELFT_B.c **** * File Name: HELFT_B.c  
+   3:Generated_Source\PSoC5/HELFT_B.c **** * Version 2.20
+   4:Generated_Source\PSoC5/HELFT_B.c **** *
+   5:Generated_Source\PSoC5/HELFT_B.c **** * Description:
+   6:Generated_Source\PSoC5/HELFT_B.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/HELFT_B.c **** *
+   8:Generated_Source\PSoC5/HELFT_B.c **** * Note:
+   9:Generated_Source\PSoC5/HELFT_B.c **** *
+  10:Generated_Source\PSoC5/HELFT_B.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/HELFT_B.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/HELFT_B.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/HELFT_B.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/HELFT_B.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/HELFT_B.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/HELFT_B.c **** 
+  17:Generated_Source\PSoC5/HELFT_B.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/HELFT_B.c **** #include "HELFT_B.h"
+  19:Generated_Source\PSoC5/HELFT_B.c **** 
+  20:Generated_Source\PSoC5/HELFT_B.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/HELFT_B.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/HELFT_B.c **** 	 HELFT_B__PORT == 15 && ((HELFT_B__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/HELFT_B.c **** 
+  24:Generated_Source\PSoC5/HELFT_B.c **** 
+  25:Generated_Source\PSoC5/HELFT_B.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/HELFT_B.c **** * Function Name: HELFT_B_Write
+  27:Generated_Source\PSoC5/HELFT_B.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/HELFT_B.c **** *
+  29:Generated_Source\PSoC5/HELFT_B.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/HELFT_B.c **** *  and shifting the bits appropriately. 
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 2
+
+
+  31:Generated_Source\PSoC5/HELFT_B.c **** *
+  32:Generated_Source\PSoC5/HELFT_B.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/HELFT_B.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/HELFT_B.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/HELFT_B.c **** * bit banding).
+  36:Generated_Source\PSoC5/HELFT_B.c **** *
+  37:Generated_Source\PSoC5/HELFT_B.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/HELFT_B.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/HELFT_B.c **** *
+  40:Generated_Source\PSoC5/HELFT_B.c **** * \param value
+  41:Generated_Source\PSoC5/HELFT_B.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/HELFT_B.c **** *
+  43:Generated_Source\PSoC5/HELFT_B.c **** * \return 
+  44:Generated_Source\PSoC5/HELFT_B.c **** *  None 
+  45:Generated_Source\PSoC5/HELFT_B.c **** *
+  46:Generated_Source\PSoC5/HELFT_B.c **** * \sideeffect
+  47:Generated_Source\PSoC5/HELFT_B.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/HELFT_B.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/HELFT_B.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/HELFT_B.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/HELFT_B.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/HELFT_B.c **** *  this function.
+  53:Generated_Source\PSoC5/HELFT_B.c **** *
+  54:Generated_Source\PSoC5/HELFT_B.c **** * \funcusage
+  55:Generated_Source\PSoC5/HELFT_B.c **** *  \snippet HELFT_B_SUT.c usage_HELFT_B_Write
+  56:Generated_Source\PSoC5/HELFT_B.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/HELFT_B.c **** void HELFT_B_Write(uint8 value)
+  58:Generated_Source\PSoC5/HELFT_B.c **** {
+  28              		.loc 1 58 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  59:Generated_Source\PSoC5/HELFT_B.c ****     uint8 staticBits = (HELFT_B_DR & (uint8)(~HELFT_B_MASK));
+  34              		.loc 1 59 0
+  35 0000 044A     		ldr	r2, .L2
+  36 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  37 0004 03F00703 		and	r3, r3, #7
+  38              	.LVL1:
+  60:Generated_Source\PSoC5/HELFT_B.c ****     HELFT_B_DR = staticBits | ((uint8)(value << HELFT_B_SHIFT) & HELFT_B_MASK);
+  39              		.loc 1 60 0
+  40 0008 C000     		lsls	r0, r0, #3
+  41              	.LVL2:
+  42 000a C0B2     		uxtb	r0, r0
+  43 000c 1843     		orrs	r0, r0, r3
+  44 000e 1070     		strb	r0, [r2]
+  45 0010 7047     		bx	lr
+  46              	.L3:
+  47 0012 00BF     		.align	2
+  48              	.L2:
+  49 0014 20510040 		.word	1073762592
+  50              		.cfi_endproc
+  51              	.LFE0:
+  52              		.size	HELFT_B_Write, .-HELFT_B_Write
+  53              		.section	.text.HELFT_B_SetDriveMode,"ax",%progbits
+  54              		.align	2
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 3
+
+
+  55              		.global	HELFT_B_SetDriveMode
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	HELFT_B_SetDriveMode, %function
+  59              	HELFT_B_SetDriveMode:
+  60              	.LFB1:
+  61:Generated_Source\PSoC5/HELFT_B.c **** }
+  62:Generated_Source\PSoC5/HELFT_B.c **** 
+  63:Generated_Source\PSoC5/HELFT_B.c **** 
+  64:Generated_Source\PSoC5/HELFT_B.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/HELFT_B.c **** * Function Name: HELFT_B_SetDriveMode
+  66:Generated_Source\PSoC5/HELFT_B.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/HELFT_B.c **** *
+  68:Generated_Source\PSoC5/HELFT_B.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/HELFT_B.c **** * 
+  70:Generated_Source\PSoC5/HELFT_B.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/HELFT_B.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/HELFT_B.c **** *
+  73:Generated_Source\PSoC5/HELFT_B.c **** * \param mode
+  74:Generated_Source\PSoC5/HELFT_B.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/HELFT_B.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/HELFT_B.c **** *
+  77:Generated_Source\PSoC5/HELFT_B.c **** * \return
+  78:Generated_Source\PSoC5/HELFT_B.c **** *  None
+  79:Generated_Source\PSoC5/HELFT_B.c **** *
+  80:Generated_Source\PSoC5/HELFT_B.c **** * \sideeffect
+  81:Generated_Source\PSoC5/HELFT_B.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/HELFT_B.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/HELFT_B.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/HELFT_B.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/HELFT_B.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/HELFT_B.c **** *
+  87:Generated_Source\PSoC5/HELFT_B.c **** * \funcusage
+  88:Generated_Source\PSoC5/HELFT_B.c **** *  \snippet HELFT_B_SUT.c usage_HELFT_B_SetDriveMode
+  89:Generated_Source\PSoC5/HELFT_B.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/HELFT_B.c **** void HELFT_B_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/HELFT_B.c **** {
+  61              		.loc 1 91 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		@ link register save eliminated.
+  66              	.LVL3:
+  92:Generated_Source\PSoC5/HELFT_B.c **** 	CyPins_SetPinDriveMode(HELFT_B_0, mode);
+  67              		.loc 1 92 0
+  68 0000 104A     		ldr	r2, .L5
+  69 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  70 0004 00F00E00 		and	r0, r0, #14
+  71              	.LVL4:
+  72 0008 03F0F103 		and	r3, r3, #241
+  73 000c 0343     		orrs	r3, r3, r0
+  74 000e 1370     		strb	r3, [r2]
+  93:Generated_Source\PSoC5/HELFT_B.c **** 	CyPins_SetPinDriveMode(HELFT_B_1, mode);
+  75              		.loc 1 93 0
+  76 0010 0132     		adds	r2, r2, #1
+  77 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  78 0014 03F0F103 		and	r3, r3, #241
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 4
+
+
+  79 0018 0343     		orrs	r3, r3, r0
+  80 001a 1370     		strb	r3, [r2]
+  94:Generated_Source\PSoC5/HELFT_B.c **** 	CyPins_SetPinDriveMode(HELFT_B_2, mode);
+  81              		.loc 1 94 0
+  82 001c 0132     		adds	r2, r2, #1
+  83 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  84 0020 03F0F103 		and	r3, r3, #241
+  85 0024 0343     		orrs	r3, r3, r0
+  86 0026 1370     		strb	r3, [r2]
+  95:Generated_Source\PSoC5/HELFT_B.c **** 	CyPins_SetPinDriveMode(HELFT_B_3, mode);
+  87              		.loc 1 95 0
+  88 0028 0132     		adds	r2, r2, #1
+  89 002a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  90 002c 03F0F103 		and	r3, r3, #241
+  91 0030 0343     		orrs	r3, r3, r0
+  92 0032 1370     		strb	r3, [r2]
+  96:Generated_Source\PSoC5/HELFT_B.c **** 	CyPins_SetPinDriveMode(HELFT_B_4, mode);
+  93              		.loc 1 96 0
+  94 0034 0132     		adds	r2, r2, #1
+  95 0036 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  96 0038 03F0F103 		and	r3, r3, #241
+  97 003c 1843     		orrs	r0, r0, r3
+  98 003e 1070     		strb	r0, [r2]
+  99 0040 7047     		bx	lr
+ 100              	.L6:
+ 101 0042 00BF     		.align	2
+ 102              	.L5:
+ 103 0044 13500040 		.word	1073762323
+ 104              		.cfi_endproc
+ 105              	.LFE1:
+ 106              		.size	HELFT_B_SetDriveMode, .-HELFT_B_SetDriveMode
+ 107              		.section	.text.HELFT_B_Read,"ax",%progbits
+ 108              		.align	2
+ 109              		.global	HELFT_B_Read
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.type	HELFT_B_Read, %function
+ 113              	HELFT_B_Read:
+ 114              	.LFB2:
+  97:Generated_Source\PSoC5/HELFT_B.c **** }
+  98:Generated_Source\PSoC5/HELFT_B.c **** 
+  99:Generated_Source\PSoC5/HELFT_B.c **** 
+ 100:Generated_Source\PSoC5/HELFT_B.c **** /*******************************************************************************
+ 101:Generated_Source\PSoC5/HELFT_B.c **** * Function Name: HELFT_B_Read
+ 102:Generated_Source\PSoC5/HELFT_B.c **** ****************************************************************************//**
+ 103:Generated_Source\PSoC5/HELFT_B.c **** *
+ 104:Generated_Source\PSoC5/HELFT_B.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 105:Generated_Source\PSoC5/HELFT_B.c **** *  the required bits according to the width and bit position of the component
+ 106:Generated_Source\PSoC5/HELFT_B.c **** *  instance. 
+ 107:Generated_Source\PSoC5/HELFT_B.c **** *
+ 108:Generated_Source\PSoC5/HELFT_B.c **** * The pin's status register returns the current logic level present on the 
+ 109:Generated_Source\PSoC5/HELFT_B.c **** * physical pin.
+ 110:Generated_Source\PSoC5/HELFT_B.c **** *
+ 111:Generated_Source\PSoC5/HELFT_B.c **** * \return 
+ 112:Generated_Source\PSoC5/HELFT_B.c **** *  The current value for the pins in the component as a right justified number.
+ 113:Generated_Source\PSoC5/HELFT_B.c **** *
+ 114:Generated_Source\PSoC5/HELFT_B.c **** * \funcusage
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 5
+
+
+ 115:Generated_Source\PSoC5/HELFT_B.c **** *  \snippet HELFT_B_SUT.c usage_HELFT_B_Read  
+ 116:Generated_Source\PSoC5/HELFT_B.c **** *******************************************************************************/
+ 117:Generated_Source\PSoC5/HELFT_B.c **** uint8 HELFT_B_Read(void)
+ 118:Generated_Source\PSoC5/HELFT_B.c **** {
+ 115              		.loc 1 118 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 119:Generated_Source\PSoC5/HELFT_B.c ****     return (HELFT_B_PS & HELFT_B_MASK) >> HELFT_B_SHIFT;
+ 120              		.loc 1 119 0
+ 121 0000 014B     		ldr	r3, .L8
+ 122 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 120:Generated_Source\PSoC5/HELFT_B.c **** }
+ 123              		.loc 1 120 0
+ 124 0004 C008     		lsrs	r0, r0, #3
+ 125 0006 7047     		bx	lr
+ 126              	.L9:
+ 127              		.align	2
+ 128              	.L8:
+ 129 0008 21510040 		.word	1073762593
+ 130              		.cfi_endproc
+ 131              	.LFE2:
+ 132              		.size	HELFT_B_Read, .-HELFT_B_Read
+ 133              		.section	.text.HELFT_B_ReadDataReg,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	HELFT_B_ReadDataReg
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.type	HELFT_B_ReadDataReg, %function
+ 139              	HELFT_B_ReadDataReg:
+ 140              	.LFB3:
+ 121:Generated_Source\PSoC5/HELFT_B.c **** 
+ 122:Generated_Source\PSoC5/HELFT_B.c **** 
+ 123:Generated_Source\PSoC5/HELFT_B.c **** /*******************************************************************************
+ 124:Generated_Source\PSoC5/HELFT_B.c **** * Function Name: HELFT_B_ReadDataReg
+ 125:Generated_Source\PSoC5/HELFT_B.c **** ****************************************************************************//**
+ 126:Generated_Source\PSoC5/HELFT_B.c **** *
+ 127:Generated_Source\PSoC5/HELFT_B.c **** * \brief Reads the associated physical port's data output register and masks 
+ 128:Generated_Source\PSoC5/HELFT_B.c **** *  the correct bits according to the width and bit position of the component 
+ 129:Generated_Source\PSoC5/HELFT_B.c **** *  instance. 
+ 130:Generated_Source\PSoC5/HELFT_B.c **** *
+ 131:Generated_Source\PSoC5/HELFT_B.c **** * The data output register controls the signal applied to the physical pin in 
+ 132:Generated_Source\PSoC5/HELFT_B.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 133:Generated_Source\PSoC5/HELFT_B.c **** * preferred HELFT_B_Read() API because the 
+ 134:Generated_Source\PSoC5/HELFT_B.c **** * HELFT_B_ReadDataReg() reads the data register instead of the status 
+ 135:Generated_Source\PSoC5/HELFT_B.c **** * register. For output pins this is a useful function to determine the value 
+ 136:Generated_Source\PSoC5/HELFT_B.c **** * just written to the pin.
+ 137:Generated_Source\PSoC5/HELFT_B.c **** *
+ 138:Generated_Source\PSoC5/HELFT_B.c **** * \return 
+ 139:Generated_Source\PSoC5/HELFT_B.c **** *  The current value of the data register masked and shifted into a right 
+ 140:Generated_Source\PSoC5/HELFT_B.c **** *  justified number for the component instance.
+ 141:Generated_Source\PSoC5/HELFT_B.c **** *
+ 142:Generated_Source\PSoC5/HELFT_B.c **** * \funcusage
+ 143:Generated_Source\PSoC5/HELFT_B.c **** *  \snippet HELFT_B_SUT.c usage_HELFT_B_ReadDataReg 
+ 144:Generated_Source\PSoC5/HELFT_B.c **** *******************************************************************************/
+ 145:Generated_Source\PSoC5/HELFT_B.c **** uint8 HELFT_B_ReadDataReg(void)
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 6
+
+
+ 146:Generated_Source\PSoC5/HELFT_B.c **** {
+ 141              		.loc 1 146 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
+ 147:Generated_Source\PSoC5/HELFT_B.c ****     return (HELFT_B_DR & HELFT_B_MASK) >> HELFT_B_SHIFT;
+ 146              		.loc 1 147 0
+ 147 0000 014B     		ldr	r3, .L11
+ 148 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 148:Generated_Source\PSoC5/HELFT_B.c **** }
+ 149              		.loc 1 148 0
+ 150 0004 C008     		lsrs	r0, r0, #3
+ 151 0006 7047     		bx	lr
+ 152              	.L12:
+ 153              		.align	2
+ 154              	.L11:
+ 155 0008 20510040 		.word	1073762592
+ 156              		.cfi_endproc
+ 157              	.LFE3:
+ 158              		.size	HELFT_B_ReadDataReg, .-HELFT_B_ReadDataReg
+ 159              		.text
+ 160              	.Letext0:
+ 161              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 162              		.section	.debug_info,"",%progbits
+ 163              	.Ldebug_info0:
+ 164 0000 1B010000 		.4byte	0x11b
+ 165 0004 0400     		.2byte	0x4
+ 166 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 167 000a 04       		.byte	0x4
+ 168 000b 01       		.uleb128 0x1
+ 169 000c 5C000000 		.4byte	.LASF20
+ 170 0010 0C       		.byte	0xc
+ 171 0011 BA010000 		.4byte	.LASF21
+ 172 0015 44010000 		.4byte	.LASF22
+ 173 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 174 001d 00000000 		.4byte	0
+ 175 0021 00000000 		.4byte	.Ldebug_line0
+ 176 0025 02       		.uleb128 0x2
+ 177 0026 01       		.byte	0x1
+ 178 0027 06       		.byte	0x6
+ 179 0028 DB010000 		.4byte	.LASF0
+ 180 002c 02       		.uleb128 0x2
+ 181 002d 01       		.byte	0x1
+ 182 002e 08       		.byte	0x8
+ 183 002f 4E000000 		.4byte	.LASF1
+ 184 0033 02       		.uleb128 0x2
+ 185 0034 02       		.byte	0x2
+ 186 0035 05       		.byte	0x5
+ 187 0036 A1010000 		.4byte	.LASF2
+ 188 003a 02       		.uleb128 0x2
+ 189 003b 02       		.byte	0x2
+ 190 003c 07       		.byte	0x7
+ 191 003d 01010000 		.4byte	.LASF3
+ 192 0041 02       		.uleb128 0x2
+ 193 0042 04       		.byte	0x4
+ 194 0043 05       		.byte	0x5
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 7
+
+
+ 195 0044 B1010000 		.4byte	.LASF4
+ 196 0048 02       		.uleb128 0x2
+ 197 0049 04       		.byte	0x4
+ 198 004a 07       		.byte	0x7
+ 199 004b EF000000 		.4byte	.LASF5
+ 200 004f 02       		.uleb128 0x2
+ 201 0050 08       		.byte	0x8
+ 202 0051 05       		.byte	0x5
+ 203 0052 8E010000 		.4byte	.LASF6
+ 204 0056 02       		.uleb128 0x2
+ 205 0057 08       		.byte	0x8
+ 206 0058 07       		.byte	0x7
+ 207 0059 28010000 		.4byte	.LASF7
+ 208 005d 03       		.uleb128 0x3
+ 209 005e 04       		.byte	0x4
+ 210 005f 05       		.byte	0x5
+ 211 0060 696E7400 		.ascii	"int\000"
+ 212 0064 02       		.uleb128 0x2
+ 213 0065 04       		.byte	0x4
+ 214 0066 07       		.byte	0x7
+ 215 0067 1B010000 		.4byte	.LASF8
+ 216 006b 04       		.uleb128 0x4
+ 217 006c AB010000 		.4byte	.LASF12
+ 218 0070 02       		.byte	0x2
+ 219 0071 E801     		.2byte	0x1e8
+ 220 0073 2C000000 		.4byte	0x2c
+ 221 0077 02       		.uleb128 0x2
+ 222 0078 04       		.byte	0x4
+ 223 0079 04       		.byte	0x4
+ 224 007a 48000000 		.4byte	.LASF9
+ 225 007e 02       		.uleb128 0x2
+ 226 007f 08       		.byte	0x8
+ 227 0080 04       		.byte	0x4
+ 228 0081 14010000 		.4byte	.LASF10
+ 229 0085 02       		.uleb128 0x2
+ 230 0086 01       		.byte	0x1
+ 231 0087 08       		.byte	0x8
+ 232 0088 9C010000 		.4byte	.LASF11
+ 233 008c 04       		.uleb128 0x4
+ 234 008d EA000000 		.4byte	.LASF13
+ 235 0091 02       		.byte	0x2
+ 236 0092 9202     		.2byte	0x292
+ 237 0094 98000000 		.4byte	0x98
+ 238 0098 05       		.uleb128 0x5
+ 239 0099 6B000000 		.4byte	0x6b
+ 240 009d 06       		.uleb128 0x6
+ 241 009e 1A000000 		.4byte	.LASF14
+ 242 00a2 01       		.byte	0x1
+ 243 00a3 39       		.byte	0x39
+ 244 00a4 00000000 		.4byte	.LFB0
+ 245 00a8 18000000 		.4byte	.LFE0-.LFB0
+ 246 00ac 01       		.uleb128 0x1
+ 247 00ad 9C       		.byte	0x9c
+ 248 00ae CF000000 		.4byte	0xcf
+ 249 00b2 07       		.uleb128 0x7
+ 250 00b3 14000000 		.4byte	.LASF16
+ 251 00b7 01       		.byte	0x1
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 8
+
+
+ 252 00b8 39       		.byte	0x39
+ 253 00b9 6B000000 		.4byte	0x6b
+ 254 00bd 00000000 		.4byte	.LLST0
+ 255 00c1 08       		.uleb128 0x8
+ 256 00c2 28000000 		.4byte	.LASF23
+ 257 00c6 01       		.byte	0x1
+ 258 00c7 3B       		.byte	0x3b
+ 259 00c8 6B000000 		.4byte	0x6b
+ 260 00cc 01       		.uleb128 0x1
+ 261 00cd 53       		.byte	0x53
+ 262 00ce 00       		.byte	0
+ 263 00cf 06       		.uleb128 0x6
+ 264 00d0 33000000 		.4byte	.LASF15
+ 265 00d4 01       		.byte	0x1
+ 266 00d5 5A       		.byte	0x5a
+ 267 00d6 00000000 		.4byte	.LFB1
+ 268 00da 48000000 		.4byte	.LFE1-.LFB1
+ 269 00de 01       		.uleb128 0x1
+ 270 00df 9C       		.byte	0x9c
+ 271 00e0 F4000000 		.4byte	0xf4
+ 272 00e4 07       		.uleb128 0x7
+ 273 00e5 3F010000 		.4byte	.LASF17
+ 274 00e9 01       		.byte	0x1
+ 275 00ea 5A       		.byte	0x5a
+ 276 00eb 6B000000 		.4byte	0x6b
+ 277 00ef 21000000 		.4byte	.LLST1
+ 278 00f3 00       		.byte	0
+ 279 00f4 09       		.uleb128 0x9
+ 280 00f5 E7010000 		.4byte	.LASF18
+ 281 00f9 01       		.byte	0x1
+ 282 00fa 75       		.byte	0x75
+ 283 00fb 6B000000 		.4byte	0x6b
+ 284 00ff 00000000 		.4byte	.LFB2
+ 285 0103 0C000000 		.4byte	.LFE2-.LFB2
+ 286 0107 01       		.uleb128 0x1
+ 287 0108 9C       		.byte	0x9c
+ 288 0109 09       		.uleb128 0x9
+ 289 010a 00000000 		.4byte	.LASF19
+ 290 010e 01       		.byte	0x1
+ 291 010f 91       		.byte	0x91
+ 292 0110 6B000000 		.4byte	0x6b
+ 293 0114 00000000 		.4byte	.LFB3
+ 294 0118 0C000000 		.4byte	.LFE3-.LFB3
+ 295 011c 01       		.uleb128 0x1
+ 296 011d 9C       		.byte	0x9c
+ 297 011e 00       		.byte	0
+ 298              		.section	.debug_abbrev,"",%progbits
+ 299              	.Ldebug_abbrev0:
+ 300 0000 01       		.uleb128 0x1
+ 301 0001 11       		.uleb128 0x11
+ 302 0002 01       		.byte	0x1
+ 303 0003 25       		.uleb128 0x25
+ 304 0004 0E       		.uleb128 0xe
+ 305 0005 13       		.uleb128 0x13
+ 306 0006 0B       		.uleb128 0xb
+ 307 0007 03       		.uleb128 0x3
+ 308 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 9
+
+
+ 309 0009 1B       		.uleb128 0x1b
+ 310 000a 0E       		.uleb128 0xe
+ 311 000b 55       		.uleb128 0x55
+ 312 000c 17       		.uleb128 0x17
+ 313 000d 11       		.uleb128 0x11
+ 314 000e 01       		.uleb128 0x1
+ 315 000f 10       		.uleb128 0x10
+ 316 0010 17       		.uleb128 0x17
+ 317 0011 00       		.byte	0
+ 318 0012 00       		.byte	0
+ 319 0013 02       		.uleb128 0x2
+ 320 0014 24       		.uleb128 0x24
+ 321 0015 00       		.byte	0
+ 322 0016 0B       		.uleb128 0xb
+ 323 0017 0B       		.uleb128 0xb
+ 324 0018 3E       		.uleb128 0x3e
+ 325 0019 0B       		.uleb128 0xb
+ 326 001a 03       		.uleb128 0x3
+ 327 001b 0E       		.uleb128 0xe
+ 328 001c 00       		.byte	0
+ 329 001d 00       		.byte	0
+ 330 001e 03       		.uleb128 0x3
+ 331 001f 24       		.uleb128 0x24
+ 332 0020 00       		.byte	0
+ 333 0021 0B       		.uleb128 0xb
+ 334 0022 0B       		.uleb128 0xb
+ 335 0023 3E       		.uleb128 0x3e
+ 336 0024 0B       		.uleb128 0xb
+ 337 0025 03       		.uleb128 0x3
+ 338 0026 08       		.uleb128 0x8
+ 339 0027 00       		.byte	0
+ 340 0028 00       		.byte	0
+ 341 0029 04       		.uleb128 0x4
+ 342 002a 16       		.uleb128 0x16
+ 343 002b 00       		.byte	0
+ 344 002c 03       		.uleb128 0x3
+ 345 002d 0E       		.uleb128 0xe
+ 346 002e 3A       		.uleb128 0x3a
+ 347 002f 0B       		.uleb128 0xb
+ 348 0030 3B       		.uleb128 0x3b
+ 349 0031 05       		.uleb128 0x5
+ 350 0032 49       		.uleb128 0x49
+ 351 0033 13       		.uleb128 0x13
+ 352 0034 00       		.byte	0
+ 353 0035 00       		.byte	0
+ 354 0036 05       		.uleb128 0x5
+ 355 0037 35       		.uleb128 0x35
+ 356 0038 00       		.byte	0
+ 357 0039 49       		.uleb128 0x49
+ 358 003a 13       		.uleb128 0x13
+ 359 003b 00       		.byte	0
+ 360 003c 00       		.byte	0
+ 361 003d 06       		.uleb128 0x6
+ 362 003e 2E       		.uleb128 0x2e
+ 363 003f 01       		.byte	0x1
+ 364 0040 3F       		.uleb128 0x3f
+ 365 0041 19       		.uleb128 0x19
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 10
+
+
+ 366 0042 03       		.uleb128 0x3
+ 367 0043 0E       		.uleb128 0xe
+ 368 0044 3A       		.uleb128 0x3a
+ 369 0045 0B       		.uleb128 0xb
+ 370 0046 3B       		.uleb128 0x3b
+ 371 0047 0B       		.uleb128 0xb
+ 372 0048 27       		.uleb128 0x27
+ 373 0049 19       		.uleb128 0x19
+ 374 004a 11       		.uleb128 0x11
+ 375 004b 01       		.uleb128 0x1
+ 376 004c 12       		.uleb128 0x12
+ 377 004d 06       		.uleb128 0x6
+ 378 004e 40       		.uleb128 0x40
+ 379 004f 18       		.uleb128 0x18
+ 380 0050 9742     		.uleb128 0x2117
+ 381 0052 19       		.uleb128 0x19
+ 382 0053 01       		.uleb128 0x1
+ 383 0054 13       		.uleb128 0x13
+ 384 0055 00       		.byte	0
+ 385 0056 00       		.byte	0
+ 386 0057 07       		.uleb128 0x7
+ 387 0058 05       		.uleb128 0x5
+ 388 0059 00       		.byte	0
+ 389 005a 03       		.uleb128 0x3
+ 390 005b 0E       		.uleb128 0xe
+ 391 005c 3A       		.uleb128 0x3a
+ 392 005d 0B       		.uleb128 0xb
+ 393 005e 3B       		.uleb128 0x3b
+ 394 005f 0B       		.uleb128 0xb
+ 395 0060 49       		.uleb128 0x49
+ 396 0061 13       		.uleb128 0x13
+ 397 0062 02       		.uleb128 0x2
+ 398 0063 17       		.uleb128 0x17
+ 399 0064 00       		.byte	0
+ 400 0065 00       		.byte	0
+ 401 0066 08       		.uleb128 0x8
+ 402 0067 34       		.uleb128 0x34
+ 403 0068 00       		.byte	0
+ 404 0069 03       		.uleb128 0x3
+ 405 006a 0E       		.uleb128 0xe
+ 406 006b 3A       		.uleb128 0x3a
+ 407 006c 0B       		.uleb128 0xb
+ 408 006d 3B       		.uleb128 0x3b
+ 409 006e 0B       		.uleb128 0xb
+ 410 006f 49       		.uleb128 0x49
+ 411 0070 13       		.uleb128 0x13
+ 412 0071 02       		.uleb128 0x2
+ 413 0072 18       		.uleb128 0x18
+ 414 0073 00       		.byte	0
+ 415 0074 00       		.byte	0
+ 416 0075 09       		.uleb128 0x9
+ 417 0076 2E       		.uleb128 0x2e
+ 418 0077 00       		.byte	0
+ 419 0078 3F       		.uleb128 0x3f
+ 420 0079 19       		.uleb128 0x19
+ 421 007a 03       		.uleb128 0x3
+ 422 007b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 11
+
+
+ 423 007c 3A       		.uleb128 0x3a
+ 424 007d 0B       		.uleb128 0xb
+ 425 007e 3B       		.uleb128 0x3b
+ 426 007f 0B       		.uleb128 0xb
+ 427 0080 27       		.uleb128 0x27
+ 428 0081 19       		.uleb128 0x19
+ 429 0082 49       		.uleb128 0x49
+ 430 0083 13       		.uleb128 0x13
+ 431 0084 11       		.uleb128 0x11
+ 432 0085 01       		.uleb128 0x1
+ 433 0086 12       		.uleb128 0x12
+ 434 0087 06       		.uleb128 0x6
+ 435 0088 40       		.uleb128 0x40
+ 436 0089 18       		.uleb128 0x18
+ 437 008a 9742     		.uleb128 0x2117
+ 438 008c 19       		.uleb128 0x19
+ 439 008d 00       		.byte	0
+ 440 008e 00       		.byte	0
+ 441 008f 00       		.byte	0
+ 442              		.section	.debug_loc,"",%progbits
+ 443              	.Ldebug_loc0:
+ 444              	.LLST0:
+ 445 0000 00000000 		.4byte	.LVL0
+ 446 0004 0A000000 		.4byte	.LVL2
+ 447 0008 0100     		.2byte	0x1
+ 448 000a 50       		.byte	0x50
+ 449 000b 0A000000 		.4byte	.LVL2
+ 450 000f 18000000 		.4byte	.LFE0
+ 451 0013 0400     		.2byte	0x4
+ 452 0015 F3       		.byte	0xf3
+ 453 0016 01       		.uleb128 0x1
+ 454 0017 50       		.byte	0x50
+ 455 0018 9F       		.byte	0x9f
+ 456 0019 00000000 		.4byte	0
+ 457 001d 00000000 		.4byte	0
+ 458              	.LLST1:
+ 459 0021 00000000 		.4byte	.LVL3
+ 460 0025 08000000 		.4byte	.LVL4
+ 461 0029 0100     		.2byte	0x1
+ 462 002b 50       		.byte	0x50
+ 463 002c 08000000 		.4byte	.LVL4
+ 464 0030 48000000 		.4byte	.LFE1
+ 465 0034 0400     		.2byte	0x4
+ 466 0036 F3       		.byte	0xf3
+ 467 0037 01       		.uleb128 0x1
+ 468 0038 50       		.byte	0x50
+ 469 0039 9F       		.byte	0x9f
+ 470 003a 00000000 		.4byte	0
+ 471 003e 00000000 		.4byte	0
+ 472              		.section	.debug_aranges,"",%progbits
+ 473 0000 34000000 		.4byte	0x34
+ 474 0004 0200     		.2byte	0x2
+ 475 0006 00000000 		.4byte	.Ldebug_info0
+ 476 000a 04       		.byte	0x4
+ 477 000b 00       		.byte	0
+ 478 000c 0000     		.2byte	0
+ 479 000e 0000     		.2byte	0
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 12
+
+
+ 480 0010 00000000 		.4byte	.LFB0
+ 481 0014 18000000 		.4byte	.LFE0-.LFB0
+ 482 0018 00000000 		.4byte	.LFB1
+ 483 001c 48000000 		.4byte	.LFE1-.LFB1
+ 484 0020 00000000 		.4byte	.LFB2
+ 485 0024 0C000000 		.4byte	.LFE2-.LFB2
+ 486 0028 00000000 		.4byte	.LFB3
+ 487 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 488 0030 00000000 		.4byte	0
+ 489 0034 00000000 		.4byte	0
+ 490              		.section	.debug_ranges,"",%progbits
+ 491              	.Ldebug_ranges0:
+ 492 0000 00000000 		.4byte	.LFB0
+ 493 0004 18000000 		.4byte	.LFE0
+ 494 0008 00000000 		.4byte	.LFB1
+ 495 000c 48000000 		.4byte	.LFE1
+ 496 0010 00000000 		.4byte	.LFB2
+ 497 0014 0C000000 		.4byte	.LFE2
+ 498 0018 00000000 		.4byte	.LFB3
+ 499 001c 0C000000 		.4byte	.LFE3
+ 500 0020 00000000 		.4byte	0
+ 501 0024 00000000 		.4byte	0
+ 502              		.section	.debug_line,"",%progbits
+ 503              	.Ldebug_line0:
+ 504 0000 94000000 		.section	.debug_str,"MS",%progbits,1
+ 504      02004400 
+ 504      00000201 
+ 504      FB0E0D00 
+ 504      01010101 
+ 505              	.LASF19:
+ 506 0000 48454C46 		.ascii	"HELFT_B_ReadDataReg\000"
+ 506      545F425F 
+ 506      52656164 
+ 506      44617461 
+ 506      52656700 
+ 507              	.LASF16:
+ 508 0014 76616C75 		.ascii	"value\000"
+ 508      6500
+ 509              	.LASF14:
+ 510 001a 48454C46 		.ascii	"HELFT_B_Write\000"
+ 510      545F425F 
+ 510      57726974 
+ 510      6500
+ 511              	.LASF23:
+ 512 0028 73746174 		.ascii	"staticBits\000"
+ 512      69634269 
+ 512      747300
+ 513              	.LASF15:
+ 514 0033 48454C46 		.ascii	"HELFT_B_SetDriveMode\000"
+ 514      545F425F 
+ 514      53657444 
+ 514      72697665 
+ 514      4D6F6465 
+ 515              	.LASF9:
+ 516 0048 666C6F61 		.ascii	"float\000"
+ 516      7400
+ 517              	.LASF1:
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 13
+
+
+ 518 004e 756E7369 		.ascii	"unsigned char\000"
+ 518      676E6564 
+ 518      20636861 
+ 518      7200
+ 519              	.LASF20:
+ 520 005c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 520      43313120 
+ 520      352E342E 
+ 520      31203230 
+ 520      31363036 
+ 521 008f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 521      20726576 
+ 521      6973696F 
+ 521      6E203233 
+ 521      37373135 
+ 522 00c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 522      66756E63 
+ 522      74696F6E 
+ 522      2D736563 
+ 522      74696F6E 
+ 523              	.LASF13:
+ 524 00ea 72656738 		.ascii	"reg8\000"
+ 524      00
+ 525              	.LASF5:
+ 526 00ef 6C6F6E67 		.ascii	"long unsigned int\000"
+ 526      20756E73 
+ 526      69676E65 
+ 526      6420696E 
+ 526      7400
+ 527              	.LASF3:
+ 528 0101 73686F72 		.ascii	"short unsigned int\000"
+ 528      7420756E 
+ 528      7369676E 
+ 528      65642069 
+ 528      6E7400
+ 529              	.LASF10:
+ 530 0114 646F7562 		.ascii	"double\000"
+ 530      6C6500
+ 531              	.LASF8:
+ 532 011b 756E7369 		.ascii	"unsigned int\000"
+ 532      676E6564 
+ 532      20696E74 
+ 532      00
+ 533              	.LASF7:
+ 534 0128 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 534      206C6F6E 
+ 534      6720756E 
+ 534      7369676E 
+ 534      65642069 
+ 535              	.LASF17:
+ 536 013f 6D6F6465 		.ascii	"mode\000"
+ 536      00
+ 537              	.LASF22:
+ 538 0144 433A5C55 		.ascii	"C:\\Users\\atill\\OneDrive\\Documenten\\PSoC Creato"
+ 538      73657273 
+ 538      5C617469 
+ 538      6C6C5C4F 
+ARM GAS  C:\Users\atill\AppData\Local\Temp\ccOfYgka.s 			page 14
+
+
+ 538      6E654472 
+ 539 0172 725C486F 		.ascii	"r\\Homework\\D Potmeter.cydsn\000"
+ 539      6D65776F 
+ 539      726B5C44 
+ 539      20506F74 
+ 539      6D657465 
+ 540              	.LASF6:
+ 541 018e 6C6F6E67 		.ascii	"long long int\000"
+ 541      206C6F6E 
+ 541      6720696E 
+ 541      7400
+ 542              	.LASF11:
+ 543 019c 63686172 		.ascii	"char\000"
+ 543      00
+ 544              	.LASF2:
+ 545 01a1 73686F72 		.ascii	"short int\000"
+ 545      7420696E 
+ 545      7400
+ 546              	.LASF12:
+ 547 01ab 75696E74 		.ascii	"uint8\000"
+ 547      3800
+ 548              	.LASF4:
+ 549 01b1 6C6F6E67 		.ascii	"long int\000"
+ 549      20696E74 
+ 549      00
+ 550              	.LASF21:
+ 551 01ba 47656E65 		.ascii	"Generated_Source\\PSoC5\\HELFT_B.c\000"
+ 551      72617465 
+ 551      645F536F 
+ 551      75726365 
+ 551      5C50536F 
+ 552              	.LASF0:
+ 553 01db 7369676E 		.ascii	"signed char\000"
+ 553      65642063 
+ 553      68617200 
+ 554              	.LASF18:
+ 555 01e7 48454C46 		.ascii	"HELFT_B_Read\000"
+ 555      545F425F 
+ 555      52656164 
+ 555      00
+ 556              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
