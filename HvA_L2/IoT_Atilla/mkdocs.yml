@@ -1,0 +1,64 @@
+# Replace the text below to customize your site
+site_name: IoT Documentation | Atilla Ören
+site_description: Documentation for <Atilla Ören>
+site_author: <Atilla Ören>
+copyright: Copyright 2023 <Atilla Ören> - Creative Commons Attribution Non Commercial
+
+site_url: https://localhost:8000/
+  
+theme:
+  name: material
+  palette:
+    # try other colours https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
+    scheme: slate
+    primary: pink
+    accent: cyan
+  font:
+    # See available fonts at https://fonts.google.com/
+    text: Playfair Display
+    code: Merriweather
+  logo: images/iot_washing_machine.svg
+  favicon: images/iot_lamp.svg
+  features:
+    - navigation.instant 
+    - content.code.annotate 
+nav:
+    - 'index.md'
+    - 'Product' :
+      - 'Product Description' : 'product.md'
+      - 'User Manual' : 'user_manual.md'
+      - 'Architecture Overview' : 'architecture_overview.md'
+    - 'Embedded Device' : 'embedded_device.md'
+    - 'Web Application' :
+      - 'Documentation' : 'web_application.md'
+      - 'API Documentation' : 'api_documentation.md'
+    - 'User Interaction' : 'user_interaction.md'
+    - 'Physical Design' : 'physical_design.md'
+    - 'Logbook' : 'logbook.md'
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      # Read more: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/#enabled
+      enabled: !ENV [ENABLED_GIT_REVISION_DATE, False]
+
+markdown_extensions:
+  - extra
+  - smarty
+  - admonition
+  - pymdownx.keys
+  - codehilite:
+      guess_lang: true
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details  
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

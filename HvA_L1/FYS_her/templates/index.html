@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/index.css"> <!-- This is where the stylesheet gets included -->
+    <script src="../static/index.js"></script>  <!-- This is where the javascript gets included -->
+    <title>LDR Sensor</title> <!-- This is the title that is displayed in the tab in your browser  -->
+</head>
+    <body>
+        <h1 id="Header">"LDR Sensor" by Atilla Ören</h1> <!-- This is the main header on the website -->
+        <div id="DivAbout">
+            <h3 id="About">About</h3> <!-- This is the header 'About' -->
+            <p class="About">This project is a tool that uses <bold><i>light-dependent resistors</i></bold></p>
+            <p class="About">that can be used to measure from what direction the user is waving from.</p>
+        </div>
+        <div id="DivComponents">
+            <h3 id="Components">Components</h3> <!-- This is the header 'Components' -->
+            <p class="Components">In this project I used several components:</p>
+            <p class="Components">- 9 Light-dependent resistors</p>
+            <p class="Components">- 9 1uF Capacitors</p>
+            <p class="Components">- 1 RaspberryPi 4 Model B</p>
+            <p class="Components">- 6 Half-sized breadboards</p>
+            <p class="Components">- Male-Female Pins</p>
+            <p class="Components">- Male-Male Pins</p>
+        </div>
+        <div id="BoardTitle">
+            <h3 id="Board">Board</h3> <!-- This is the header 'Board' -->
+        </div>
+        <div class="grid"> <!-- This is where the 3x3 grid is created to recreate the layout of the LDR sensors -->
+            <div>Top Left {{TopLeft}}</div>
+            <div>Top Center {{TopCenter}}</div>
+            <div>Top Right {{TopRight}}</div>
+            <div>Middle Left {{MiddleLeft}}</div>
+            <div>Middle Center {{MiddleCenter}}</div>
+            <div>Middle Right {{MiddleRight}}</div>
+            <div>Bottom Left {{BottomLeft}}</div>
+            <div>Bottom Center {{BottomCenter}}</div>
+            <div>Bottom Right {{BottomRight}}</div>
+        </div>
+    </body>
+</html>
