@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7becaf4-988f-4955-bcc7-01759ff3c42d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1hMd1N6kOHXFItVx1otAYkW0lb1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test2/src/Main.java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BSA monitor" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7becaf4-988f-4955-bcc7-01759ff3c42d" name="Default Changelist" comment="" />
+      <created>1599824684385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599824684385</updated>
+      <workItem from="1599824685530" duration="9745000" />
+      <workItem from="1599859195604" duration="248000" />
+      <workItem from="1599861993452" duration="861000" />
+      <workItem from="1600088834767" duration="187000" />
+      <workItem from="1600200359613" duration="27000" />
+      <workItem from="1600442910497" duration="960000" />
+      <workItem from="1600722209532" duration="650000" />
+      <workItem from="1600794256408" duration="103000" />
+      <workItem from="1600795138584" duration="899000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600805577579">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600805577579" />
+    <state width="1497" height="211" key="GridCell.Tab.0.bottom" timestamp="1600794358713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600794358713" />
+    <state width="1497" height="211" key="GridCell.Tab.0.center" timestamp="1600794358713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600794358713" />
+    <state width="1497" height="211" key="GridCell.Tab.0.left" timestamp="1600794358713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600794358713" />
+    <state width="1497" height="211" key="GridCell.Tab.0.right" timestamp="1600794358713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1497" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600794358713" />
+    <state x="214" y="33" key="new project wizard" timestamp="1600805567198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="214" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1600805567198" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599849999980">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599849999980" />
+  </component>
+</project>
