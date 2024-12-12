@@ -1,0 +1,5 @@
+C:/Users/atill/AndroidStudioProjects/databaseTest/app/src/main/java/com/example/databasetest/cmake-build-debug/CMakeFiles/databaseTest.dir
+C:/Users/atill/AndroidStudioProjects/databaseTest/app/src/main/java/com/example/databasetest/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/atill/AndroidStudioProjects/databaseTest/app/src/main/java/com/example/databasetest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/atill/AndroidStudioProjects/databaseTest/app/src/main/java/com/example/databasetest/cmake-build-debug/bin/CMakeFiles/edit_cache.dir
+C:/Users/atill/AndroidStudioProjects/databaseTest/app/src/main/java/com/example/databasetest/cmake-build-debug/bin/CMakeFiles/rebuild_cache.dir
